@@ -14,10 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
           allow="autoplay; encrypted-media"
           allowfullscreen
         ></iframe>
-        <h3><a href="${game.fullVideo}" target="_blank">${game.title}</a></h3>
+        <h3><a href="${game.detailPage}">${game.title}</a></h3>
       </div>
     `;
     container.appendChild(card);
   });
 });
-    
