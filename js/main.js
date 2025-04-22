@@ -1,22 +1,29 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('gameGallery');
-  if (!gameData || !container) return;
+  const batchSize = 6;
+  let loadedCount = 0;
 
-  gameData.forEach(game => {
-    const card = document.createElement('div');
-    card.className = 'game-card';
-    card.innerHTML = `
-      <div class="game-card">
-        <iframe width="100%" height="215"
-          src="${game.preview}"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-        ></iframe>
+  function loadNextBatch() {
+    const nextBatch = gameData.slice(loadedCount, loadedCount + batchSize);
+    nextBatch.forEach(game => {
+      const card = document.createElement('div');
+      card.className = 'game-card';
+      card.innerHTML = `
+        <iframe src="${game.preview}" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <h3><a href="${game.detailPage}">${game.title}</a></h3>
-      </div>
-    `;
-    container.appendChild(card);
-  });
+      `;
+      container.appendChild(card);
+    });
+    loadedCount += batchSize;
+  }
+
+  function handleScroll() {
+    const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+    if (nearBottom && loadedCount < gameData.length) loadNextBatch();
+  }
+
+  loadNextBatch();
+  window.addEventListener('scroll', handleScroll);
 });
