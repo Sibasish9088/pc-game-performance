@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
   <nav>
     <h1>Horizon: Forbidden West </h1>
@@ -14,19 +16,21 @@
 
   <main class="container">
     <section>
-      <iframe width="100%" height="480" src="https://www.youtube.com/embed/kWkTHSKKl7U" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="480" src="https://www.youtube.com/embed/kWkTHSKKl7U" frameborder="0"
+        allowfullscreen></iframe>
     </section>
 
     <section>
-      <h2>FPS Comparison (1080p vs 1440p)</h2>
-      <canvas id="fpsChart"></canvas>
+      <h2 style="color:#00ffff;text-shadow:0 0 10px #00ffff;">FPS Comparison (1080p vs 1440p)</h2>
+      <canvas id="fpsChart" style="max-width: 100%; height: 300px;"></canvas>
     </section>
 
     <section>
       <h3>Description</h3>
       <p><strong>Release:</strong> Unknown<br>
-         <strong>Genre:</strong> Unknown<br><br>
-         No summary available.</p>
+        <strong>Genre:</strong> Unknown<br><br>
+        No summary available.
+      </p>
     </section>
 
     <section>
@@ -35,37 +39,40 @@
   </main>
 
   <script>
-    const ctx = document.getElementById('fpsChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['1080p', '1440p'],
-        datasets: [{
-          label: 'FPS',
-          data: [55–65, 40–50],
-          backgroundColor: ['#00ffff', '#008b8b']
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          title: {
-            display: true,
-            text: 'Estimated FPS Performance'
-          }
+    document.addEventListener("DOMContentLoaded", function () {
+      const ctx = document.getElementById('fpsChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['1080p', '1440p'],
+          datasets: [{
+            label: 'FPS',
+            data: [80, 60],
+            backgroundColor: ['#00ffff', '#008b8b']
+          }]
         },
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: { color: '#f5f5f5' }
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: 'Estimated FPS Performance'
+            }
           },
-          x: {
-            ticks: { color: '#f5f5f5' }
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { color: '#f5f5f5' }
+            },
+            x: {
+              ticks: { color: '#f5f5f5' }
+            }
           }
         }
-      }
+      });
     });
   </script>
 </body>
+
 </html>
