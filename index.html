@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>siba-pcbenchmark.site</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>siba-pcbenchmark.site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <nav><h1>siba-pcbenchmark.site</h1></nav>
-  <main class="container">
+<nav><h1>siba-pcbenchmark.site</h1></nav>
+<main class="container">
     <section class="my-pc-section">
-      <video autoplay muted loop width="400">
-        <source src="assets/My_PC_Video.mp4" type="video/mp4" />
-      </video>
-      <div class="pc-info">
-        <h2>My 2022 RTX 3060 Build</h2>
-        <ul>
-          <li>Intel Core i5-12400</li>
-          <li>Gigabyte B660M DS3H AX DDR4</li>
-          <li>NVIDIA RTX 3060 12GB</li>
-          <li>Corsair Vengeance 16GB DDR4 3200MHz (2x8GB)</li>
-          <li>WD Black SN770 1TB NVMe</li>
-          <li>Corsair CV650 PSU</li>
-          <li>Deepcool Matrexx 40 Case</li>
-          <li>Cooler Master Hyper 212 Black Edition</li>
-        </ul>
-      </div>
+        <video autoplay muted loop width="400">
+            <source src="assets/My_PC_Video.mp4" type="video/mp4"/>
+        </video>
+        <div class="pc-info">
+            <h2>My 2022 RTX 3060 Build</h2>
+            <ul>
+                <li><i data-lucide="cpu"></i> Intel Core i5-12400</li>
+                <li><i data-lucide="circuit-board"></i> Gigabyte B660M DS3H AX DDR4</li>
+                <li><i data-lucide="monitor"></i> NVIDIA RTX 3060 12GB</li>
+                <li><i data-lucide="memory-stick"></i> Corsair Vengeance 16GB DDR4 3200MHz (2x8GB)</li>
+                <li><i data-lucide="hard-drive"></i> WD Black SN770 1TB NVMe</li>
+                <li><i data-lucide="plug"></i> Corsair CV650 PSU</li>
+                <li><i data-lucide="package"></i> Deepcool Matrexx 40 Case</li>
+                <li><i data-lucide="fan"></i> Cooler Master Hyper 212 Black Edition</li>
+            </ul>
+        </div>
     </section>
     <section id="gameplays">
-      <h2 class="section-title">My Gameplays</h2>
-      <div id="gameGallery" class="row"></div>
+        <h2 class="section-title">My Gameplays</h2>
+        <div id="gameGallery" class="row"></div>
     </section>
-  </main>
-  <script src="js/gameData.js"></script>
-  <script src="js/main.js"></script>
+</main>
+<script src="js/gameData.js"></script>
+<script src="js/main.js"></script>
+<script>
+    lucide.createIcons();
+</script>
 </body>
 </html>
