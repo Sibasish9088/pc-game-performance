@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Siba's PC Benchmark</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>siba-pcbenchmark.site</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
-<nav><h1><i data-lucide="bar-chart" class="w-8 h-8 inline-block align-middle mr-3"></i>Siba's PC Benchmark</h1></nav>
+<nav>
+    <h1>siba-pcbenchmark.site</h1>
+</nav>
 <main class="container">
     <section class="my-pc-section">
         <video autoplay muted loop width="400">
             <source src="assets/My_PC_Video.mp4" type="video/mp4"/>
         </video>
         <div class="pc-info">
-            <h2><i data-lucide="server" class="w-8 h-8 inline-block align-middle mr-3"></i>Siba's RTX 3060 Rig</h2>
-            <ul>
-                <li><i data-lucide="cpu"></i> Intel Core i5-12400</li>
-                <li><i data-lucide="circuit-board"></i> Gigabyte B660M DS3H AX DDR4</li>
-                <li><i data-lucide="monitor"></i> NVIDIA RTX 3060 12GB</li>
-                <li><i data-lucide="memory-stick"></i> Corsair Vengeance 16GB DDR4 3200MHz (2x8GB)</li>
-                <li><i data-lucide="hard-drive"></i> WD Black SN770 1TB NVMe</li>
-                <li><i data-lucide="plug"></i> Corsair CV650 PSU</li>
-                <li><i data-lucide="package"></i> Deepcool Matrexx 40 Case</li>
-                <li><i data-lucide="fan"></i> Cooler Master Hyper 212 Black Edition</li>
-            </ul>
+            <h2>Siba's RTX 3060 Rig</h2>
+
+            <div class="component-grid">
+                <div class="component-card"><i data-lucide="cpu"></i><span>Intel Core i5-12400</span></div>
+                <div class="component-card"><i data-lucide="circuit-board"></i><span>Gigabyte B660M DS3H AX DDR4</span>
+                </div>
+                <div class="component-card"><i data-lucide="monitor"></i><span>NVIDIA RTX 3060 12GB</span></div>
+                <div class="component-card"><i
+                        data-lucide="memory-stick"></i><span>Corsair Vengeance 16GB DDR4 3200MHz</span>
+                </div>
+                <div class="component-card"><i data-lucide="hard-drive"></i><span>WD Black SN770 1TB NVMe</span></div>
+                <div class="component-card"><i data-lucide="plug"></i><span>Corsair CV650 PSU</span></div>
+                <div class="component-card"><i data-lucide="package"></i><span>Deepcool Matrexx 40 Case</span></div>
+                <div class="component-card"><i data-lucide="fan"></i><span>Cooler Master Hyper 212 Black Edition</span>
+                </div>
+            </div>
+
         </div>
     </section>
     <section id="gameplays">
-        <h2 class="section-title"><i data-lucide="gamepad-2" class="w-8 h-8 inline-block align-middle mr-3"></i> My
-            Gameplays</h2>
+        <h2 class="section-title">My Gameplays</h2>
         <div id="gameGallery" class="row"></div>
     </section>
 </main>
@@ -40,4 +49,5 @@
     lucide.createIcons();
 </script>
 </body>
+
 </html>
