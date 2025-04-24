@@ -7,11 +7,25 @@
   <title>Alan Wake 2</title>
   <link rel="stylesheet" href="../css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script type="module">
+    import { getGameByTitle } from '../utility/dataReader.js';
+    document.addEventListener('DOMContentLoaded', async () => {
+      const game = await getGameByTitle('Alan Wake 2');
+      if (game) {
+        document.querySelector('#game-title').textContent = game.Title;
+        document.querySelector('#release-date').textContent = game['Release Date'];
+        document.querySelector('#description').textContent = game.Description;
+        document.querySelector('#fps-1080p').textContent = `${game['1080p']} FPS @1080p`;
+        document.querySelector('#fps-1440p').textContent = `${game['1440p']} FPS @1440p`;
+      }
+    });
+  </script>
 </head>
 
 <body>
   <nav>
-    <h1>Alan Wake 2</h1>
+    <h1 id="game-title">Loading...</h1>
   </nav>
 
   <main class="container">
