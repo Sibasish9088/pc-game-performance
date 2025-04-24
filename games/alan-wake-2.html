@@ -28,50 +28,6 @@
     <h2 class="fps-header neon">FPS Benchmark</h2>
     <canvas id="fpsChart" width="400" height="200"></canvas>
 
-    <!-- ✅ JSON Loader + Chart Draw -->
-    <script type="module">
-      import gameData from '../assets/Game_Data.json' assert { type: "json" };
-
-      const game = gameData.find(g => g.title === "Alan Wake 2");
-      if (game) {
-        const ctx = document.getElementById('fpsChart')?.getContext('2d');
-        if (ctx) {
-          const fpsChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ['1080p', '1440p'],
-              datasets: [{
-                label: 'Average FPS',
-                data: [game.fps["1080p"], game.fps["1440p"]],
-                backgroundColor: ['#00ffffaa', '#00ffaa88']
-              }]
-            },
-            options: {
-              responsive: true,
-              plugins: {
-                legend: { display: false },
-                tooltip: { enabled: true }
-              },
-              scales: {
-                y: {
-                  beginAtZero: true,
-                  title: {
-                    display: true,
-                    text: 'Frames Per Second (FPS)',
-                    color: '#00ffff'
-                  },
-                  ticks: { color: '#fff' }
-                },
-                x: {
-                  ticks: { color: '#fff' }
-                }
-              }
-            }
-          });
-        }
-      }
-    </script>
-
     <!-- ✅ Description -->
     <section class="description">
       <h2>Description</h2>
@@ -83,6 +39,50 @@
 
     <a href="../index.html" class="back-link">← Back to Home</a>
   </main>
+
+  <!-- ✅ JSON Loader + Chart Draw -->
+  <script type="module">
+    import gameData from '../assets/Game_Data.json' assert { type: "json" };
+
+    const game = gameData.find(g => g.title === "Alan Wake 2");
+    if (game) {
+      const ctx = document.getElementById('fpsChart')?.getContext('2d');
+      if (ctx) {
+        const fpsChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['1080p', '1440p'],
+            datasets: [{
+              label: 'Average FPS',
+              data: [game.fps["1080p"], game.fps["1440p"]],
+              backgroundColor: ['#00ffffaa', '#00ffaa88']
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { display: false },
+              tooltip: { enabled: true }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Frames Per Second (FPS)',
+                  color: '#00ffff'
+                },
+                ticks: { color: '#fff' }
+              },
+              x: {
+                ticks: { color: '#fff' }
+              }
+            }
+          }
+        });
+      }
+    }
+  </script>
 </body>
 
 </html>
