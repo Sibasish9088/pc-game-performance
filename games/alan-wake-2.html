@@ -40,49 +40,54 @@
   </main>
 
   <!-- ✅ JSON Loader + Chart Draw -->
-  <script type="module">
-    import gameData from '../assets/Game_Data.json' assert { type: 'json' };
-
-    const game = gameData["Alan Wake 2"];
-    const ctx = document.getElementById('fpsChart')?.getContext('2d');
-
-    if (ctx && game && game.fps) {
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['1080p', '1440p'],
-          datasets: [{
-            label: 'Average FPS',
-            data: [game.fps["1080p"], game.fps["1440p"]],
-            backgroundColor: ['#00ffffaa', '#00ffaa88']
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { display: false },
-            tooltip: { enabled: true }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              title: {
-                display: true,
-                text: 'Frames Per Second (FPS)',
-                color: '#00ffff'
-              },
-              ticks: { color: '#fff' }
+  <script>
+    fetch('../assets/Game_Data.json')
+      .then(response => response.json())
+      .then(data => {
+        const game = data["Alan Wake 2"]; // Update game title dynamically if needed
+  
+        const ctx = document.getElementById('fpsChart')?.getContext('2d');
+  
+        if (ctx && game && game.fps) {
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['1080p', '1440p'],
+              datasets: [{
+                label: 'Average FPS',
+                data: [game.fps["1080p"], game.fps["1440p"]],
+                backgroundColor: ['#00ffffaa', '#00ffaa88']
+              }]
             },
-            x: {
-              ticks: { color: '#fff' }
+            options: {
+              responsive: true,
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: true }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Frames Per Second (FPS)',
+                    color: '#00ffff'
+                  },
+                  ticks: { color: '#fff' }
+                },
+                x: {
+                  ticks: { color: '#fff' }
+                }
+              }
             }
-          }
+          });
+        } else {
+          console.warn("Chart element or game data not found");
         }
-      });
-    } else {
-      console.warn("FPS chart data or canvas not found");
-    }
+      })
+      .catch(err => console.error("Failed to load JSON data:", err));
   </script>
+  
 
 </body>
 
