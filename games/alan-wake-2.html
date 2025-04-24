@@ -21,6 +21,21 @@
       }
     });
   </script>
+
+  <script type="module">
+    import { getGameByTitle } from '../utility/dataReader.js';
+    document.addEventListener('DOMContentLoaded', async () => {
+      const game = await getGameByTitle("Alan Wake 2");
+      if (game) {
+        document.querySelector('#game-title').textContent = game.title;
+        document.querySelector('#release-date').textContent = game.release;
+        document.querySelector('#description').textContent = game.description;
+        document.querySelector('#fps-1080p').textContent = `${game.fps["1080p"]} FPS @1080p`;
+        document.querySelector('#fps-1440p').textContent = `${game.fps["1440p"]} FPS @1440p`;
+        document.querySelector('#video-frame').src = game.youtube;
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -30,7 +45,7 @@
 
   <main class="container">
     <section>
-      <div class="video-frame"><iframe width="100%" height="480" src="https://www.youtube.com/embed/XAOIPgdrAcI" frameborder="0"
+      <div class="video-frame"><iframe id="video-frame" frameborder="0"
         allowfullscreen allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
     </section>
 
