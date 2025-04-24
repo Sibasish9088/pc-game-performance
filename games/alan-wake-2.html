@@ -19,8 +19,7 @@
 
     <!-- ✅ Proper YouTube Embed Format -->
     <div class="video-wrapper">
-      <iframe width="100%" height="480" src="https://www.youtube.com/embed/XAOIPgdrAcI"
-        frameborder="0" allowfullscreen>
+      <iframe width="100%" height="480" src="https://www.youtube.com/embed/XAOIPgdrAcI" frameborder="0" allowfullscreen>
       </iframe>
     </div>
 
@@ -42,47 +41,49 @@
 
   <!-- ✅ JSON Loader + Chart Draw -->
   <script type="module">
-    import gameData from '../assets/Game_Data.json' assert { type: "json" };
+    import gameData from '../assets/Game_Data.json' assert { type: 'json' };
 
-    const game = gameData.find(g => g.title === "Alan Wake 2");
-    if (game) {
-      const ctx = document.getElementById('fpsChart')?.getContext('2d');
-      if (ctx) {
-        const fpsChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['1080p', '1440p'],
-            datasets: [{
-              label: 'Average FPS',
-              data: [game.fps['1080p'], game.fps['1440p']],
-              backgroundColor: ['#00ffffaa', '#00ffaa88']
-            }]
+    const game = gameData["Alan Wake 2"];
+    const ctx = document.getElementById('fpsChart')?.getContext('2d');
+
+    if (ctx && game && game.fps) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['1080p', '1440p'],
+          datasets: [{
+            label: 'Average FPS',
+            data: [game.fps["1080p"], game.fps["1440p"]],
+            backgroundColor: ['#00ffffaa', '#00ffaa88']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: true }
           },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: { display: false },
-              tooltip: { enabled: true }
-            },
-            scales: {
-              y: {
-                beginAtZero: true,
-                title: {
-                  display: true,
-                  text: 'Frames Per Second (FPS)',
-                  color: '#00ffff'
-                },
-                ticks: { color: '#fff' }
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Frames Per Second (FPS)',
+                color: '#00ffff'
               },
-              x: {
-                ticks: { color: '#fff' }
-              }
+              ticks: { color: '#fff' }
+            },
+            x: {
+              ticks: { color: '#fff' }
             }
           }
-        });
-      }
+        }
+      });
+    } else {
+      console.warn("FPS chart data or canvas not found");
     }
   </script>
+
 </body>
 
 </html>
