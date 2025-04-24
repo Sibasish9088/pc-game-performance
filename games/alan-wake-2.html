@@ -49,7 +49,7 @@
         document.getElementById("game-title").textContent = game.title;
         document.getElementById("release-date").textContent = game.release;
         document.getElementById("description").textContent = game.description;
-        document.getElementById("video-frame").src = game.youtube.replace("youtu.be/", "www.youtube.com/embed/");
+        document.getElementById("video-frame").src = game.youtube;
 
         // Tags
         const tagContainer = document.getElementById("tag-container");
