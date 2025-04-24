@@ -1,23 +1,19 @@
-
 let ytPlayers = {};
-let resetTimers = {};
+let loopCheckers = {};
 
-function attachHoverControls(container, player) {
+function attachLoopingControls(container, player) {
   container.addEventListener('mouseenter', () => {
     player.seekTo(0);
     player.playVideo();
 
-    resetTimers[player.getIframe().id] = setTimeout(() => {
-      if (player.getPlayerState() === YT.PlayerState.PLAYING) {
-        player.seekTo(0);
-      }
-    }, 45000);
-  });
-
-  container.addEventListener('mouseleave', () => {
-    player.pauseVideo();
-    player.seekTo(0);
-    clearTimeout(resetTimers[player.getIframe().id]);
+    if (!loopCheckers[player.getIframe().id]) {
+      loopCheckers[player.getIframe().id] = setInterval(() => {
+        const time = player.getCurrentTime();
+        if (time >= 45) {
+          player.seekTo(0);
+        }
+      }, 1000);
+    }
   });
 }
 
@@ -32,7 +28,7 @@ function loadYouTubePlayers() {
     ytPlayers[id] = new YT.Player(id, {
       events: {
         onReady: (event) => {
-          attachHoverControls(container, event.target);
+          attachLoopingControls(container, event.target);
         }
       }
     });
