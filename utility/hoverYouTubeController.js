@@ -1,19 +1,13 @@
 let ytPlayers = {};
-let loopCheckers = {};
 
 function attachLoopingControls(container, player) {
   container.addEventListener('mouseenter', () => {
-    player.seekTo(0);
+    player.loadVideoById({
+      videoId: player.getVideoData().video_id,
+      startSeconds: 0,
+      endSeconds: 45,
+    });
     player.playVideo();
-
-    if (!loopCheckers[player.getIframe().id]) {
-      loopCheckers[player.getIframe().id] = setInterval(() => {
-        const time = player.getCurrentTime();
-        if (time >= 45) {
-          player.seekTo(0);
-        }
-      }, 1000);
-    }
   });
 }
 
@@ -29,8 +23,13 @@ function loadYouTubePlayers() {
       events: {
         onReady: (event) => {
           attachLoopingControls(container, event.target);
-        }
-      }
+        },
+        onStateChange: (event) => {
+          if (event.data === YT.PlayerState.ENDED) {
+            event.target.seekTo(0);
+          }
+        },
+      },
     });
   });
 }
