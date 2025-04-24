@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rise Of The Tomb Raider Reemastered</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Game Detail</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <main class="game-page">
+<main class="game-page">
     <h1 id="game-title">Loading title...</h1>
     <div id="tag-container" class="tag-bar"></div>
     <p><strong>Release Date:</strong> <span id="release-date">Loading...</span></p>
 
     <div class="video-wrapper">
-      <iframe
-        id="video-frame"
-        width="100%"
-        height="400"
-        frameborder="0"
-        allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-      </iframe>
+        <iframe
+                id="video-frame"
+                width="100%"
+                height="400"
+                frameborder="0"
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
     </div>
 
     <h2 class="fps-header neon">FPS Benchmark</h2>
     <canvas id="fpsChart" width="400" height="200"></canvas>
 
     <section class="description">
-      <h2>Description</h2>
-      <p id="description">Loading description...</p>
+        <h2>Description</h2>
+        <p id="description">Loading description...</p>
     </section>
 
     <a href="../index.html" class="back-link">← Back to Game List</a>
-  </main>
-  
+</main>
+
+<!-- ✅ JSON-Powered Dynamic Script -->
 <script>
-  const gameTitle = "Rise Of The Tomb Raider Reemastered";
+    const gameTitle = "Rise of the Tomb Raider Remastered";
 
-  fetch("../assets/Game_Data.json")
-    .then(res => res.json())
-    .then(data => {
-      const game = data[gameTitle];
-      if (!game) return;
+    fetch("../assets/Game_Data.json")
+      .then(res => res.json())
+      .then(data => {
+        const game = data[gameTitle];
+        if (!game) return;
 
-      document.getElementById("game-title").textContent = game.title;
-      document.getElementById("release-date").textContent = game.release;
-      document.getElementById("description").textContent = game.description;
-      document.getElementById("video-frame").src = game.youtube;
+        // Set content
+        document.getElementById("game-title").textContent = game.title;
+        document.getElementById("release-date").textContent = game.release;
+        document.getElementById("description").textContent = game.description;
+        document.getElementById("video-frame").src = game.youtube;
 
-      const tagContainer = document.getElementById("tag-container");
-      game.tags.forEach(tag => {
-        const span = document.createElement("span");
-        span.className = "tag";
-        span.textContent = tag;
-        tagContainer.appendChild(span);
-      });
+        // Tags
+        const tagContainer = document.getElementById("tag-container");
+        game.tags.forEach(tag => {
+          const span = document.createElement("span");
+          span.className = "tag";
+          span.textContent = tag;
+          tagContainer.appendChild(span);
+        });
 
-      const ctx = document.getElementById("fpsChart")?.getContext("2d");
-      if (ctx && game.fps) {
-        new Chart(ctx, {
-          type: "bar",
-          data: {
-            labels: ["1080p", "1440p"],
-            datasets: [{
-              label: "Average FPS",
-              data: [game.fps["1080p"], game.fps["1440p"]],
-              backgroundColor: ["#00ffffaa", "#00ffaa88"]
-            }]
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: { display: false }
+        // FPS Chart
+        const ctx = document.getElementById("fpsChart")?.getContext("2d");
+        if (ctx && game.fps) {
+          new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: ["1080p", "1440p"],
+              datasets: [{
+                label: "Average FPS",
+                data: [game.fps["1080p"], game.fps["1440p"]],
+                backgroundColor: ["#00ffffaa", "#00ffaa88"]
+              }]
             },
-            scales: {
-              y: {
-                beginAtZero: true,
-                title: {
-                  display: true,
-                  text: "FPS",
-                  color: "#00ffff"
-                },
-                ticks: { color: "#fff" }
+            options: {
+              responsive: true,
+              plugins: {
+                legend: { display: false }
               },
-              x: {
-                ticks: { color: "#fff" }
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: "FPS",
+                    color: "#00ffff"
+                  },
+                  ticks: { color: "#fff" }
+                },
+                x: {
+                  ticks: { color: "#fff" }
+                }
               }
             }
-          }
-        });
-      }
-    })
-    .catch(err => console.error("Failed to load game data:", err));
+          });
+        }
+      })
+      .catch(err => console.error("Failed to load game data:", err));
 </script>
-
 </body>
 </html>
