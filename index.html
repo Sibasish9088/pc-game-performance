@@ -39,10 +39,42 @@
         </div>
     </section>
     <section id="gameplays">
-        <h2 class="section-title"><i data-lucide="gamepad-2" class="w-8 h-8 inline-block align-middle mr-3"></i> My
-            Gameplays</h2>
-        <div id="gameGallery" class="row"></div>
+        <h2 class="section-title">My Gameplays</h2>
+
+        <div class="container">
+            <!-- Sidebar Filters -->
+            <aside class="sidebar">
+                <h2>Filter Games</h2>
+
+                <div class="filter-section">
+                    <label for="search-input">Search</label>
+                    <input type="text" id="search-input" placeholder="e.g. STALKER, RTX, Horror" />
+                </div>
+
+                <div class="filter-section">
+                    <label>FPS Range</label>
+                    <div>
+                        <label><input type="checkbox" name="fps" value="60"> 60+ FPS</label>
+                        <label><input type="checkbox" name="fps" value="90"> 90+ FPS</label>
+                        <label><input type="checkbox" name="fps" value="120"> 120+ FPS</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <label>Genres / Tags</label>
+                    <div id="tag-filters">
+                        <!-- Tags will be populated via JS -->
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Game Thumbnails -->
+            <section class="main-content">
+                <div id="gameGallery" class="gallery-grid"></div>
+            </section>
+        </div>
     </section>
+
 </main>
 <script src="js/gameData.js"></script>
 <script src="js/main.js"></script>
