@@ -72,6 +72,11 @@ function bindDynamicButtons() {
   const depreciationDetails = document.getElementById('depreciation-details');
   const backButton = document.getElementById('back-to-components');
 
+  // Very important: create Lucide icons for newly added elements
+  if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+  }
+
   if (depreciationToggle) {
     depreciationToggle.addEventListener('click', function() {
       depreciationDetails.classList.toggle('hidden');
