@@ -1,3 +1,5 @@
+// Modularized pcComponentLoader.js ✅
+
 document.addEventListener('DOMContentLoaded', function() {
   const componentItems = document.querySelectorAll('.component-card');
 
@@ -9,61 +11,72 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Generator function for GPU Details
+function generateGPUDetail() {
+  return `
+    <section id="component-detail" class="fade-in">
+      <div class="component-header">
+        <span class="component-icon" data-lucide="monitor"></span>
+        <h2>NVIDIA RTX 3060 12GB</h2>
+      </div>
+
+      <div class="component-pricing">
+        <div class="price-source">
+          <i data-lucide="shopping-cart"></i>
+          <p>Flipkart Price: ₹29,200</p>
+        </div>
+        <div class="price-source">
+          <i data-lucide="box"></i>
+          <p>Amazon Price: ₹28,500</p>
+        </div>
+      </div>
+
+      <div class="resale-section">
+        <h3><i data-lucide="badge-dollar-sign"></i> Your Resale Price: ₹24,000</h3>
+      </div>
+
+      <button id="depreciation-toggle" class="depreciation-button">
+          <i data-lucide="calculator"></i> How was this calculated?
+      </button>
+
+      <div id="depreciation-details" class="depreciation-details hidden">
+        <p>
+          <i data-lucide="tag"></i> Original Price ~₹36,000 → After ~1.5 years (~30% depreciation)<br>
+          <i data-lucide="badge-dollar-sign"></i> Calculated Resale: ₹24,000 based on ~30% value drop<br>
+          <i data-lucide="calendar-clock"></i> Usage Period: Dec 2022 – May 2025
+        </p>
+      </div>
+
+      <button id="back-to-components" class="back-button">
+          <i data-lucide="cpu"></i> Back to Components
+      </button>
+    </section>
+  `;
+}
+
+// Component Generators Map
+const componentGenerators = {
+  'NVIDIA RTX 3060 12GB': generateGPUDetail
+};
+
+// Loader Function
 function loadComponentDetail(componentName) {
   const gameplaysSection = document.getElementById('gameplays');
   const dynamicContentSection = document.getElementById('dynamic-content');
 
-  if (componentName === 'NVIDIA RTX 3060 12GB') {
-    const componentHTML = `
-      <section id="component-detail" class="fade-in">
-        <div class="component-header">
-          <span class="component-icon" data-lucide="monitor"></span>
-          <h2>NVIDIA RTX 3060 12GB</h2>
-        </div>
+  const generator = componentGenerators[componentName];
 
-        <div class="component-pricing">
-          <div class="price-source">
-            <i data-lucide="shopping-cart"></i>
-            <p>Flipkart Price: ₹29,200</p>
-          </div>
-          <div class="price-source">
-            <i data-lucide="box"></i>
-            <p>Amazon Price: ₹28,500</p>
-          </div>
-        </div>
-
-        <div class="resale-section">
-          <h3><i data-lucide="badge-dollar-sign"></i> Your Resale Price: ₹24,000</h3>
-        </div>
-
-        <button id="depreciation-toggle" class="depreciation-button">
-            <i data-lucide="calculator"></i> How was this calculated?
-        </button>
-
-        <div id="depreciation-details" class="depreciation-details hidden">
-          <p>
-            <i data-lucide="tag"></i> Original Price ~₹36,000 → After ~1.5 years (~30% depreciation)<br>
-            <i data-lucide="badge-dollar-sign"></i> Calculated Resale: ₹24,000 based on ~30% value drop<br>
-            <i data-lucide="calendar-clock"></i> Usage Period: Dec 2022 – May 2025
-          </p>
-        </div>
-
-        <button id="back-to-components" class="back-button">
-            <i data-lucide="cpu"></i> Back to Components
-        </button>
-      </section>
-    `;
-
+  if (generator) {
     // Hide Gameplays
     gameplaysSection.style.display = 'none';
 
     // Show Dynamic Content
-    dynamicContentSection.innerHTML = componentHTML;
+    dynamicContentSection.innerHTML = generator();
     dynamicContentSection.style.display = 'block';
 
     // Scroll to dynamic content
     setTimeout(() => {
-      document.getElementById('dynamic-content').scrollIntoView({ behavior: 'smooth' });
+      dynamicContentSection.scrollIntoView({ behavior: 'smooth' });
     }, 100);
 
     // Bind buttons inside dynamic content
