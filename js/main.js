@@ -10,8 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.className = 'game-card';
       card.innerHTML = `
-        <iframe src="${game.preview}" frameborder="0"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe
+          src="${game.preview}"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
         <h3><a href="${game.detailPage}">${game.title}</a></h3>
       `;
       container.appendChild(card);
