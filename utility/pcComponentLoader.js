@@ -103,7 +103,7 @@ function generateRAMDetail() {
     <section id="component-detail" class="fade-in">
       <div class="component-header">
         <span class="component-icon" data-lucide="memory-stick"></span>
-        <h2>Corsair Vengeance 32GB DDR5</h2>
+        <h2>Corsair Vengeance 16GB DDR4 3200MHz</h2>
       </div>
 
       <div class="component-pricing">
@@ -144,7 +144,7 @@ function generateRAMDetail() {
 const componentGenerators = {
   'NVIDIA RTX 3060 12GB': generateGPUDetail,
   'Intel Core i5-12400': generateCPUDetail,
-  'Corsair Vengeance 32GB DDR5': generateRAMDetail
+  'Corsair Vengeance 16GB DDR4 3200MHz': generateRAMDetail
 };
 
 // Loader Function
