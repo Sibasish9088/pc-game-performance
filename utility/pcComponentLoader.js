@@ -97,10 +97,54 @@ function generateCPUDetail() {
   `;
 }
 
+// Generator function for RAM Details
+function generateRAMDetail() {
+  return `
+    <section id="component-detail" class="fade-in">
+      <div class="component-header">
+        <span class="component-icon" data-lucide="memory-stick"></span>
+        <h2>Corsair Vengeance 32GB DDR5</h2>
+      </div>
+
+      <div class="component-pricing">
+        <div class="price-source">
+          <i data-lucide="shopping-cart"></i>
+          <p>Flipkart Price: ₹8,999</p>
+        </div>
+        <div class="price-source">
+          <i data-lucide="box"></i>
+          <p>Amazon Price: ₹8,750</p>
+        </div>
+      </div>
+
+      <div class="resale-section">
+        <h3><i data-lucide="badge-dollar-sign"></i> Your Resale Price: ₹7,000</h3>
+      </div>
+
+      <button id="depreciation-toggle" class="depreciation-button">
+          <i data-lucide="calculator"></i> How was this calculated?
+      </button>
+
+      <div id="depreciation-details" class="depreciation-details hidden">
+        <p>
+          <i data-lucide="tag"></i> Original Price ~₹9,500 → After ~2 years (~26% depreciation)<br>
+          <i data-lucide="badge-dollar-sign"></i> Calculated Resale: ₹7,000 based on ~26% value drop<br>
+          <i data-lucide="calendar-clock"></i> Usage Period: Dec 2022 – May 2025
+        </p>
+      </div>
+
+      <button id="back-to-components" class="back-button">
+          <i data-lucide="cpu"></i> Back to Components
+      </button>
+    </section>
+  `;
+}
+
 // Component Generators Map
 const componentGenerators = {
   'NVIDIA RTX 3060 12GB': generateGPUDetail,
-  'Intel Core i5-12400': generateCPUDetail
+  'Intel Core i5-12400': generateCPUDetail,
+  'Corsair Vengeance 32GB DDR5': generateRAMDetail
 };
 
 // Loader Function
@@ -133,7 +177,6 @@ function bindDynamicButtons() {
   const depreciationDetails = document.getElementById('depreciation-details');
   const backButton = document.getElementById('back-to-components');
 
-  // Very important: create Lucide icons for newly added elements
   if (typeof lucide !== 'undefined') {
       lucide.createIcons();
   }
@@ -141,7 +184,6 @@ function bindDynamicButtons() {
   if (depreciationToggle) {
     depreciationToggle.addEventListener('click', function() {
       depreciationDetails.classList.toggle('hidden');
-      // After expanding, scroll to details
       setTimeout(() => {
         if (!depreciationDetails.classList.contains('hidden')) {
           depreciationDetails.scrollIntoView({ behavior: 'smooth' });
@@ -156,12 +198,10 @@ function bindDynamicButtons() {
       const dynamicContentSection = document.getElementById('dynamic-content');
       const pcComponentsSection = document.querySelector('.my-pc-section');
 
-      // Show PC Components
       if (pcComponentsSection) {
         pcComponentsSection.scrollIntoView({ behavior: 'smooth' });
       }
 
-      // Clear dynamic content after short delay
       setTimeout(() => {
         dynamicContentSection.innerHTML = '';
         dynamicContentSection.style.display = 'none';
