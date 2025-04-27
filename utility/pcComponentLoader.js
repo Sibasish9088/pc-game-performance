@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Bind click listeners to all PC components
-  const componentItems = document.querySelectorAll('.component-item'); // Assuming your PC parts have this class
+  const componentItems = document.querySelectorAll('.component-card');
 
   componentItems.forEach(item => {
     item.addEventListener('click', function() {
-      const componentName = item.getAttribute('data-component');
+      const componentName = item.innerText;
       loadComponentDetail(componentName);
     });
   });
@@ -20,7 +20,7 @@ function loadComponentDetail(componentName) {
   // Generate dynamic content based on component
   let componentHTML = '';
 
-  if (componentName === 'RTX 3060') {
+  if (componentName === 'NVIDIA RTX 3060 12GB') {
     componentHTML = `
       <section id="component-detail" class="fade-in">
         <div class="component-header">
