@@ -17,7 +17,7 @@ function loadComponentDetail(componentName) {
     const componentHTML = `
       <section id="component-detail" class="fade-in">
         <div class="component-header">
-          <span class="component-icon" data-lucide="gpu"></span>
+          <span class="component-icon" data-lucide="monitor"></span>
           <h2>NVIDIA RTX 3060 12GB</h2>
         </div>
 
@@ -36,17 +36,21 @@ function loadComponentDetail(componentName) {
           <h3><i data-lucide="badge-dollar-sign"></i> Your Resale Price: ₹24,000</h3>
         </div>
 
-        <button id="depreciation-toggle" class="depreciation-button">How was this calculated?</button>
+        <button id="depreciation-toggle" class="depreciation-button">
+            <i data-lucide="calculator"></i> How was this calculated?
+        </button>
 
         <div id="depreciation-details" class="depreciation-details hidden">
           <p>
-            <i data-lucide="tag"></i> 🎯 Original Price ~₹36,000 → After ~1.5 years (~30% depreciation)<br>
-            <i data-lucide="badge-dollar-sign"></i> 📉 Calculated Resale: ₹24,000 based on ~30% value drop<br>
-            <i data-lucide="calendar-clock"></i> 📅 Usage Period: Dec 2022 – May 2025
+            <i data-lucide="tag"></i> Original Price ~₹36,000 → After ~1.5 years (~30% depreciation)<br>
+            <i data-lucide="badge-dollar-sign"></i> Calculated Resale: ₹24,000 based on ~30% value drop<br>
+            <i data-lucide="calendar-clock"></i> Usage Period: Dec 2022 – May 2025
           </p>
         </div>
 
-        <button id="back-to-components" class="back-button">⬅️ Back to Components</button>
+        <button id="back-to-components" class="back-button">
+            <i data-lucide="cpu"></i> Back to Components
+        </button>
       </section>
     `;
 
