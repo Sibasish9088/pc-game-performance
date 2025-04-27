@@ -49,6 +49,28 @@
 <script>
     lucide.createIcons();
 </script>
+<script>
+    function refreshGameplaysSection() {
+      const container = document.getElementById("gameGallery");
+
+      // Fade out
+      container.style.transition = "opacity 0.5s ease";
+      container.style.opacity = "0";
+
+      setTimeout(() => {
+        const currentContent = container.innerHTML;
+        container.innerHTML = ""; // Clear content
+        container.innerHTML = currentContent; // Reload content
+
+        // Fade back in
+        container.style.opacity = "1";
+      }, 500); // 500ms fade out time
+    }
+
+    // Refresh every 45 seconds
+    setInterval(refreshGameplaysSection, 45000);
+</script>
+
 </body>
 
 </html>
