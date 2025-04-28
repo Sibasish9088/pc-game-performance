@@ -192,14 +192,15 @@ h1 i, h2 i {
 }
 
 .badge {
-  background: #00ffe7;
+  display: inline-block;
+  background: #00ffff;
   color: #000;
-  border-radius: 999px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
   font-weight: bold;
-  box-shadow: 0 0 8px #00ffe7aa;
-  margin-right: 0.5rem;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  box-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+  animation: pulse 2s infinite;
 }
 
 /* 🆕 Genre / Feature Tags */
@@ -311,4 +312,16 @@ h1 i, h2 i {
 .back-link:hover {
   color: #0ff;
   text-shadow: 0 0 8px #0ff;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 16px #00ffff, 0 0 24px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+  }
 }
