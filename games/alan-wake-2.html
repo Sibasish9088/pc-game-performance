@@ -6,6 +6,22 @@
     <title>Game Detail</title>
     <link rel="stylesheet" href="../css/style.css"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #00f0ff, #00ffaa);
+            color: #000;
+            font-weight: bold;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 5px #0ff; }
+            to { box-shadow: 0 0 20px #0ff; }
+        }
+    </style>
 </head>
 <body>
 <main class="game-page">
@@ -28,6 +44,13 @@
                 <h2>Description</h2>
                 <p id="description">Loading description...</p>
             </section>
+            <section class="additional-info" style="margin-top: 20px;">
+                <h2>Game Info</h2>
+                <p><strong>Developer:</strong> Remedy Entertainment</p>
+                <p><strong>Publisher:</strong> Epic Games Publishing</p>
+                <p><strong>Platforms:</strong> PC, PlayStation 5, Xbox Series X/S</p>
+                <p><strong>Rating:</strong> ★★★★☆ 4.5/5</p>
+            </section>
         </div>
     </div>
 
@@ -40,6 +63,8 @@
             <h2 class="fps-header neon">Insights</h2>
             <div id="fps-insight-content"
                  style="background: #111; padding: 15px; border-radius: 8px; color: #0ff;"></div>
+            <div id="comparison-content"
+                 style="background: #111; padding: 15px; margin-top: 20px; border-radius: 8px; color: #0ff;"></div>
         </div>
     </div>
 
@@ -105,14 +130,22 @@
 
         // Insights Section
         const fps1080 = game.fps["1080p"] || 0;
-        let badge = "Challenging";
-        if (fps1080 >= 90) badge = "Ultra Smooth";
-        else if (fps1080 >= 60) badge = "Optimal";
-        else if (fps1080 >= 40) badge = "Playable";
+        let badgeText = "Challenging";
+        if (fps1080 >= 90) badgeText = "Ultra Smooth";
+        else if (fps1080 >= 60) badgeText = "Optimal";
+        else if (fps1080 >= 40) badgeText = "Playable";
 
         document.getElementById("fps-insight-content").innerHTML = `
           <p><strong>Your PC FPS @1080p:</strong> ${fps1080} FPS</p>
-          <p><strong>Playability:</strong> <span style="color: #0f0;">${badge}</span></p>
+          <p><strong>Playability:</strong> <span class="badge">${badgeText}</span></p>
+        `;
+
+        // Comparison Section
+        document.getElementById("comparison-content").innerHTML = `
+          <h3>Comparison</h3>
+          <p>Your PC (RTX 3060 + i5-12400): ${fps1080} FPS</p>
+          <p>High-End PC (RTX 4070 Super + i7-13700K): 75 FPS</p>
+          <p>Gaming Laptop (RTX 4060 Laptop GPU): 45 FPS</p>
         `;
       })
       .catch(err => console.error("Failed to load game data:", err));
