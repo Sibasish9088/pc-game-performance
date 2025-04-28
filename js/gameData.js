@@ -82,7 +82,7 @@ const gameData = [
   {
     title: "Hellblade II : Senua's Saga",
     preview: "https://www.youtube.com/embed/nKZnUvnFwRE?autoplay=1&mute=1&controls=0&start=0&end=45",
-    detailPage: "games/hellblade-ii-senua-s-saga.html",
+    detailPage: "games/hellblade-2-senua-s-saga.html",
     fps1080p: "50–60",
     fps1440p: "35–45",
     notes: "RT & cinematic realism = heavier"
@@ -114,7 +114,7 @@ const gameData = [
   {
     title: "Rise of the Tomb Raider Reemastered",
     preview: "https://www.youtube.com/embed/kD6On6EZLwo?autoplay=1&mute=1&controls=0&start=0&end=45",
-    detailPage: "games/rise-of-the-tomb-raider-reemastered.html",
+    detailPage: "games/rise-of-the-tomb-raider-remastered.html",
     fps1080p: "50-60",
     fps1440p: "45-60",
     notes: "Smooth RTX with DLSS Performance"
@@ -130,7 +130,7 @@ const gameData = [
   {
     title: "Marvel's Spiderman Remastered",
     preview: "https://www.youtube.com/embed/3vQ2A91-Yvc?autoplay=1&mute=1&controls=0&start=0&end=45",
-    detailPage: "games/marvel-s-spiderman-remastered.html",
+    detailPage: "games/marvels-spiderman-remastered.html",
     fps1080p: "60-100",
     fps1440p: "60-100",
     notes: "RTX and DLSS Performance smooth"
@@ -138,7 +138,7 @@ const gameData = [
   {
     title: "The Last of Us Part I",
     preview: "https://www.youtube.com/embed/A-Y4Ibqc8a8?autoplay=1&mute=1&controls=0&start=0&end=45",
-    detailPage: "games/the-last-of-us-part-i.html",
+    detailPage: "games/the-last-of-us-part-1.html",
     fps1080p: "55–65",
     fps1440p: "40–50",
     notes: "Patch-optimized with DLSS"

@@ -1,102 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Game Detail</title>
-    <link rel="stylesheet" href="../css/style.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Detail</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 <main class="game-page">
-    <h1 id="game-title">Loading title...</h1>
-    <div id="tag-container" class="tag-bar"></div>
-    <p><strong>Release Date:</strong> <span id="release-date">Loading...</span></p>
-
-    <div class="video-wrapper">
-        <iframe
-                id="video-frame"
-                width="100%"
-                height="400"
-                frameborder="0"
-                allowfullscreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
+  <div class="top-section" style="display: flex; gap: 20px; align-items: flex-start;">
+    <div class="video-wrapper-left" style="flex: 0 0 60%;">
+      <iframe id="video-frame" width="100%" height="400" frameborder="0" allowfullscreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
-
-    <h2 class="fps-header neon">FPS Benchmark</h2>
-    <canvas id="fpsChart" width="400" height="200"></canvas>
-
-    <section class="description">
+    <div class="info-wrapper-right" style="flex: 0 0 40%;">
+      <h1 id="game-title">Loading title...</h1>
+      <p><strong>Release Date:</strong> <span id="release-date">Loading...</span></p>
+      <div id="tag-container" class="tag-bar"></div>
+      <section class="description">
         <h2>Description</h2>
         <p id="description">Loading description...</p>
-    </section>
-
-    <a href="../index.html" class="back-link">← Back to Game List</a>
+      </section>
+      <section class="additional-info" style="margin-top: 20px;">
+        <h2>Game Info</h2>
+        <p><strong>Developer:</strong> Loading...</p>
+        <p><strong>Publisher:</strong> Loading...</p>
+        <p><strong>Platforms:</strong> Loading...</p>
+        <p><strong>Rating:</strong> Loading...</p>
+      </section>
+    </div>
+  </div>
+  <div class="performance-section" style="display: flex; margin-top: 40px; gap: 20px;">
+    <div class="fps-chart-container" style="flex: 0 0 60%;">
+      <h2 class="fps-header neon">FPS Benchmark</h2>
+      <canvas id="fpsChart" height="150"></canvas>
+    </div>
+    <div class="insights-container" style="flex: 0 0 40%;">
+      <h2 class="fps-header neon">Insights</h2>
+      <div id="fps-insight-content" style="background: #111; padding: 15px; border-radius: 8px; color: #0ff;"></div>
+      <div id="comparison-content" style="background: #111; padding: 15px; margin-top: 20px; border-radius: 8px; color: #0ff;"></div>
+    </div>
+  </div>
+  <a href="../index.html" class="back-link">
+    <i data-lucide="gamepad-2"></i> Back to My Gameplays
+  </a>
 </main>
-
-<!-- ✅ JSON-Powered Dynamic Script -->
 <script>
-    const gameTitle = "A Plague Tale: Innocence";
-
-    fetch("../assets/Game_Data.json")
-      .then(res => res.json())
-      .then(data => {
-        const game = data[gameTitle];
-        if (!game) return;
-
-        // Set content
-        document.getElementById("game-title").textContent = game.title;
-        document.getElementById("release-date").textContent = game.release;
-        document.getElementById("description").textContent = game.description;
-        document.getElementById("video-frame").src = game.youtube;
-
-        // Tags
-        const tagContainer = document.getElementById("tag-container");
-        game.tags.forEach(tag => {
-          const span = document.createElement("span");
-          span.className = "tag";
-          span.textContent = tag;
-          tagContainer.appendChild(span);
-        });
-
-        // FPS Chart
-        const ctx = document.getElementById("fpsChart")?.getContext("2d");
-        if (ctx && game.fps) {
-          new Chart(ctx, {
-            type: "bar",
-            data: {
-              labels: ["1080p", "1440p"],
-              datasets: [{
-                label: "Average FPS",
-                data: [game.fps["1080p"], game.fps["1440p"]],
-                backgroundColor: ["#00ffffaa", "#00ffaa88"]
-              }]
-            },
-            options: {
-              responsive: true,
-              plugins: {
-                legend: { display: false }
-              },
-              scales: {
-                y: {
-                  beginAtZero: true,
-                  title: {
-                    display: true,
-                    text: "FPS",
-                    color: "#00ffff"
-                  },
-                  ticks: { color: "#fff" }
-                },
-                x: {
-                  ticks: { color: "#fff" }
-                }
-              }
-            }
-          });
-        }
-      })
-      .catch(err => console.error("Failed to load game data:", err));
+  const gameTitle = "A Plague Tale: Innocence";
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+    loadGameDetail(gameTitle);
+  });
 </script>
+<script src="../js/loadGameDetail.js"></script>
 </body>
 </html>
