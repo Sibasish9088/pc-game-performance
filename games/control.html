@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Detail</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Detail</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 <main class="game-page">
-  <div class="top-section" style="display: flex; gap: 20px; align-items: flex-start;">
-    <div class="video-wrapper-left" style="flex: 0 0 60%;">
-      <iframe id="video-frame" width="100%" height="400" frameborder="0" allowfullscreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <div class="top-section" style="display: flex; gap: 20px; align-items: flex-start;">
+        <div class="video-wrapper-left" style="flex: 0 0 60%;">
+            <iframe id="video-frame" width="100%" height="400" frameborder="0" allowfullscreen
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <div class="info-wrapper-right" style="flex: 0 0 40%;">
+            <h1 id="game-title">Loading title...</h1>
+            <p><strong>Release Date:</strong> <span id="release-date">Loading...</span></p>
+            <div id="tag-container" class="tag-bar"></div>
+            <section class="description">
+                <h2>Description</h2>
+                <p id="description">Loading description...</p>
+            </section>
+            <section class="additional-info" style="margin-top: 20px;">
+                <h2>Game Info</h2>
+                <p><strong>Developer:</strong> Loading...</p>
+                <p><strong>Publisher:</strong> Loading...</p>
+                <p><strong>Platforms:</strong> Loading...</p>
+                <p><strong>Rating:</strong> Loading...</p>
+            </section>
+        </div>
     </div>
-    <div class="info-wrapper-right" style="flex: 0 0 40%;">
-      <h1 id="game-title">Loading title...</h1>
-      <p><strong>Release Date:</strong> <span id="release-date">Loading...</span></p>
-      <div id="tag-container" class="tag-bar"></div>
-      <section class="description">
-        <h2>Description</h2>
-        <p id="description">Loading description...</p>
-      </section>
-      <section class="additional-info" style="margin-top: 20px;">
-        <h2>Game Info</h2>
-        <p><strong>Developer:</strong> Loading...</p>
-        <p><strong>Publisher:</strong> Loading...</p>
-        <p><strong>Platforms:</strong> Loading...</p>
-        <p><strong>Rating:</strong> Loading...</p>
-      </section>
+    <div class="performance-section" style="display: flex; margin-top: 40px; gap: 20px;">
+        <div class="fps-chart-container" style="flex: 0 0 60%;">
+            <h2 class="fps-header neon">FPS Benchmark</h2>
+            <canvas id="fpsChart" height="150"></canvas>
+        </div>
+        <div class="insights-container" style="flex: 0 0 40%;">
+            <h2 class="fps-header neon">Insights</h2>
+            <div id="fps-insight-content"
+                 style="background: #111; padding: 15px; border-radius: 8px; color: #0ff;"></div>
+            <div id="comparison-content"
+                 style="background: #111; padding: 15px; margin-top: 20px; border-radius: 8px; color: #0ff;"></div>
+        </div>
     </div>
-  </div>
-  <div class="performance-section" style="display: flex; margin-top: 40px; gap: 20px;">
-    <div class="fps-chart-container" style="flex: 0 0 60%;">
-      <h2 class="fps-header neon">FPS Benchmark</h2>
-      <canvas id="fpsChart" height="150"></canvas>
-    </div>
-    <div class="insights-container" style="flex: 0 0 40%;">
-      <h2 class="fps-header neon">Insights</h2>
-      <div id="fps-insight-content" style="background: #111; padding: 15px; border-radius: 8px; color: #0ff;"></div>
-      <div id="comparison-content" style="background: #111; padding: 15px; margin-top: 20px; border-radius: 8px; color: #0ff;"></div>
-    </div>
-  </div>
-  <a href="../index.html" class="back-link">
-    <i data-lucide="gamepad-2"></i> Back to My Gameplays
-  </a>
+    <a href="../index.html" class="back-link">
+        <i data-lucide="gamepad-2"></i> Back to My Gameplays
+    </a>
 </main>
-<script>
-  const gameTitle = "Control";
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
-    loadGameDetail(gameTitle);
-  });
-</script>
 <script src="../utility/loadGameDetail.js"></script>
+<script>
+    const gameTitle = "Control";
+    loadGameDetail(gameTitle);
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+</script>
 </body>
 </html>

@@ -72,19 +72,15 @@
         <i data-lucide="gamepad-2"></i> Back to My Gameplays
     </a>
 </main>
-
+<script src="../utility/loadGameDetail.js"></script>
 <script>
     const gameTitle = "Alan Wake 2";
     loadGameDetail(gameTitle);
-</script>
-<script src="../utility/loadGameDetail.js"></script>
-<script>
     document.addEventListener('DOMContentLoaded', function() {
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
       }
     });
 </script>
-
 </body>
 </html>

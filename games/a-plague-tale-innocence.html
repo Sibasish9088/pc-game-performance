@@ -49,15 +49,15 @@
         <i data-lucide="gamepad-2"></i> Back to My Gameplays
     </a>
 </main>
+<script src="../utility/loadGameDetail.js"></script>
 <script>
     const gameTitle = "A Plague Tale: Innocence";
+    loadGameDetail(gameTitle);
     document.addEventListener('DOMContentLoaded', function() {
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
       }
-      loadGameDetail(gameTitle);
     });
 </script>
-<script src="../utility/loadGameDetail.js"></script>
 </body>
 </html>
