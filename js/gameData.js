@@ -128,14 +128,6 @@ const gameData = [
     notes: "RTX lighting is demanding"
   },
   {
-    title: "Marvel's Spiderman Remastered",
-    preview: "https://www.youtube.com/embed/3vQ2A91-Yvc?autoplay=1&mute=1&controls=0&start=0&end=45",
-    detailPage: "games/marvels-spiderman-remastered.html",
-    fps1080p: "60-100",
-    fps1440p: "60-100",
-    notes: "RTX and DLSS Performance smooth"
-  },
-  {
     title: "The Last of Us Part I",
     preview: "https://www.youtube.com/embed/A-Y4Ibqc8a8?autoplay=1&mute=1&controls=0&start=0&end=45",
     detailPage: "games/the-last-of-us-part-1.html",
