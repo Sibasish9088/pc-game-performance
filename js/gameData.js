@@ -82,7 +82,7 @@ const gameData = [
   {
     title: "Hellblade II : Senua's Saga",
     preview: "https://www.youtube.com/embed/nKZnUvnFwRE?autoplay=1&mute=1&controls=0&start=0&end=45",
-    detailPage: "games/hellblade-2-senua-s-saga.html",
+    detailPage: "games/hellblade-2-senuas-saga.html",
     fps1080p: "50–60",
     fps1440p: "35–45",
     notes: "RT & cinematic realism = heavier"

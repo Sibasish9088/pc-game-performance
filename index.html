@@ -50,30 +50,10 @@
 <script src="js/gameData.js"></script>
 <script src="js/main.js"></script>
 <script src="utility/pcComponentLoader.js" defer></script>
+<script src="utility/homepage-patch.js"></script>
 <script>
     lucide.createIcons();
 </script>
-<script>
-    function refreshIndividualVideos() {
-      const videos = document.querySelectorAll("#gameGallery iframe, #gameGallery video");
-
-      videos.forEach((video, index) => {
-        setTimeout(() => {
-          video.style.transition = "opacity 0.5s ease";
-          video.style.opacity = "0";
-
-          setTimeout(() => {
-            const src = video.getAttribute('src');
-            video.setAttribute('src', src);
-            video.style.opacity = "1";
-          }, 500);
-        }, index * 100);
-      });
-    }
-
-    setInterval(refreshIndividualVideos, 45000);
-</script>
-
+<script src="utility/refresh-gallery-videos.js"></script>
 </body>
-
 </html>
