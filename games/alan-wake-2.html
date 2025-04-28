@@ -9,33 +9,43 @@
 </head>
 <body>
 <main class="game-page">
-    <h1 id="game-title">Loading title...</h1>
-    <div id="tag-container" class="tag-bar"></div>
-    <p><strong>Release Date:</strong> <span id="release-date">Loading...</span></p>
-
-    <div class="video-wrapper">
-        <iframe
-                id="video-frame"
-                width="100%"
-                height="400"
-                frameborder="0"
-                allowfullscreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
+    <div class="top-section" style="display: flex; gap: 20px; align-items: flex-start;">
+        <div class="video-wrapper-left" style="flex: 0 0 60%;">
+            <iframe
+                    id="video-frame"
+                    width="100%"
+                    height="400"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            </iframe>
+        </div>
+        <div class="info-wrapper-right" style="flex: 0 0 40%;">
+            <h1 id="game-title">Loading title...</h1>
+            <p><strong>Release Date:</strong> <span id="release-date">Loading...</span></p>
+            <div id="tag-container" class="tag-bar"></div>
+            <section class="description">
+                <h2>Description</h2>
+                <p id="description">Loading description...</p>
+            </section>
+        </div>
     </div>
 
-    <h2 class="fps-header neon">FPS Benchmark</h2>
-    <canvas id="fpsChart" width="400" height="200"></canvas>
-
-    <section class="description">
-        <h2>Description</h2>
-        <p id="description">Loading description...</p>
-    </section>
+    <div class="performance-section" style="display: flex; margin-top: 40px; gap: 20px;">
+        <div class="fps-chart-container" style="flex: 0 0 60%;">
+            <h2 class="fps-header neon">FPS Benchmark</h2>
+            <canvas id="fpsChart" height="150"></canvas>
+        </div>
+        <div class="insights-container" style="flex: 0 0 40%;">
+            <h2 class="fps-header neon">Insights</h2>
+            <div id="fps-insight-content"
+                 style="background: #111; padding: 15px; border-radius: 8px; color: #0ff;"></div>
+        </div>
+    </div>
 
     <a href="../index.html" class="back-link">← Back to Game List</a>
 </main>
 
-<!-- ✅ JSON-Powered Dynamic Script -->
 <script>
     const gameTitle = "Alan Wake 2";
 
@@ -74,27 +84,36 @@
               }]
             },
             options: {
+              indexAxis: 'y',
               responsive: true,
               plugins: {
                 legend: { display: false }
               },
               scales: {
-                y: {
+                x: {
                   beginAtZero: true,
-                  title: {
-                    display: true,
-                    text: "FPS",
-                    color: "#00ffff"
-                  },
+                  title: { display: true, text: "FPS", color: "#00ffff" },
                   ticks: { color: "#fff" }
                 },
-                x: {
+                y: {
                   ticks: { color: "#fff" }
                 }
               }
             }
           });
         }
+
+        // Insights Section
+        const fps1080 = game.fps["1080p"] || 0;
+        let badge = "Challenging";
+        if (fps1080 >= 90) badge = "Ultra Smooth";
+        else if (fps1080 >= 60) badge = "Optimal";
+        else if (fps1080 >= 40) badge = "Playable";
+
+        document.getElementById("fps-insight-content").innerHTML = `
+          <p><strong>Your PC FPS @1080p:</strong> ${fps1080} FPS</p>
+          <p><strong>Playability:</strong> <span style="color: #0f0;">${badge}</span></p>
+        `;
       })
       .catch(err => console.error("Failed to load game data:", err));
 </script>
