@@ -3,16 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const batchSize = 6;
   let loadedCount = 0;
 
+  // ✅ Assign component IDs dynamically
+  const componentLabels = ['cpu', 'motherboard', 'gpu', 'ram', 'storage', 'psu', 'case', 'fans'];
+  document.querySelectorAll('.component-card').forEach((card, index) => {
+    card.id = componentLabels[index];
+  });
+
   function loadNextBatch() {
     const nextBatch = gameData.slice(loadedCount, loadedCount + batchSize);
     nextBatch.forEach(game => {
       const card = document.createElement('div');
       card.className = 'game-card';
 
-      // Generate a clean slug from title (lowercase, hyphen-separated)
       const slug = game.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-
-      // Set the ID dynamically
       card.id = `game-id-${slug}`;
 
       card.innerHTML = `
@@ -26,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3><a href="${game.detailPage}">${game.title}</a></h3>
       `;
 
-      // Save last clicked game into sessionStorage
-      card.addEventListener('click', function() {
+      card.addEventListener('click', function () {
         sessionStorage.setItem('lastGameClicked', card.id);
       });
 
