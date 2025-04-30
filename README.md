@@ -1,91 +1,53 @@
-# 🎮 Siba's PC Benchmark Site - [siba-pcbenchmark.site](https://siba-pcbenchmark.site/)
+## 📜 Changelog
 
-Showcasing real-world gaming performance of my custom RTX 3060 PC Build with immersive cyberpunk UI.
+### `SPCBMv1.3.1-view-recovery-for-components-and-thumbnails` (2025-04-30)
+> 🗝️ View memory & scroll restoration for all dynamic cards
 
----
-
-## 🚀 Features
-
-- 🎥 45-second gameplay thumbnail previews (autoplay and looped)
-- 🖥️ Dynamic game performance comparison (1080p vs 1440p FPS)
-- 🛡️ Smooth fade transitions during thumbnail refresh
-- ⚡ Optimized loading with iframe `lazy-loading`
-- 🌌 Cyberpunk gamer UI with neon effects
-- 🧹 Modular JavaScript structure (utilities separated)
-- 📈 Improved Lighthouse performance scores (FCP, LCP)
+- ✅ Smooth scroll recovery added for both:
+    - PC component cards (e.g., CPU, GPU)
+    - Gameplay cards (even those loaded after scrolling)
+- ↻ MutationObserver + auto-scroll loop ensure back-navigation is always context-aware
+- 🎨 "Back to Components" and "Back to My Gameplays" buttons now preserve scroll + highlight visual
 
 ---
 
-## 🌟 Tech Stack
+### `v1.3.0-game-insights-and-details-with-glow-animations` (2025-04-28)
+> ✨ Interactive FPS insights + glow cue upgrades
 
-- HTML5
-- CSS3 (Custom + Animations)
-- Vanilla JavaScript (No frameworks)
-- GitHub Pages Hosting
-- Assets Management (short clips hosted locally)
-
----
-
-## 📈 Performance Optimizations
-
-| Metric | Before | After |
-|:---|:---|:---|
-| First Contentful Paint (FCP) | ~2.4s | 1.3s |
-| Largest Contentful Paint (LCP) | ~3.8s | 2.0s |
-| Page Size | ~11MB | ~4MB |
-| Requests | ~75 | ~25 initially |
-
-Achieved via:
-- Native `loading="lazy"` for iframes
-- Section-by-section dynamic refresh
-- Optimized video asset management
-- Minimal blocking scripts
+- 🧠 Added FPS badges (e.g., "90 FPS @1080p") for better visibility
+- 🧹 Introduced genre + RTX/DLSS tag bars per game card
+- 💡 Highlight-glow animations applied to game cards on return scroll
+- ➕ Next/Previous navigation between game pages added
 
 ---
 
-## 🎯 Key Sections
+### `v1.2.0-dynamic-pc-parts-details-loading` (2025-04-28)
+> 🔧 PC build detail loader goes modular
 
-| Section | Details |
-|:---|:---|
-| 🛠️ My RTX 3060 Build | Showcases custom PC setup |
-| 🎮 My Gameplays | 45-second gameplay clips + FPS comparison |
-| 📊 Game Details | Dynamic pages per game with benchmark charts |
-
----
-
-## 🧠 Why This Project?
-
-Combining gaming passion with front-end performance engineering to create a **realistic, visually engaging benchmark showcase** for gamers, builders, and tech enthusiasts.
+- 🛠️ PC parts data now dynamically loaded via `pcComponentLoader.js`
+- 🧹 Each component (CPU, GPU, etc.) now supports:
+    - Real-time pricing
+    - Resale estimation
+    - Animated breakdowns
+- 🔗 "How was this calculated?" links scroll to explanation panels
 
 ---
 
-## 🔗 Live Demo
+### `v1.1.0-fps-json-integration` (2025-04-25)
+> 📊 Data gets smarter with JSON-backed benchmarks
 
-👉 [https://siba-pcbenchmark.site/](https://siba-pcbenchmark.site/)
-
----
-
-## 🧹 Future Enhancements (Coming Soon)
-
-- 🔎 Search and Filters for game library
-- 🎛️ Genre and Feature Tags (RTX, DLSS, etc.)
-- ♻️ Infinite scroll loading optimization
-- 🛠️ Admin Dashboard for gameplay uploads
-- 📜 Data storage optimization (JSON-backed)
+- ↺ FPS comparison logic moved to structured JSON file
+- 📈 Dynamic parsing for per-game average FPS (e.g., converting "80-100" ➞ 90)
+- 📊 ChartJS used to generate real-time 1080p vs 1440p comparison graphs
 
 ---
 
-## 📢 Contributions
+### `siba-pcbenchmark-site-v1.0` (2025-04-24)
+> 🎉 Initial Public Release
 
-This is a personal project — but open to ideas, optimizations, and collaborations!  
-Feel free to fork and improve 🔥
-
----
-
-## 📜 License
-
-MIT License — free to use, modify, and distribute.
-
----
-
-# 🚀 Let's benchmark better! 🎮⚡
+- 💥 Cyberpunk-themed static site featuring:
+    - Gameplay thumbnails with video preview
+    - PC build summary
+    - Individual game detail pages
+- 🚀 Optimized lazy-loading, minimal blocking scripts
+- 💡 Built using pure HTML/CSS/JS — no frameworks
