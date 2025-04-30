@@ -1,4 +1,4 @@
-// homepage-patch.js (fully patched: observer + auto-trigger scroll to load batches)
+// homepage-patch.js (enhanced: smooth scroll + fallback handling)
 
 document.addEventListener('DOMContentLoaded', function () {
   const gameCards = document.querySelectorAll('.game-card');
@@ -23,9 +23,19 @@ document.addEventListener('DOMContentLoaded', function () {
       const target = document.getElementById(lastGameId);
       if (target) {
         setTimeout(() => {
-          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          target.classList.add('highlight-glow');
-          setTimeout(() => target.classList.remove('highlight-glow'), 1500);
+          // Fade out body to smooth transition visually
+          document.body.style.transition = 'opacity 0.3s ease';
+          document.body.style.opacity = '0.3';
+
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            target.classList.add('highlight-glow');
+
+            setTimeout(() => {
+              target.classList.remove('highlight-glow');
+              document.body.style.opacity = '1';
+            }, 1500);
+          }, 300);
         }, 300);
         sessionStorage.removeItem('lastGameClicked');
         return true;
@@ -47,8 +57,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Actively simulate scroll to bottom every 300ms
       const scrollSim = setInterval(() => {
-        window.scrollBy(0, 200); // Scroll downward to trigger lazy-load
+        window.scrollBy(0, 200);
       }, 300);
+
+      // Fallback: stop auto-scroll if not found after 10 seconds
+      setTimeout(() => {
+        clearInterval(scrollSim);
+        observer.disconnect();
+        sessionStorage.removeItem('lastGameClicked');
+      }, 10000);
     }
   }
 });
