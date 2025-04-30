@@ -41,6 +41,7 @@ body {
   background: linear-gradient(270deg, #0f0f0f, #1a1a1a);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
+  transition: opacity 0.3s ease;
 }
 
 nav {

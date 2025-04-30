@@ -1,4 +1,4 @@
-// homepage-patch.js (enhanced: smooth scroll + fallback handling)
+// homepage-patch.js (enhanced: smooth scroll + fallback handling + physics-style easing)
 
 document.addEventListener('DOMContentLoaded', function () {
   const gameCards = document.querySelectorAll('.game-card');
@@ -19,16 +19,34 @@ document.addEventListener('DOMContentLoaded', function () {
   if (lastGameId) {
     const gallery = document.getElementById('gameGallery');
 
+    // Custom physics-style scroll function
+    function easeScrollToElement(el, offset = 0, duration = 800) {
+      const targetY = el.getBoundingClientRect().top + window.scrollY + offset;
+      const startY = window.scrollY;
+      const diff = targetY - startY;
+      const startTime = performance.now();
+
+      function step(currentTime) {
+        const time = Math.min(1, (currentTime - startTime) / duration);
+        const eased = 0.5 * (1 - Math.cos(Math.PI * time)); // easeInOutSine
+        window.scrollTo(0, startY + diff * eased);
+        if (time < 1) {
+          requestAnimationFrame(step);
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
     const tryScrollToGame = () => {
       const target = document.getElementById(lastGameId);
       if (target) {
         setTimeout(() => {
-          // Fade out body to smooth transition visually
           document.body.style.transition = 'opacity 0.3s ease';
           document.body.style.opacity = '0.3';
 
           setTimeout(() => {
-            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            easeScrollToElement(target, -window.innerHeight * 0.2); // offset above center
             target.classList.add('highlight-glow');
 
             setTimeout(() => {
@@ -47,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const observer = new MutationObserver(() => {
         if (tryScrollToGame()) {
           observer.disconnect();
-          clearInterval(scrollSim); // stop scrolling once found
+          clearInterval(scrollSim);
         }
       });
 
@@ -55,12 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(gallery, { childList: true, subtree: true });
       }
 
-      // Actively simulate scroll to bottom every 300ms
       const scrollSim = setInterval(() => {
         window.scrollBy(0, 200);
       }, 300);
 
-      // Fallback: stop auto-scroll if not found after 10 seconds
       setTimeout(() => {
         clearInterval(scrollSim);
         observer.disconnect();
