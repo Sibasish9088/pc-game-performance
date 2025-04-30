@@ -283,6 +283,14 @@ h1 i, h2 i {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  background-color: #00ffe710;
+  transform: translateY(-1px);
 }
 
 .depreciation-details {
