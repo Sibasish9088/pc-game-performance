@@ -21,23 +21,25 @@ export function scrollToLastGameplay() {
   if (!lastGameId) return;
 
   const gallery = document.getElementById('gameGallery');
+  let scrollAttempts = 0;
+
   const tryScrollToGame = () => {
     const target = document.getElementById(lastGameId);
     if (target) {
+      // Scroll and highlight
+      document.body.style.transition = 'opacity 0.3s ease';
+      document.body.style.opacity = '0.3';
+
       setTimeout(() => {
-        document.body.style.transition = 'opacity 0.3s ease';
-        document.body.style.opacity = '0.3';
+        easeScrollToElement(target, -window.innerHeight * 0.2);
+        target.classList.add('highlight-glow');
 
         setTimeout(() => {
-          easeScrollToElement(target, -window.innerHeight * 0.2);
-          target.classList.add('highlight-glow');
-
-          setTimeout(() => {
-            target.classList.remove('highlight-glow');
-            document.body.style.opacity = '1';
-          }, 1500);
-        }, 300);
+          target.classList.remove('highlight-glow');
+          document.body.style.opacity = '1';
+        }, 1500);
       }, 300);
+
       sessionStorage.removeItem('lastGameClicked');
       return true;
     }
@@ -45,6 +47,16 @@ export function scrollToLastGameplay() {
   };
 
   if (!tryScrollToGame()) {
+    const scrollSim = setInterval(() => {
+      window.scrollBy(0, 300);
+      scrollAttempts++;
+
+      if (tryScrollToGame() || scrollAttempts > 12) {
+        clearInterval(scrollSim);
+        sessionStorage.removeItem('lastGameClicked');
+      }
+    }, 300);
+
     const observer = new MutationObserver(() => {
       if (tryScrollToGame()) {
         observer.disconnect();
@@ -55,10 +67,6 @@ export function scrollToLastGameplay() {
     if (gallery) {
       observer.observe(gallery, { childList: true, subtree: true });
     }
-
-    const scrollSim = setInterval(() => {
-      window.scrollBy(0, 200);
-    }, 300);
 
     setTimeout(() => {
       clearInterval(scrollSim);
