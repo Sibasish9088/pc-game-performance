@@ -1,0 +1,74 @@
+const componentData = [
+  {
+    "name": "Intel Core i5-12400",
+        "purchased": 2022,
+        "depreciation": 0.25,
+        "flipkart": "₹14,407",
+        "amazon": "₹14,400",
+        "cost": "₹14,407",
+        "icon": "cpu"
+  },
+  {
+    "name": "Gigabyte B660M DS3H AX DDR4",
+        "purchased": 2022,
+        "depreciation": 0.25,
+        "flipkart": "₹11,865",
+        "amazon": "₹11,800",
+        "cost": "₹11,865",
+        "icon": "circuit-board"
+  },
+  {
+    "name": "Gigabyte NVIDIA RTX 3060 12GB OC",
+        "purchased": 2022,
+        "depreciation": 0.25,
+        "flipkart": "₹26,271",
+        "amazon": "₹25,900",
+        "cost" : "₹26,271",
+        "icon": "monitor"
+  },
+  {
+    "name": "Corsair Vengeance (2x8) 16GB DDR4 3200MHz",
+        "purchased": 2022,
+        "depreciation": 0.25,
+        "flipkart": "₹4,577",
+        "amazon": "₹4,500",
+        "cost" : "₹4,577",
+        "icon": "memory-stick"
+  },
+  {
+    "name": "Crucial P3 1TB NVMe Gen 3 M.2",
+        "purchased": 2022,
+        "depreciation": 0.25,
+        "flipkart": "₹3,051",
+        "amazon": "₹3,000",
+        "cost" : "₹3,051",
+        "icon": "hard-drive"
+  },
+  {
+    "name": "Corsair CV650 80+ Bronze PSU",
+        "purchased": 2022,
+        "depreciation": 0.25,
+        "flipkart": "₹4,873",
+        "amazon": "₹4,800",
+        "cost" : "₹4,873",
+        "icon": "plug"
+  },
+  {
+    "name": "ANT ESports 690 AIR",
+        "purchased": 2022,
+        "depreciation": 0.25,
+        "flipkart": "₹6,000",
+        "amazon": "₹5,800",
+        "cost" : "₹6,000",
+        "icon": "package"
+  },
+  {
+    "name": "Ant ESports Superflow 120 Auto RGB",
+        "purchased": 2022,
+        "depreciation": 0.25,
+        "flipkart": "₹424",
+        "amazon": "₹420",
+        "cost" : "₹424",
+        "icon": "fan"
+  },
+];

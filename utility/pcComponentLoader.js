@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Component File Paths Map
 const componentFilePaths = {
-  'NVIDIA RTX 3060 12GB': '/assets/components/gpu.html',
-  'Intel Core i5-12400': '/assets/components/cpu.html',
-  'Corsair Vengeance 16GB DDR4 3200MHz': '/assets/components/ram.html',
-  'Gigabyte B660M DS3H AX DDR4': '/assets/components/motherboard.html',
-  'WD Black SN770 1TB NVMe': '/assets/components/storage.html',
-  'Corsair CV650 PSU': '/assets/components/psu.html',
   'ANT ESports 690 AIR': '/assets/components/cabinet.html',
-  'ANT ESports Superflow 120': '/assets/components/cpu-cooler.html'
+  'Intel Core i5-12400': '/assets/components/cpu.html',
+  'Ant ESports Superflow 120 Auto RGB': '/assets/components/cpu-cooler.html'
+  'Gigabyte NVIDIA RTX 3060 12GB OC': '/assets/components/gpu.html',
+  'Gigabyte B660M DS3H AX DDR4': '/assets/components/motherboard.html',
+  'Corsair CV650 80+ Bronze PSU': '/assets/components/psu.html',
+  'Corsair Vengeance (2x8) 16GB DDR4 3200MHz': '/assets/components/ram.html',
+  'Crucial P3 1TB NVMe Gen 3 M.2': '/assets/components/storage.html',
 };
 
 // Loader Function (Fetch from External HTML)
