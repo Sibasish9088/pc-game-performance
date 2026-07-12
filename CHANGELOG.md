@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.2.0] - 2026-07-13
+
+### Added
+- Dynamic game details template
+- Gameplay capture section with embedded videos
+- Performance benchmark dashboard
+- Benchmark Notes and Hardware Requirements panels
+
+### Changed
+- Migrated all game detail pages to JSON-driven architecture
+- Redesigned game details layout and visual hierarchy
+- Standardized SPCBM styling using Lucide icons and reusable components
+
 ## [3.1.0] - 2026-05-27
 
 ### Added
