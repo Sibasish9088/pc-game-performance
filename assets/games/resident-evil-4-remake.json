@@ -1,0 +1,58 @@
+{
+  "id": "resident-evil-4-remake",
+
+  "title": "Resident Evil 4 Remake",
+  "release": 2023,
+
+  "developer": "Capcom",
+  "publisher": "Capcom",
+  "engine": "RE Engine",
+
+  "description": "Resident Evil 4 Remake reimagines Capcom's legendary survival horror classic with modern visuals, refined gameplay mechanics, and a darker, more immersive atmosphere. Players once again step into the role of Leon S. Kennedy as he embarks on a mission to rescue the U.S. President's daughter from a mysterious cult in rural Spain, facing terrifying bioweapons and relentless enemies along the way.",
+
+  "tags": [
+    "Third-Person",
+    "Survival Horror",
+    "Action",
+    "Adventure",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Max",
+    "rayTracing": true,
+    "dlss": "DLSS Quality",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 121,
+    "1440p": 121,
+    "2160p": 84
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/KZ6WyoNmiIM",
+    "preview": "https://www.youtube.com/embed/KZ6WyoNmiIM?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Max Graphics Preset",
+    "Ray Tracing Enabled",
+    "DLSS Quality",
+    "Native 4K Benchmark",
+    "Excellent RE Engine optimization",
+    "Consistent frame pacing with high-quality lighting and reflections"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

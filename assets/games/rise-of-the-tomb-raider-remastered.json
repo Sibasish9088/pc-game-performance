@@ -1,0 +1,59 @@
+{
+  "id": "rise-of-the-tomb-raider-remastered",
+
+  "title": "Rise of the Tomb Raider Remastered",
+  "release": 2024,
+
+  "developer": "Crystal Dynamics",
+  "publisher": "Aspyr",
+  "engine": "Foundation Engine",
+
+  "description": "Rise of the Tomb Raider Remastered follows Lara Croft on an expedition across the frozen landscapes of Siberia in search of the legendary city of Kitezh and the secret of immortality. Combining cinematic storytelling, exploration, platforming, environmental puzzles, and intense combat, the remastered edition enhances one of the franchise's finest adventures with modern visual improvements and high-refresh-rate PC support.",
+
+  "tags": [
+    "Third-Person",
+    "Action",
+    "Adventure",
+    "Exploration",
+    "Puzzle",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Very High",
+    "rayTracing": false,
+    "dlss": "DLSS Quality",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 121,
+    "1440p": 114,
+    "2160p": 82
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/kD6On6EZLwo",
+    "preview": "https://www.youtube.com/embed/kD6On6EZLwo?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Very High Graphics Preset",
+    "DLSS Quality",
+    "Native 4K Benchmark",
+    "Excellent environmental detail",
+    "Smooth traversal and combat performance",
+    "Well-optimized Foundation Engine"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "6 GB",
+    "recommendedVRAM": "8 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": false
+  }
+}

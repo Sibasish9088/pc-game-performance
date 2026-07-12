@@ -1,0 +1,56 @@
+{
+  "id": "black-myth-wukong",
+  "title": "Black Myth: Wukong",
+  "release": 2024,
+
+  "developer": "Game Science",
+  "publisher": "Game Science",
+  "engine": "Unreal Engine 5",
+
+  "description": "Inspired by the classic Chinese novel Journey to the West, Black Myth: Wukong follows the Destined One on a perilous journey through a world filled with mythical creatures, legendary warriors, and ancient gods. Powered by Unreal Engine 5, it is regarded as one of the most visually stunning and technically demanding action RPGs available on PC.",
+
+  "tags": [
+    "Third-Person",
+    "Action RPG",
+    "Souls-like",
+    "Fantasy",
+    "Mythology"
+  ],
+
+  "benchmark": {
+    "preset": "Cinematic",
+    "rayTracing": true,
+    "dlss": "Quality + Frame Generation",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 148,
+    "1440p": 108,
+    "2160p": 72
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/wZM5yeJlPgU",
+    "preview": "https://www.youtube.com/embed/wZM5yeJlPgU?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Cinematic Graphics Preset",
+    "Full Ray Tracing Enabled",
+    "DLSS Quality + Frame Generation",
+    "Nanite & Lumen powered rendering",
+    "One of the most GPU-intensive Unreal Engine 5 titles"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "12 GB",
+    "recommendedVRAM": "16 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

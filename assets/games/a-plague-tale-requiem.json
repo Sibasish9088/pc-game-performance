@@ -1,0 +1,57 @@
+{
+  "id": "a-plague-tale-requiem",
+  "title": "A Plague Tale: Requiem",
+  "release": 2022,
+
+  "developer": "Asobo Studio",
+  "publisher": "Focus Entertainment",
+  "engine": "Zouna Engine",
+
+  "description": "Following the events of Innocence, Amicia and Hugo journey across Southern France in search of a cure for Hugo's curse. As the Macula grows stronger, the siblings are forced into increasingly desperate situations while confronting overwhelming supernatural forces and the devastating consequences of the plague.",
+
+  "tags": [
+    "Third-Person",
+    "Stealth",
+    "Action",
+    "Adventure",
+    "Story Rich",
+    "Horror"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": true,
+    "dlss": "Quality",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 121,
+    "1440p": 88,
+    "2160p": 62
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/cVEz8Hq32ik",
+    "preview": "https://www.youtube.com/embed/cVEz8Hq32ik?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "Ray Tracing Enabled",
+    "DLSS Quality",
+    "One of the most demanding Unreal Engine titles",
+    "Stable experience at 1440p Ultra"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

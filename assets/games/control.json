@@ -1,0 +1,57 @@
+{
+  "id": "control",
+  "title": "Control",
+  "release": 2019,
+
+  "developer": "Remedy Entertainment",
+  "publisher": "505 Games",
+  "engine": "Northlight Engine",
+
+  "description": "Control is a supernatural action-adventure game that follows Jesse Faden as she explores the mysterious Federal Bureau of Control in search of her missing brother. Wielding telekinetic powers and a shape-shifting Service Weapon, she confronts the Hiss while uncovering the Bureau's deepest secrets inside the ever-changing Oldest House.",
+
+  "tags": [
+    "Third-Person",
+    "Action",
+    "Adventure",
+    "Sci-Fi",
+    "Supernatural",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": true,
+    "dlss": "Quality",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 176,
+    "1440p": 132,
+    "2160p": 88
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/G26Quobv3cQ",
+    "preview": "https://www.youtube.com/embed/G26Quobv3cQ?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "Ray Tracing Enabled",
+    "DLSS Quality",
+    "Excellent global illumination and reflections",
+    "Showcase title for real-time ray tracing"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "the-witcher-3-next-gen",
+
+  "title": "The Witcher 3: Wild Hunt – Complete Edition (Next-Gen)",
+  "release": 2022,
+
+  "developer": "CD PROJEKT RED",
+  "publisher": "CD PROJEKT RED",
+  "engine": "REDengine 3",
+
+  "description": "The Witcher 3: Wild Hunt – Complete Edition modernizes CD PROJEKT RED's award-winning RPG with ray tracing, DLSS, improved textures, enhanced foliage, faster loading, and numerous gameplay improvements. Players once again assume the role of Geralt of Rivia as he searches for Ciri across a vast open world filled with monsters, political intrigue, and memorable quests. The Next-Gen update transforms one of gaming's greatest RPGs into a visually stunning modern experience.",
+
+  "tags": [
+    "Third-Person",
+    "Open-World",
+    "Action RPG",
+    "Fantasy",
+    "Story Rich",
+    "Adventure"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra+",
+    "rayTracing": true,
+    "dlss": "Quality + Frame Generation",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 110,
+    "1440p": 77,
+    "2160p": 52
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/IobRFK-r5nc",
+    "preview": "https://www.youtube.com/embed/IobRFK-r5nc?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra+ Graphics Preset",
+    "Ray Tracing Enabled",
+    "DLSS Quality + Frame Generation",
+    "Native 4K Benchmark",
+    "Ray-traced Global Illumination and Ambient Occlusion",
+    "One of the most visually impressive RPGs after the Next-Gen update"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "12 GB",
+    "recommendedVRAM": "16 GB",
+    "cpuHeavy": true,
+    "gpuHeavy": true
+  }
+}

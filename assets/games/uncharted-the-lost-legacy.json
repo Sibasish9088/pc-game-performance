@@ -1,0 +1,59 @@
+{
+  "id": "uncharted-the-lost-legacy",
+
+  "title": "UNCHARTED: Legacy of Thieves Collection – The Lost Legacy",
+  "release": 2022,
+
+  "developer": "Naughty Dog / Iron Galaxy Studios",
+  "publisher": "PlayStation Publishing LLC",
+  "engine": "Naughty Dog Engine",
+
+  "description": "UNCHARTED: The Lost Legacy follows Chloe Frazer and Nadine Ross on an expedition through the Western Ghats of India in search of the legendary Tusk of Ganesh. Combining cinematic storytelling, thrilling set pieces, environmental puzzles, and fluid third-person combat, the PC release of the Legacy of Thieves Collection features enhanced visuals, ultrawide support, DLSS, AMD FSR, and high-refresh-rate gameplay.",
+
+  "tags": [
+    "Third-Person",
+    "Action",
+    "Adventure",
+    "Exploration",
+    "Puzzle",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": false,
+    "dlss": "DLSS Quality",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 132,
+    "1440p": 99,
+    "2160p": 70
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/EA54xERvdqI",
+    "preview": "https://www.youtube.com/embed/EA54xERvdqI?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "DLSS Quality",
+    "Native 4K Benchmark",
+    "Excellent environmental detail and cinematic visuals",
+    "Smooth traversal and combat with outstanding frame pacing",
+    "Well-optimized PC port by Iron Galaxy"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "6 GB",
+    "recommendedVRAM": "8 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": false
+  }
+}

@@ -1,48 +1,97 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('gameGallery');
-  const batchSize = 6;
-  let loadedCount = 0;
+document.addEventListener('DOMContentLoaded', async () => {
+    const container = document.getElementById('gameGallery');
+    const batchSize = 6;
+    let loadedCount = 0;
 
-  // ✅ Assign component IDs dynamically
-  const componentLabels = ['cpu', 'motherboard', 'gpu', 'ram', 'storage', 'psu', 'case', 'fans'];
-  document.querySelectorAll('.component-card').forEach((card, index) => {
-    card.id = componentLabels[index];
-  });
+    // Assign component IDs dynamically
+    const componentLabels = [
+        'cpu',
+        'motherboard',
+        'gpu',
+        'ram',
+        'storage',
+        'psu',
+        'case',
+        'fans'
+    ];
 
-  function loadNextBatch() {
-    const nextBatch = gameData.slice(loadedCount, loadedCount + batchSize);
-    nextBatch.forEach(game => {
-      const card = document.createElement('div');
-      card.className = 'game-card';
-
-      const slug = game.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      card.id = `game-id-${slug}`;
-
-      card.innerHTML = `
-        <iframe
-          src="${game.preview}"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-        <h3><a href="${game.detailPage}">${game.title}</a></h3>
-      `;
-
-      card.addEventListener('click', function () {
-        sessionStorage.setItem('lastGameClicked', card.id);
-      });
-
-      container.appendChild(card);
+    document.querySelectorAll('.component-card').forEach((card, index) => {
+        if (index < componentLabels.length) {
+            card.id = componentLabels[index];
+        }
     });
-    loadedCount += batchSize;
-  }
 
-  function handleScroll() {
-    const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
-    if (nearBottom && loadedCount < gameData.length) loadNextBatch();
-  }
+    // Load Game_Data.json
+    try {
+        await loadGameData();
+    } catch (error) {
+        console.error('Failed to load Game_Data.json', error);
 
-  loadNextBatch();
-  window.addEventListener('scroll', handleScroll);
+        container.innerHTML = `
+            <div class="game-card error-card">
+                <h3>Unable to load game library.</h3>
+                <p>Please refresh the page.</p>
+            </div>
+        `;
+        return;
+    }
+
+    function loadNextBatch() {
+        const nextBatch = gameData.slice(
+            loadedCount,
+            loadedCount + batchSize
+        );
+
+        nextBatch.forEach(game => {
+
+            const card = document.createElement('div');
+            card.className = 'game-card';
+
+            card.id = `game-id-${game.id}`;
+
+            card.innerHTML = `
+                <iframe
+                    src="${game.media.preview}"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+
+                <h3>${game.title}</h3>
+            `;
+
+            card.addEventListener('click', () => {
+
+                sessionStorage.setItem('lastGameClicked', card.id);
+
+                window.location.href = `games/game.html?id=${game.id}`;
+
+            });
+
+            container.appendChild(card);
+
+        });
+
+        loadedCount += nextBatch.length;
+    }
+
+    function handleScroll() {
+
+        const nearBottom =
+            window.innerHeight +
+                window.scrollY >=
+            document.body.offsetHeight - 100;
+
+        if (
+            nearBottom &&
+            loadedCount < gameData.length
+        ) {
+            loadNextBatch();
+        }
+    }
+
+    loadNextBatch();
+
+    window.addEventListener('scroll', handleScroll);
 });

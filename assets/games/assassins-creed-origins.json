@@ -1,0 +1,58 @@
+{
+  "id": "assassins-creed-origins",
+  "title": "Assassin's Creed Origins",
+  "release": 2017,
+
+  "developer": "Ubisoft Montreal",
+  "publisher": "Ubisoft",
+  "engine": "AnvilNext 2.0",
+
+  "description": "Set in Ancient Egypt during the Ptolemaic period, Assassin's Creed Origins follows Bayek of Siwa, the last Medjay, as he embarks on a journey of revenge that ultimately leads to the formation of the Hidden Ones—the organization that would later become the Assassin Brotherhood. Featuring a vast open world and a complete RPG overhaul, Origins marked a new era for the Assassin's Creed franchise.",
+
+  "tags": [
+    "Third-Person",
+    "Open-World",
+    "Action RPG",
+    "Adventure",
+    "Historical",
+    "Stealth",
+    "Mythology"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra High",
+    "rayTracing": false,
+    "dlss": "Not Supported",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 210,
+    "1440p": 170,
+    "2160p": 118
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/yz1nno-A12E",
+    "preview": "https://www.youtube.com/embed/yz1nno-A12E?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra High Graphics Preset",
+    "Native Resolution",
+    "No Ray Tracing",
+    "Excellent GPU utilization",
+    "Smooth gameplay throughout the open world"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "6 GB",
+    "recommendedVRAM": "8 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": false
+  }
+}

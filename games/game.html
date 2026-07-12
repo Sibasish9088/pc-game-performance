@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Detail | Siba PC Benchmark</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+
+    <main class="game-page">
+
+        <!-- ==========================================================
+         Gameplay Capture
+        =========================================================== -->
+
+        <section class="gameplay-card">
+
+            <div class="gameplay-header">
+
+                <h2>
+                    <i data-lucide="clapperboard"></i>
+                    SPCBM • Gameplay Capture
+                </h2>
+
+            </div>
+
+            <div class="gameplay-video">
+
+                <iframe id="video-frame" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+
+            </div>
+
+            <div class="benchmark-strip">
+
+                <span>
+                    <i data-lucide="cpu"></i>
+                    Intel Core i7-14700K
+                </span>
+
+                <span>
+                    <i data-lucide="monitor"></i>
+                    RTX 5070 Ti
+                </span>
+
+                <span>
+                    <i data-lucide="settings-2"></i>
+                    Ultra
+                </span>
+
+                <span>
+                    <i data-lucide="badge-check"></i>
+                    SPCBM Verified
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================================
+         Game Overview
+        =========================================================== -->
+
+        <section class="game-overview">
+
+            <!-- LEFT COLUMN -->
+
+            <div class="overview-left">
+
+                <h1>
+
+                    <i data-lucide="gamepad-2"></i>
+
+                    <span id="game-title">
+                        Loading...
+                    </span>
+
+                </h1>
+
+                <div id="tag-container" class="tag-bar">
+                </div>
+
+
+                <!-- ===========================
+                 Performance
+                ============================ -->
+
+                <div class="performance-card">
+
+                    <h2>
+
+                        <i data-lucide="gauge"></i>
+
+                        Performance
+
+                    </h2>
+
+                    <div class="performance-bars">
+
+                        <div class="performance-item">
+
+                            <div class="performance-label">
+
+                                1080p Ultra RTX
+
+                            </div>
+
+                            <div class="performance-row">
+
+                                <div class="performance-track">
+
+                                    <div id="bar1080" class="performance-fill">
+                                    </div>
+
+                                </div>
+
+                                <span id="fps1080" class="fps-text">
+
+                                    -- FPS
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="performance-item">
+
+                            <div class="performance-label">
+
+                                1440p Ultra RTX
+
+                            </div>
+
+                            <div class="performance-row">
+
+                                <div class="performance-track">
+
+                                    <div id="bar1440" class="performance-fill">
+                                    </div>
+
+                                </div>
+
+                                <span id="fps1440" class="fps-text">
+
+                                    -- FPS
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="performance-item">
+
+                            <div class="performance-label">
+
+                                2160p Ultra RTX
+
+                            </div>
+
+                            <div class="performance-row">
+
+                                <div class="performance-track">
+
+                                    <div id="bar2160" class="performance-fill">
+                                    </div>
+
+                                </div>
+
+                                <span id="fps2160" class="fps-text">
+
+                                    -- FPS
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT COLUMN -->
+
+            <div class="overview-right">
+
+                <p class="release-line">
+
+                    <i data-lucide="rocket"></i>
+
+                    <span>
+                        Release : <span id="release-date"></span>
+                    </span>
+
+                </p>
+
+                <section class="description-section">
+
+                    <h2>
+
+                        Description
+
+                    </h2>
+
+                    <p id="description">
+
+                        Loading description...
+
+                    </p>
+
+                </section>
+
+
+
+                <section class="game-info-card">
+
+                    <h2>
+
+                        <i data-lucide="info"></i>
+
+                        Game Information
+
+                    </h2>
+
+                    <ul class="game-info-list">
+
+                        <li>
+
+                            <strong>Developer:</strong>
+
+                            <span id="developer">
+
+                                Loading...
+
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <strong>Publisher:</strong>
+
+                            <span id="publisher">
+
+                                Loading...
+
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <strong>Engine:</strong>
+
+                            <span id="engine">
+
+                                Loading...
+
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <strong>Graphics Preset:</strong>
+
+                            <span id="preset">
+
+                                Loading...
+
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <strong>Ray Tracing:</strong>
+
+                            <span id="raytracing">
+
+                                Loading...
+
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <strong>Upscaling:</strong>
+
+                            <span id="dlss">
+
+                                Loading...
+
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================================
+         Bottom Information Cards
+        =========================================================== -->
+
+        <section class="bottom-information">
+
+            <!-- ===========================
+             Benchmark Notes
+            ============================ -->
+
+            <div class="bottom-card">
+
+                <h2>
+
+                    <i data-lucide="clipboard-list"></i>
+
+                    Benchmark Notes
+
+                </h2>
+
+                <div id="fps-insight-content">
+
+                    Loading...
+
+                </div>
+
+            </div>
+
+
+            <!-- ===========================
+             Hardware Requirements
+            ============================ -->
+
+            <div class="bottom-card">
+
+                <h2>
+
+                    <i data-lucide="microchip"></i>
+
+                    Hardware Requirements
+
+                </h2>
+
+                <div id="comparison-content">
+
+                    Loading...
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================================
+         Back Navigation
+        =========================================================== -->
+
+        <div class="page-footer">
+
+            <a href="../index.html#gameplays" class="back-link">
+
+                <i data-lucide="arrow-left"></i>
+
+                Back to My Gameplays
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================================
+     Scripts
+    =========================================================== -->
+
+    <script src="../utility/loadGameDetail.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const params = new URLSearchParams(window.location.search);
+
+            const gameId = params.get("id");
+
+            if (!gameId) {
+
+                document.getElementById("game-title").textContent =
+                    "Game not found";
+
+                return;
+
+            }
+
+            loadGameDetail(gameId);
+
+            if (typeof lucide !== "undefined") {
+
+                lucide.createIcons();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

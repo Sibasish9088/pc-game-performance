@@ -1,0 +1,59 @@
+{
+  "id": "hitman-3",
+
+  "title": "Hitman 3",
+  "release": 2021,
+
+  "developer": "IO Interactive",
+  "publisher": "IO Interactive",
+  "engine": "Glacier Engine",
+
+  "description": "Hitman 3 is the dramatic conclusion to the World of Assassination trilogy, following Agent 47 on his most personal mission yet. Featuring expansive sandbox environments, countless assassination opportunities, and exceptional replayability, the PC version showcases excellent optimization with support for ray tracing, DLSS, and high-refresh-rate gameplay.",
+
+  "tags": [
+    "Third-Person",
+    "Stealth",
+    "Action",
+    "Sandbox",
+    "Assassination",
+    "Adventure",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": true,
+    "dlss": "Quality",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 220,
+    "1440p": 160,
+    "2160p": 112
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/gaGEdjJK0gE",
+    "preview": "https://www.youtube.com/embed/gaGEdjJK0gE?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "Ray Tracing Enabled",
+    "DLSS Quality",
+    "Native 4K Benchmark",
+    "Outstanding optimization with excellent frame pacing"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "8 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": false
+  }
+}

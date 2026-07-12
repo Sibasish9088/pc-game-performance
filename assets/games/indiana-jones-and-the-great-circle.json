@@ -1,0 +1,59 @@
+{
+  "id": "indiana-jones-and-the-great-circle",
+
+  "title": "Indiana Jones and the Great Circle",
+  "release": 2024,
+
+  "developer": "MachineGames",
+  "publisher": "Bethesda Softworks",
+  "engine": "id Tech 7",
+
+  "description": "Indiana Jones and the Great Circle is a cinematic action-adventure that follows the legendary archaeologist between the events of Raiders of the Lost Ark and The Last Crusade. Journey across iconic global locations, solve intricate environmental puzzles, uncover ancient mysteries, and engage in thrilling first-person combat, all brought to life by MachineGames' latest id Tech engine.",
+
+  "tags": [
+    "First-Person",
+    "Action",
+    "Adventure",
+    "Puzzle",
+    "Story Rich",
+    "Historical"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": true,
+    "dlss": "Quality + Frame Generation",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 162,
+    "1440p": 121,
+    "2160p": 80
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/psT5bMmKOcM",
+    "preview": "https://www.youtube.com/embed/psT5bMmKOcM?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "Full Ray Tracing Enabled",
+    "DLSS Quality + Frame Generation",
+    "Native 4K Benchmark",
+    "Excellent global illumination and texture quality",
+    "Highly cinematic presentation with stable frame pacing"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "12 GB",
+    "recommendedVRAM": "16 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

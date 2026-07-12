@@ -1,0 +1,58 @@
+{
+  "id": "assassins-creed-odyssey",
+  "title": "Assassin's Creed Odyssey",
+  "release": 2018,
+
+  "developer": "Ubisoft Quebec",
+  "publisher": "Ubisoft",
+  "engine": "AnvilNext 2.0",
+
+  "description": "Set during the Peloponnesian War in Ancient Greece, Assassin's Creed Odyssey follows the journey of Kassandra or Alexios, a Spartan mercenary destined to uncover the truth behind their family, confront the Cult of Kosmos, and influence the fate of Greece through meaningful player choices in one of the largest open worlds ever created.",
+
+  "tags": [
+    "Third-Person",
+    "Open-World",
+    "Action RPG",
+    "Adventure",
+    "Historical",
+    "Stealth",
+    "Mythology"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra High",
+    "rayTracing": false,
+    "dlss": "Not Supported",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 191,
+    "1440p": 143,
+    "2160p": 96
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/oEFN3bvgruo",
+    "preview": "https://www.youtube.com/embed/oEFN3bvgruo?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra High Graphics Preset",
+    "Native Resolution",
+    "No Ray Tracing",
+    "CPU-intensive in large cities",
+    "Excellent frame pacing across the open world"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "6 GB",
+    "recommendedVRAM": "8 GB",
+    "cpuHeavy": true,
+    "gpuHeavy": false
+  }
+}

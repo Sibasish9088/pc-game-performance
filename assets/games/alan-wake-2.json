@@ -1,0 +1,56 @@
+{
+  "id": "alan-wake-2",
+  "title": "Alan Wake 2",
+  "release": 2023,
+
+  "developer": "Remedy Entertainment",
+  "publisher": "Epic Games Publishing",
+  "engine": "Northlight Engine",
+
+  "description": "Alan Wake 2 is a psychological survival horror game that follows bestselling author Alan Wake and FBI agent Saga Anderson as their realities intertwine in a dark supernatural mystery. Featuring cinematic storytelling, cutting-edge visuals, and intense atmosphere, it stands among the most technologically demanding games available on PC.",
+
+  "tags": [
+    "Third-Person",
+    "Survival Horror",
+    "Psychological",
+    "Action",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": true,
+    "dlss": "Quality + Frame Generation",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 135,
+    "1440p": 135,
+    "2160p": 92
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/cb-6Jxn0KcA",
+    "preview": "https://www.youtube.com/embed/cb-6Jxn0KcA?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "Full Ray Tracing Enabled",
+    "DLSS Quality + Frame Generation",
+    "Path Tracing capable",
+    "One of the most GPU-intensive titles available"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "12 GB",
+    "recommendedVRAM": "16 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

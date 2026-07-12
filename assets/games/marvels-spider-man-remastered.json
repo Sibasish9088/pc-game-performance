@@ -1,0 +1,59 @@
+{
+  "id": "marvels-spider-man-remastered",
+
+  "title": "Marvel's Spider-Man Remastered",
+  "release": 2022,
+
+  "developer": "Insomniac Games / Nixxes Software",
+  "publisher": "PlayStation Publishing LLC",
+  "engine": "Insomniac Engine",
+
+  "description": "Marvel's Spider-Man Remastered follows Peter Parker as he balances his personal life with the responsibilities of protecting New York City. Featuring fluid web-swinging, cinematic combat, and ray-traced visuals, the remastered PC edition introduces ultrawide support, DLSS, DLAA, NVIDIA Frame Generation, and high-refresh-rate gameplay for one of PlayStation's flagship superhero experiences.",
+
+  "tags": [
+    "Third-Person",
+    "Open-World",
+    "Action",
+    "Adventure",
+    "Superhero",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Very High",
+    "rayTracing": true,
+    "dlss": "Quality + Frame Generation",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 200,
+    "1440p": 180,
+    "2160p": 128
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/3vQ2A91-YVc",
+    "preview": "https://www.youtube.com/embed/3vQ2A91-YVc?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Very High Graphics Preset",
+    "Ray Tracing Enabled",
+    "DLSS Quality + Frame Generation",
+    "Native 4K Benchmark",
+    "Excellent PC optimization by Nixxes",
+    "Smooth traversal and combat throughout Manhattan"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

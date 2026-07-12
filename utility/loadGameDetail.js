@@ -1,80 +1,229 @@
-// loadGameDetail.js ✅
+async function loadGameDetail(gameId) {
 
-function loadGameDetail(gameTitle) {
-  fetch("../assets/Game_Data.json")
-    .then(res => res.json())
-    .then(data => {
-      const game = data[gameTitle];
-      if (!game) return;
+  try {
 
-      // Set basic game info
-      document.getElementById("game-title").textContent = game.title;
-      document.getElementById("release-date").textContent = game.release;
-      document.getElementById("description").textContent = game.description;
-      document.getElementById("video-frame").src = game.youtube;
-
-      // Tags
-      const tagContainer = document.getElementById("tag-container");
-      tagContainer.innerHTML = ""; // Clear old
-      game.tags.forEach(tag => {
-        const span = document.createElement("span");
-        span.className = "tag";
-        span.textContent = tag;
-        tagContainer.appendChild(span);
-      });
-
-      // FPS Chart
-      const ctx = document.getElementById("fpsChart")?.getContext("2d");
-      if (ctx && game.fps) {
-        new Chart(ctx, {
-          type: "bar",
-          data: {
-            labels: ["1080p", "1440p"],
-            datasets: [{
-              label: "Average FPS",
-              data: [game.fps["1080p"], game.fps["1440p"]],
-              backgroundColor: ["#00ffffaa", "#00ffaa88"]
-            }]
-          },
-          options: {
-            indexAxis: 'y',
-            responsive: true,
-            plugins: {
-              legend: { display: false }
-            },
-            scales: {
-              x: {
-                beginAtZero: true,
-                title: { display: true, text: "FPS", color: "#00ffff" },
-                ticks: { color: "#fff" }
-              },
-              y: {
-                ticks: { color: "#fff" }
-              }
-            }
-          }
-        });
+    const response = await fetch(
+      `../assets/games/${gameId}.json`,
+      {
+        cache: "no-store"
       }
+    );
 
-      // Insights Section
-      const fps1080 = game.fps["1080p"] || 0;
-      let badgeText = "Challenging";
-      if (fps1080 >= 90) badgeText = "Ultra Smooth";
-      else if (fps1080 >= 60) badgeText = "Optimal";
-      else if (fps1080 >= 40) badgeText = "Playable";
+    if (!response.ok) {
+      throw new Error(
+        `Unable to load ${gameId}.json`
+      );
+    }
 
-      document.getElementById("fps-insight-content").innerHTML = `
-        <p><strong>Your PC FPS @1080p:</strong> ${fps1080} FPS</p>
-        <p><strong>Playability:</strong> <span class="badge">${badgeText}</span></p>
-      `;
+    const game = await response.json();
 
-      // Comparison Section
-      document.getElementById("comparison-content").innerHTML = `
-        <h3>Comparison</h3>
-        <p>Your PC (RTX 3060 + i5-12400): ${fps1080} FPS</p>
-        <p>High-End PC (RTX 4070 Super + i7-13700K): 75 FPS</p>
-        <p>Gaming Laptop (RTX 4060 Laptop GPU): 45 FPS</p>
-      `;
-    })
-    .catch(err => console.error("Failed to load game data:", err));
+    document.title =
+      `${game.title} | Siba PC Benchmark`;
+
+    document.getElementById("game-title").textContent =
+      game.title;
+
+    document.getElementById("release-date").textContent =
+      game.release;
+
+    document.getElementById("description").textContent =
+      game.description;
+
+    document.getElementById("developer").textContent =
+      game.developer;
+
+    document.getElementById("publisher").textContent =
+      game.publisher;
+
+    document.getElementById("engine").textContent =
+      game.engine;
+
+    document.getElementById("preset").textContent =
+      game.benchmark.preset;
+
+    document.getElementById("raytracing").textContent =
+      game.benchmark.rayTracing
+        ? "Enabled"
+        : "Disabled";
+
+    document.getElementById("dlss").textContent =
+      game.benchmark.dlss;
+
+    document.getElementById("video-frame").src =
+      game.media.youtube;
+
+    //---------------------------------------
+    // Tags
+    //---------------------------------------
+
+    const tagContainer =
+      document.getElementById("tag-container");
+
+    tagContainer.innerHTML = "";
+
+    game.tags.forEach(tag => {
+
+      const span =
+        document.createElement("span");
+
+      span.className = "tag";
+
+      span.textContent = tag;
+
+      tagContainer.appendChild(span);
+
+    });
+
+    //---------------------------------------
+    // Benchmark Notes
+    //---------------------------------------
+
+    const notes =
+        document.getElementById(
+            "fps-insight-content"
+        );
+
+    notes.innerHTML = `
+    <div class="info-list">
+
+        ${game.benchmarkNotes.map(note => `
+
+            <div class="info-row">
+                <span>${note}</span>
+            </div>
+
+        `).join("")}
+
+    </div>
+    `;
+
+    //---------------------------------------
+    // Hardware Requirements
+    //---------------------------------------
+
+    const comparison =
+        document.getElementById(
+            "comparison-content"
+        );
+
+    comparison.innerHTML = `
+
+    <div class="info-list">
+
+        <div class="info-row">
+
+            <span>Minimum VRAM</span>
+
+            <span>${game.requirements.minimumVRAM}</span>
+
+        </div>
+
+        <div class="info-row">
+
+            <span>Recommended VRAM</span>
+
+            <span>${game.requirements.recommendedVRAM}</span>
+
+        </div>
+
+        <div class="info-row">
+
+            <span>CPU Intensive</span>
+
+            <span>${game.requirements.cpuHeavy}</span>
+
+        </div>
+
+        <div class="info-row">
+
+            <span>GPU Intensive</span>
+
+            <span>${game.requirements.gpuHeavy}</span>
+
+        </div>
+
+    </div>
+
+    `;
+
+    //---------------------------------------
+    // Performance
+    //---------------------------------------
+
+    const fps1080 = game.fps["1080p"];
+    const fps1440 = game.fps["1440p"];
+    const fps2160 = game.fps["2160p"];
+
+    // Display FPS values
+    document.getElementById("fps1080").textContent = `${fps1080} FPS`;
+    document.getElementById("fps1440").textContent = `${fps1440} FPS`;
+    document.getElementById("fps2160").textContent = `${fps2160} FPS`;
+
+    // Dynamically determine scale
+    const maxFPS = Math.max(
+        fps1080,
+        fps1440,
+        fps2160,
+        120
+    );
+
+    // Progress bar widths
+    document.getElementById("bar1080").style.width =
+        `${(fps1080 / maxFPS) * 100}%`;
+
+    document.getElementById("bar1440").style.width =
+        `${(fps1440 / maxFPS) * 100}%`;
+
+    document.getElementById("bar2160").style.width =
+        `${(fps2160 / maxFPS) * 100}%`;
+
+    // Playability colours
+    function applyBarStyle(barId, fps) {
+
+        const bar = document.getElementById(barId);
+
+        bar.classList.remove(
+            "fps-outstanding",
+            "fps-excellent",
+            "fps-playable",
+            "fps-limited"
+        );
+
+        if (fps >= 160) {
+
+            bar.classList.add("fps-outstanding");
+
+        } else if (fps >= 100) {
+
+            bar.classList.add("fps-excellent");
+
+        } else if (fps >= 60) {
+
+            bar.classList.add("fps-playable");
+
+        } else {
+
+            bar.classList.add("fps-limited");
+
+        }
+
+    }
+
+    applyBarStyle("bar1080", fps1080);
+    applyBarStyle("bar1440", fps1440);
+    applyBarStyle("bar2160", fps2160);
+
+  }
+  catch (error) {
+
+    console.error(error);
+
+    document.getElementById("game-title").textContent =
+      "Unable to load game.";
+
+    document.getElementById("description").textContent =
+      error.message;
+
+  }
+
 }

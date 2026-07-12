@@ -1,0 +1,58 @@
+{
+  "id": "silent-hill-2-remake",
+
+  "title": "Silent Hill 2 Remake",
+  "release": 2024,
+
+  "developer": "Bloober Team",
+  "publisher": "Konami Digital Entertainment",
+  "engine": "Unreal Engine 5",
+
+  "description": "Silent Hill 2 Remake faithfully reimagines Konami's psychological horror masterpiece using Unreal Engine 5. Players once again follow James Sunderland as he returns to the fog-covered town of Silent Hill after receiving a mysterious letter from his deceased wife. Featuring modern visuals, enhanced exploration, over-the-shoulder combat, and immersive audio design, the remake delivers one of the most atmospheric horror experiences available on PC.",
+
+  "tags": [
+    "Third-Person",
+    "Survival Horror",
+    "Psychological Horror",
+    "Adventure",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Epic",
+    "rayTracing": true,
+    "dlss": "Quality + Frame Generation",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 148,
+    "1440p": 108,
+    "2160p": 72
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/HwZBikMDKIg",
+    "preview": "https://www.youtube.com/embed/HwZBikMDKIg?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Epic Graphics Preset",
+    "Ray Tracing Enabled",
+    "DLSS Quality + Frame Generation",
+    "Native 4K Benchmark",
+    "Lumen-powered global illumination",
+    "Highly demanding Unreal Engine 5 title"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "12 GB",
+    "recommendedVRAM": "16 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

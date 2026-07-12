@@ -1,0 +1,55 @@
+{
+  "id": "007-first-light",
+  "title": "007: First Light",
+  "release": 2026,
+
+  "developer": "IO Interactive",
+  "publisher": "IO Interactive",
+  "engine": "Glacier Engine",
+
+  "description": "007: First Light is a 2026 espionage action-adventure game developed and published by IO Interactive. Serving as a standalone re-imagined origin story, the game follows a young James Bond as he earns his 00 status through high-risk covert operations across the globe.",
+
+  "tags": [
+    "Third-Person",
+    "Stealth",
+    "Action",
+    "Espionage",
+    "Adventure"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": true,
+    "dlss": "Quality + Frame Generation",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 180,
+    "1440p": 150,
+    "2160p": 105
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/3EeeRWQQARE",
+    "preview": "https://www.youtube.com/embed/3EeeRWQQARE?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "Ray Tracing Enabled",
+    "DLSS Quality + Frame Generation",
+    "Excellent image quality with stable frame pacing"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "12 GB",
+    "recommendedVRAM": "16 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

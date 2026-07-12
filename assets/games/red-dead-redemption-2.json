@@ -1,0 +1,58 @@
+{
+  "id": "red-dead-redemption-2",
+
+  "title": "Red Dead Redemption 2",
+  "release": 2019,
+
+  "developer": "Rockstar Games",
+  "publisher": "Rockstar Games",
+  "engine": "Rockstar Advanced Game Engine (RAGE)",
+
+  "description": "Red Dead Redemption 2 is an epic open-world western that follows Arthur Morgan, an outlaw and senior member of the Van der Linde gang, as he struggles to survive during the decline of the American frontier. Renowned for its unparalleled environmental detail, dynamic world simulation, and cinematic storytelling, it remains one of the most immersive open-world games ever created.",
+
+  "tags": [
+    "Third-Person",
+    "Open-World",
+    "Action",
+    "Adventure",
+    "Western",
+    "Story Rich"
+  ],
+
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": false,
+    "dlss": "DLSS Quality",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+
+  "fps": {
+    "1080p": 121,
+    "1440p": 121,
+    "2160p": 82
+  },
+
+  "media": {
+    "youtube": "https://www.youtube.com/embed/FcZIIPDVd4I",
+    "preview": "https://www.youtube.com/embed/FcZIIPDVd4I?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "DLSS Quality",
+    "Native 4K Benchmark",
+    "Exceptional world streaming and lighting",
+    "Outstanding visual fidelity with consistent frame pacing"
+  ],
+
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": true,
+    "gpuHeavy": true
+  }
+}
