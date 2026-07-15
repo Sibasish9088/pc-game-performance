@@ -1,15 +1,11 @@
 {
   "id": "hogwarts-legacy",
-
   "title": "Hogwarts Legacy",
   "release": 2023,
-
   "developer": "Avalanche Software",
   "publisher": "Warner Bros. Games",
   "engine": "Unreal Engine 4",
-
   "description": "Hogwarts Legacy is an open-world action RPG set in the Wizarding World during the late 1800s. Players assume the role of a fifth-year Hogwarts student possessing a rare connection to Ancient Magic, exploring Hogwarts Castle, Hogsmeade, the Forbidden Forest, and the surrounding Highlands while uncovering a long-forgotten mystery that threatens the wizarding world.",
-
   "tags": [
     "Third-Person",
     "Open-World",
@@ -19,7 +15,6 @@
     "Adventure",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Ultra",
     "rayTracing": true,
@@ -27,21 +22,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 114,
     "1440p": 114,
     "2160p": 74
   },
-
   "media": {
-    "youtube": "https://www.youtube.com/embed/f-T_KK6q3zE",
-    "preview": "https://www.youtube.com/embed/oyphHT56sI0?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "youtube": "https://www.youtube.com/embed/Jjgj4b3twW8",
+    "preview": "https://www.youtube.com/embed/Jjgj4b3twW8?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/Jjgj4b3twW8?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 9,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Ultra Graphics Preset",
     "Ray Tracing Enabled",
@@ -49,7 +43,6 @@
     "Native 4K Benchmark",
     "Heavy ray tracing workload with excellent visual fidelity"
   ],
-
   "requirements": {
     "minimumVRAM": "8 GB",
     "recommendedVRAM": "12 GB",

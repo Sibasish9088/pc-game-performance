@@ -130,7 +130,7 @@ async function loadGameDetail(gameId) {
 
             <span>CPU Intensive</span>
 
-            <span>${game.requirements.cpuHeavy}</span>
+            <span>${game.requirements.cpuHeavy ? "Yes" : "No"}</span>
 
         </div>
 
@@ -138,7 +138,7 @@ async function loadGameDetail(gameId) {
 
             <span>GPU Intensive</span>
 
-            <span>${game.requirements.gpuHeavy}</span>
+            <span>${game.requirements.gpuHeavy ? "Yes" : "No"}</span>
 
         </div>
 

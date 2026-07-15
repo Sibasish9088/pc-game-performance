@@ -1,15 +1,11 @@
 {
   "id": "horizon-forbidden-west",
-
   "title": "Horizon Forbidden West Complete Edition",
   "release": 2024,
-
   "developer": "Guerrilla Games / Nixxes Software",
   "publisher": "PlayStation Publishing LLC",
   "engine": "Decima Engine",
-
   "description": "Horizon Forbidden West Complete Edition follows Aloy as she journeys across the mysterious Forbidden West to uncover the source of a catastrophic blight threatening all life on Earth. Featuring breathtaking environments, colossal machines, and cinematic storytelling, the PC release includes support for DLSS, Frame Generation, ultrawide displays, and modern rendering technologies powered by the Decima Engine.",
-
   "tags": [
     "Third-Person",
     "Open-World",
@@ -18,7 +14,6 @@
     "Sci-Fi",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Very High",
     "rayTracing": false,
@@ -26,21 +21,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 162,
     "1440p": 121,
     "2160p": 84
   },
-
   "media": {
-    "youtube": "https://www.youtube.com/embed/kWkTHSKKl7U",
-    "preview": "https://www.youtube.com/embed/kWkTHSKKl7U?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "youtube": "https://www.youtube.com/embed/KeFjM5M4e4k",
+    "preview": "https://www.youtube.com/embed/KeFjM5M4e4k?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/KeFjM5M4e4k?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 8,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Very High Graphics Preset",
     "DLSS Quality + Frame Generation",
@@ -48,7 +42,6 @@
     "Excellent Decima Engine optimization",
     "Smooth open-world traversal with stable frame pacing"
   ],
-
   "requirements": {
     "minimumVRAM": "8 GB",
     "recommendedVRAM": "12 GB",

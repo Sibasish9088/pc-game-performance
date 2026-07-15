@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const container = document.getElementById('gameGallery');
-    const batchSize = 6;
-    let loadedCount = 0;
+    const playlist = document.getElementById('featuredPlaylist');
+    const heroPlayer = document.getElementById('featuredGameplay');
+    const nowPlaying = document.getElementById('featuredTitle');
 
     // Assign component IDs dynamically
     const componentLabels = [
@@ -21,11 +21,80 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Load Game_Data.json
+    function buildFeaturedPlaylist() {
+
+        const featuredGames =
+            [...gameData]
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 6);
+
+        playlist.innerHTML = "";
+
+        featuredGames.forEach((game, index) => {
+
+            const item =
+                document.createElement("div");
+
+            item.className =
+                "playlist-item";
+
+            if (index === 0) {
+
+                item.classList.add("active");
+
+                heroPlayer.src =
+                    game.media.preview;
+
+                nowPlaying.textContent =
+                    game.title;
+
+            }
+
+            item.innerHTML = `
+
+            <img
+                src="${game.media.thumbnail}"
+                alt="${game.title}">
+
+            <div class="playlist-info">
+
+                <h3>${game.title}</h3>
+
+                <p>SPCBM Verified</p>
+
+            </div>
+
+        `;
+
+            item.addEventListener("click", () => {
+
+                document
+                    .querySelectorAll(".playlist-item")
+                    .forEach(card => card.classList.remove("active"));
+
+                item.classList.add("active");
+
+                heroPlayer.src =
+                    game.media.preview;
+
+                nowPlaying.textContent =
+                    game.title;
+
+            });
+
+            playlist.appendChild(item);
+
+        });
+
+    }
+
+    // Load Game Data
     try {
         await loadGameData();
+        buildFeaturedPlaylist();
+
     } catch (error) {
-        console.error('Failed to load Game_Data.json', error);
+        console.error("Featured Gameplay initialization failed:", error);
 
         container.innerHTML = `
             <div class="game-card error-card">
@@ -36,62 +105,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    function loadNextBatch() {
-        const nextBatch = gameData.slice(
-            loadedCount,
-            loadedCount + batchSize
-        );
-
-        nextBatch.forEach(game => {
-
-            const card = document.createElement('div');
-            card.className = 'game-card';
-
-            card.id = `game-id-${game.id}`;
-
-            card.innerHTML = `
-                <iframe
-                    src="${game.media.preview}"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-
-                <h3>${game.title}</h3>
-            `;
-
-            card.addEventListener('click', () => {
-
-                sessionStorage.setItem('lastGameClicked', card.id);
-
-                window.location.href = `games/game.html?id=${game.id}`;
-
-            });
-
-            container.appendChild(card);
-
-        });
-
-        loadedCount += nextBatch.length;
-    }
-
-    function handleScroll() {
-
-        const nearBottom =
-            window.innerHeight +
-                window.scrollY >=
-            document.body.offsetHeight - 100;
-
-        if (
-            nearBottom &&
-            loadedCount < gameData.length
-        ) {
-            loadNextBatch();
-        }
-    }
-
-    loadNextBatch();
-
-    window.addEventListener('scroll', handleScroll);
 });

@@ -2,13 +2,10 @@
   "id": "control",
   "title": "Control",
   "release": 2019,
-
   "developer": "Remedy Entertainment",
   "publisher": "505 Games",
   "engine": "Northlight Engine",
-
   "description": "Control is a supernatural action-adventure game that follows Jesse Faden as she explores the mysterious Federal Bureau of Control in search of her missing brother. Wielding telekinetic powers and a shape-shifting Service Weapon, she confronts the Hiss while uncovering the Bureau's deepest secrets inside the ever-changing Oldest House.",
-
   "tags": [
     "Third-Person",
     "Action",
@@ -17,7 +14,6 @@
     "Supernatural",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Ultra",
     "rayTracing": true,
@@ -25,21 +21,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 176,
     "1440p": 132,
     "2160p": 88
   },
-
   "media": {
     "youtube": "https://www.youtube.com/embed/G26Quobv3cQ",
-    "preview": "https://www.youtube.com/embed/G26Quobv3cQ?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "preview": "https://www.youtube.com/embed/G26Quobv3cQ?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/G26Quobv3cQ?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 8,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Ultra Graphics Preset",
     "Ray Tracing Enabled",
@@ -47,7 +42,6 @@
     "Excellent global illumination and reflections",
     "Showcase title for real-time ray tracing"
   ],
-
   "requirements": {
     "minimumVRAM": "8 GB",
     "recommendedVRAM": "12 GB",

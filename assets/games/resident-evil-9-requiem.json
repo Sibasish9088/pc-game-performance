@@ -1,15 +1,11 @@
 {
   "id": "resident-evil-9-requiem",
-
   "title": "Resident Evil Requiem",
   "release": 2026,
-
   "developer": "Capcom",
   "publisher": "Capcom",
   "engine": "RE Engine",
-
   "description": "Resident Evil Requiem is the ninth mainline entry in Capcom's iconic survival horror franchise. Set in the aftermath of previous biohazard incidents, the game introduces a new chapter filled with psychological horror, cinematic storytelling, and relentless survival gameplay. Built on the latest iteration of the RE Engine, it pushes visual fidelity with highly detailed environments, realistic lighting, and immersive character animation.",
-
   "tags": [
     "Third-Person",
     "Survival Horror",
@@ -17,7 +13,6 @@
     "Psychological Horror",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Max",
     "rayTracing": true,
@@ -25,21 +20,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 148,
     "1440p": 148,
     "2160p": 102
   },
-
   "media": {
     "youtube": "https://www.youtube.com/embed/jBXXKqio5WI",
-    "preview": "https://www.youtube.com/embed/jBXXKqio5WI?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "preview": "https://www.youtube.com/embed/jBXXKqio5WI?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/jBXXKqio5WI?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 10,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Max Graphics Preset",
     "Ray Tracing Enabled",
@@ -48,7 +42,6 @@
     "Latest RE Engine rendering pipeline",
     "Excellent image quality with smooth frame pacing"
   ],
-
   "requirements": {
     "minimumVRAM": "12 GB",
     "recommendedVRAM": "16 GB",

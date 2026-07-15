@@ -1076,3 +1076,173 @@ h2 i {
     }
 
 }
+
+/* ==================================================
+   Featured Gameplay Showcase
+================================================== */
+
+.featured-gameplay{
+
+    display:grid;
+
+    grid-template-columns:2.3fr 1fr;
+
+    gap:24px;
+
+    margin-top:30px;
+
+}
+
+.featured-player{
+
+    background:#181818;
+
+    border:1px solid rgba(0,255,231,.35);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 18px rgba(0,255,255,.10);
+
+}
+
+.featured-player iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    display:block;
+
+}
+
+.now-playing{
+
+    padding:18px 22px;
+
+    border-top:1px solid rgba(0,255,231,.18);
+
+    color:#00ffe7;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+}
+
+.featured-playlist{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.playlist-item{
+
+    display:flex;
+
+    gap:14px;
+
+    align-items:center;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    background:#181818;
+
+    border:1px solid rgba(0,255,231,.20);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.playlist-item:hover{
+
+    border-color:#00ffe7;
+
+    transform:translateX(4px);
+
+}
+
+.playlist-item.active{
+
+    border-color:#00ffe7;
+
+    box-shadow:0 0 18px rgba(0,255,255,.30);
+
+}
+
+.playlist-item img{
+
+    width:150px;
+
+    aspect-ratio:16/9;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+.playlist-info{
+
+    flex:1;
+
+}
+
+.playlist-info h3{
+
+    margin:0 0 8px;
+
+    color:#ffffff;
+
+    font-size:1rem;
+
+}
+
+.playlist-info p{
+
+    margin:0;
+
+    color:#00ffe7;
+
+    font-size:.85rem;
+
+}
+
+@media(max-width:1100px){
+
+    .featured-gameplay{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .featured-playlist{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .featured-playlist{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

@@ -1,15 +1,11 @@
 {
   "id": "god-of-war-2018",
-
   "title": "God of War",
   "release": 2022,
-
   "developer": "Santa Monica Studio",
   "publisher": "PlayStation Publishing LLC",
   "engine": "Santa Monica Engine",
-
   "description": "God of War follows Kratos and his son Atreus on an emotional journey through the Nine Realms of Norse mythology. Tasked with fulfilling the final wish of Kratos' late wife, the father and son must overcome mythical creatures, powerful gods, and their own troubled past. The PC version introduces unlocked frame rates, ultrawide support, and AI upscaling technologies, delivering a visually stunning and highly optimized experience.",
-
   "tags": [
     "Third-Person",
     "Action",
@@ -18,7 +14,6 @@
     "Mythology",
     "Hack and Slash"
   ],
-
   "benchmark": {
     "preset": "Ultra",
     "rayTracing": false,
@@ -26,21 +21,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 154,
     "1440p": 121,
     "2160p": 84
   },
-
   "media": {
     "youtube": "https://www.youtube.com/embed/KFrELhacBTc",
-    "preview": "https://www.youtube.com/embed/KFrELhacBTc?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "preview": "https://www.youtube.com/embed/KFrELhacBTc?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/KFrELhacBTc?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 8,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Ultra Graphics Preset",
     "DLSS Quality",
@@ -48,7 +42,6 @@
     "Excellent PC optimization",
     "Consistent frame pacing throughout gameplay"
   ],
-
   "requirements": {
     "minimumVRAM": "8 GB",
     "recommendedVRAM": "8 GB",

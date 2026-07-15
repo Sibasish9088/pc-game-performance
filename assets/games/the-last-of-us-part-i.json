@@ -1,15 +1,11 @@
 {
   "id": "the-last-of-us-part-i",
-
   "title": "The Last of Us Part I",
   "release": 2023,
-
   "developer": "Naughty Dog",
   "publisher": "PlayStation Publishing LLC",
   "engine": "Naughty Dog Engine",
-
   "description": "The Last of Us Part I is a complete remake of Naughty Dog's critically acclaimed post-apocalyptic masterpiece. Players follow Joel, a hardened survivor, as he escorts Ellie across a devastated United States in hopes of finding a cure for the Cordyceps infection. Featuring rebuilt visuals, advanced character rendering, realistic physics, and enhanced accessibility, the PC version supports DLSS, AMD FSR, ultrawide resolutions, and modern rendering technologies.",
-
   "tags": [
     "Third-Person",
     "Action",
@@ -18,7 +14,6 @@
     "Story Rich",
     "Post-Apocalyptic"
   ],
-
   "benchmark": {
     "preset": "Ultra",
     "rayTracing": false,
@@ -26,21 +21,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 162,
     "1440p": 121,
     "2160p": 84
   },
-
   "media": {
-    "youtube": "https://www.youtube.com/embed/A-Y4Ibqc8a8",
-    "preview": "https://www.youtube.com/embed/A-Y4Ibqc8a8?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "youtube": "https://www.youtube.com/embed/RGq8zLrJ7TQ",
+    "preview": "https://www.youtube.com/embed/RGq8zLrJ7TQ?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/RGq8zLrJ7TQ?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 9,
     "hero": "",
     "cover": "",
     "gallery": []
-  },
-
+  },  
   "benchmarkNotes": [
     "Ultra Graphics Preset",
     "DLSS Quality + Frame Generation",
@@ -49,7 +43,6 @@
     "Stable frame pacing after major PC patches",
     "One of the finest cinematic story-driven experiences"
   ],
-
   "requirements": {
     "minimumVRAM": "8 GB",
     "recommendedVRAM": "12 GB",

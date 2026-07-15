@@ -2,13 +2,10 @@
   "id": "a-plague-tale-innocence",
   "title": "A Plague Tale: Innocence",
   "release": 2019,
-
   "developer": "Asobo Studio",
   "publisher": "Focus Home Interactive",
   "engine": "Zouna Engine",
-
   "description": "During the Black Death, Amicia de Rune must protect her younger brother Hugo from the Inquisition while uncovering the truth behind his mysterious illness. Their desperate journey through plague-ridden France is haunted by deadly swarms of rats, ruthless soldiers, and the struggle to survive against overwhelming odds.",
-
   "tags": [
     "Third-Person",
     "Stealth",
@@ -16,7 +13,6 @@
     "Adventure",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Ultra",
     "rayTracing": false,
@@ -24,28 +20,26 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 198,
     "1440p": 147,
     "2160p": 98
   },
-
   "media": {
     "youtube": "https://www.youtube.com/embed/yzyfAEtOyYk",
-    "preview": "https://www.youtube.com/embed/yzyfAEtOyYk?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "preview": "https://www.youtube.com/embed/yzyfAEtOyYk?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/yzyfAEtOyYk?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 6,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Ultra Graphics Preset",
     "Native Resolution",
     "No Ray Tracing",
     "Excellent frame pacing throughout gameplay"
   ],
-
   "requirements": {
     "minimumVRAM": "8 GB",
     "recommendedVRAM": "12 GB",

@@ -139,9 +139,34 @@
         </section>
         <section id="dynamic-content" style="display: none"></section>
         <section id="gameplays">
-            <h2 class="section-title"><i data-lucide="gamepad-2" class="w-8 h-8 inline-block align-middle mr-3"></i> My
-                Gameplays</h2>
-            <div id="gameGallery" class="row"></div>
+
+            <h2 class="section-title">
+                <i data-lucide="gamepad-2"></i>
+                My Gameplays
+            </h2>
+
+            <div class="featured-gameplay">
+
+                <div class="featured-player">
+
+                    <iframe id="featuredGameplay" src="" allow="autoplay" loading="lazy">
+                    </iframe>
+
+                    <div class="now-playing">
+
+                        ▶ Now Playing :
+                        <span id="featuredTitle"></span>
+
+                    </div>
+
+                </div>
+
+                <div id="featuredPlaylist" class="featured-playlist">
+
+                </div>
+
+            </div>
+
         </section>
     </main>
     <script src="js/gameData.js"></script>

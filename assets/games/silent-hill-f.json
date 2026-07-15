@@ -1,15 +1,11 @@
 {
   "id": "silent-hill-f",
-
   "title": "Silent Hill f",
   "release": 2025,
-
   "developer": "NeoBards Entertainment",
   "publisher": "Konami Digital Entertainment",
   "engine": "Unreal Engine 5",
-
   "description": "Silent Hill f is the first mainline Silent Hill title set entirely in 1960s rural Japan. Players experience the haunting story of Hinako Shimizu as her once-peaceful town becomes consumed by an eerie fog, grotesque creatures, and psychological terror. Combining traditional Japanese horror with modern visuals powered by Unreal Engine 5, Silent Hill f delivers one of the franchise's most visually striking and emotionally unsettling experiences.",
-
   "tags": [
     "Third-Person",
     "Survival Horror",
@@ -17,7 +13,6 @@
     "Action",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Epic",
     "rayTracing": true,
@@ -25,21 +20,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 180,
     "1440p": 150,
     "2160p": 105
   },
-
   "media": {
-    "youtube": "https://www.youtube.com/embed/CJIwTosnrzI",
-    "preview": "https://www.youtube.com/embed/CJIwTosnrzI?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "youtube": "https://www.youtube.com/embed/RGq8zLrJ7TQ",
+    "preview": "https://www.youtube.com/embed/RGq8zLrJ7TQ?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/RGq8zLrJ7TQ?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 9,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Epic Graphics Preset",
     "Ray Tracing Enabled",
@@ -48,7 +42,6 @@
     "Excellent Unreal Engine 5 visual fidelity",
     "Stable frame pacing with cinematic lighting"
   ],
-
   "requirements": {
     "minimumVRAM": "12 GB",
     "recommendedVRAM": "16 GB",

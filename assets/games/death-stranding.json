@@ -2,13 +2,10 @@
   "id": "death-stranding",
   "title": "Death Stranding",
   "release": 2019,
-
   "developer": "Kojima Productions",
   "publisher": "505 Games",
   "engine": "Decima Engine",
-
   "description": "Death Stranding follows legendary porter Sam Porter Bridges as he traverses a fractured United States to reconnect isolated cities through the Chiral Network. Combining exploration, traversal, stealth, and asynchronous multiplayer mechanics, the game delivers a unique cinematic experience powered by Guerrilla Games' Decima Engine.",
-
   "tags": [
     "Third-Person",
     "Open-World",
@@ -17,7 +14,6 @@
     "Sci-Fi",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Very High",
     "rayTracing": false,
@@ -25,21 +21,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 300,
     "1440p": 240,
     "2160p": 180
   },
-
   "media": {
     "youtube": "https://www.youtube.com/embed/ub1fzJavV8c",
-    "preview": "https://www.youtube.com/embed/ub1fzJavV8c?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "preview": "https://www.youtube.com/embed/ub1fzJavV8c?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/ub1fzJavV8c?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 5,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Very High Graphics Preset",
     "DLSS Quality",
@@ -47,7 +42,6 @@
     "Exceptionally optimized Decima Engine",
     "Outstanding frame pacing and traversal performance"
   ],
-
   "requirements": {
     "minimumVRAM": "8 GB",
     "recommendedVRAM": "12 GB",

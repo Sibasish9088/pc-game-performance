@@ -1,15 +1,11 @@
 {
   "id": "hellblade-ii-senuas-saga",
-
   "title": "Senua's Saga: Hellblade II",
   "release": 2024,
-
   "developer": "Ninja Theory",
   "publisher": "Xbox Game Studios",
   "engine": "Unreal Engine 5",
-
   "description": "Senua's Saga: Hellblade II continues the haunting journey of Senua as she ventures through 10th-century Iceland, confronting brutal enemies, psychological trauma, and mythological horrors. Powered by Unreal Engine 5 with Nanite, Lumen, and MetaHuman technology, the game is widely regarded as one of the most visually realistic titles ever released.",
-
   "tags": [
     "Third-Person",
     "Action",
@@ -19,7 +15,6 @@
     "Fantasy",
     "Cinematic"
   ],
-
   "benchmark": {
     "preset": "Cinematic",
     "rayTracing": false,
@@ -27,21 +22,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 148,
     "1440p": 108,
     "2160p": 70
   },
-
   "media": {
-    "youtube": "https://www.youtube.com/embed/nKZnUvnFwRE",
-    "preview": "https://www.youtube.com/embed/nKZnUvnFwRE?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "youtube": "https://www.youtube.com/embed/OWK6Z6a0fBQ",
+    "preview": "https://www.youtube.com/embed/OWK6Z6a0fBQ?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/OWK6Z6a0fBQ?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 8,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Cinematic Graphics Preset",
     "DLSS Quality + Frame Generation",
@@ -49,7 +43,6 @@
     "Nanite and Lumen powered visuals",
     "One of the most photorealistic Unreal Engine 5 showcases"
   ],
-
   "requirements": {
     "minimumVRAM": "12 GB",
     "recommendedVRAM": "16 GB",

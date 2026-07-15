@@ -1,15 +1,11 @@
 {
   "id": "the-elder-scrolls-iv-oblivion-remastered",
-
   "title": "The Elder Scrolls IV: Oblivion Remastered",
   "release": 2025,
-
   "developer": "Virtuos / Bethesda Game Studios",
   "publisher": "Bethesda Softworks",
   "engine": "Unreal Engine 5 + Gamebryo",
-
   "description": "The Elder Scrolls IV: Oblivion Remastered modernizes Bethesda's legendary RPG with completely rebuilt visuals, enhanced animations, improved lighting, and modern gameplay refinements while preserving the original quest design and expansive open world of Cyrodiil. Powered by Unreal Engine 5 for rendering alongside the original gameplay systems, it delivers a faithful yet visually stunning return to one of the greatest role-playing games ever created.",
-
   "tags": [
     "Third-Person",
     "Open-World",
@@ -18,7 +14,6 @@
     "Adventure",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Epic",
     "rayTracing": true,
@@ -26,21 +21,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 110,
     "1440p": 77,
     "2160p": 52
   },
-
   "media": {
     "youtube": "https://www.youtube.com/embed/PSEv7_-H0b8",
-    "preview": "https://www.youtube.com/embed/PSEv7_-H0b8?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "preview": "https://www.youtube.com/embed/PSEv7_-H0b8?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/PSEv7_-H0b8?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 5,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Epic Graphics Preset",
     "Ray Tracing Enabled",
@@ -49,7 +43,6 @@
     "One of the most demanding RPG remasters available",
     "Excellent visual overhaul with Unreal Engine 5"
   ],
-
   "requirements": {
     "minimumVRAM": "12 GB",
     "recommendedVRAM": "16 GB",

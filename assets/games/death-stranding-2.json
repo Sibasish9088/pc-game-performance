@@ -1,15 +1,11 @@
 {
   "id": "death-stranding-2",
-
   "title": "Death Stranding 2: On the Beach",
   "release": 2026,
-
   "developer": "Kojima Productions",
   "publisher": "Sony Interactive Entertainment",
   "engine": "Decima Engine",
-
   "description": "Death Stranding 2: On the Beach is the sequel to Hideo Kojima's critically acclaimed Death Stranding. Sam Porter Bridges embarks on another perilous journey beyond the United Cities of America, reconnecting humanity while confronting mysterious new enemies, evolving BTs, and the haunting question of whether humanity should have connected at all. Powered by Guerrilla Games' Decima Engine, the game delivers breathtaking visuals, cinematic storytelling, and exceptional technical fidelity.",
-
   "tags": [
     "Third-Person",
     "Open-World",
@@ -18,7 +14,6 @@
     "Sci-Fi",
     "Story Rich"
   ],
-
   "benchmark": {
     "preset": "Very High",
     "rayTracing": false,
@@ -26,21 +21,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 200,
     "1440p": 180,
     "2160p": 120
   },
-
   "media": {
     "youtube": "https://www.youtube.com/embed/ZGPTcf5kc6o",
-    "preview": "https://www.youtube.com/embed/ZGPTcf5kc6o?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "preview": "https://www.youtube.com/embed/ZGPTcf5kc6o?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/ZGPTcf5kc6o?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 10,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Very High Graphics Preset",
     "DLSS Quality + Frame Generation",
@@ -48,7 +42,6 @@
     "Verified 120 FPS gameplay on SPCBM test system",
     "One of the best optimized AAA titles of 2026"
   ],
-
   "requirements": {
     "minimumVRAM": "12 GB",
     "recommendedVRAM": "16 GB",

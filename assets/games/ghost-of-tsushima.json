@@ -1,15 +1,11 @@
 {
   "id": "ghost-of-tsushima",
-
   "title": "Ghost of Tsushima",
   "release": 2024,
-
   "developer": "Nixxes Software / Sucker Punch Productions",
   "publisher": "Sony Interactive Entertainment",
   "engine": "Sucker Punch Engine",
-
   "description": "Ghost of Tsushima follows samurai Jin Sakai during the first Mongol invasion of Japan in 1274. Forced to abandon traditional samurai honor, Jin embraces unconventional tactics as 'The Ghost' to liberate Tsushima Island. The Director's Cut on PC features ultrawide support, NVIDIA DLSS, AMD FSR, Intel XeSS, and frame generation technologies, delivering one of the finest open-world experiences available.",
-
   "tags": [
     "Third-Person",
     "Open-World",
@@ -19,7 +15,6 @@
     "Stealth",
     "Samurai"
   ],
-
   "benchmark": {
     "preset": "Very High",
     "rayTracing": false,
@@ -27,21 +22,20 @@
     "resolutionScale": "100%",
     "verified": true
   },
-
   "fps": {
     "1080p": 162,
     "1440p": 120,
     "2160p": 82
   },
-
   "media": {
     "youtube": "https://www.youtube.com/embed/BVPnRcCJSb8",
-    "preview": "https://www.youtube.com/embed/BVPnRcCJSb8?autoplay=1&mute=1&controls=0&start=0&end=45",
+    "preview": "https://www.youtube.com/embed/BVPnRcCJSb8?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/BVPnRcCJSb8?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePriority": 10,
     "hero": "",
     "cover": "",
     "gallery": []
   },
-
   "benchmarkNotes": [
     "Very High Graphics Preset",
     "DLSS Quality + Frame Generation",
@@ -49,7 +43,6 @@
     "Excellent PC optimization",
     "Outstanding open-world streaming performance"
   ],
-
   "requirements": {
     "minimumVRAM": "8 GB",
     "recommendedVRAM": "12 GB",
