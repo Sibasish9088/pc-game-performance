@@ -753,26 +753,26 @@ h2 i {
 }
 
 .performance-card,
-.game-info-card{
+.game-info-card {
 
-    min-height:300px;
+  min-height: 300px;
 
 }
 
 /* Desktop */
-.performance-card{
-    position: relative;
-    top: 100px;
+.performance-card {
+  position: relative;
+  top: 100px;
 }
 
-.description-section{
-    position: relative;
-    bottom: 40px;
+.description-section {
+  position: relative;
+  bottom: 40px;
 }
 
-.game-info-card{
-    position: relative;
-    bottom: 20px;
+.game-info-card {
+  position: relative;
+  bottom: 20px;
 }
 
 .performance-card h2,
@@ -940,15 +940,15 @@ h2 i {
 
 .bottom-information {
 
-    display:grid;
+  display: grid;
 
-    grid-template-columns:1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
-    gap:20px;
+  gap: 20px;
 
-    margin-top:12px;
+  margin-top: 12px;
 
-    margin-bottom:30px;
+  margin-bottom: 30px;
 
 }
 
@@ -1036,44 +1036,44 @@ h2 i {
 
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
 
-    .performance-card{
-        top: 70px;
-    }
+  .performance-card {
+    top: 70px;
+  }
 
-    .description-section{
-        bottom: 28px;
-    }
+  .description-section {
+    bottom: 28px;
+  }
 
-    .game-info-card{
-        bottom: 14px;
-    }
-
-}
-
-@media (max-width: 900px){
-
-    .performance-card{
-        top: 35px;
-    }
-
-    .description-section,
-    .game-info-card{
-        bottom: 0;
-    }
+  .game-info-card {
+    bottom: 14px;
+  }
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 900px) {
 
-    .performance-card,
-    .description-section,
-    .game-info-card{
+  .performance-card {
+    top: 35px;
+  }
 
-        position: static;
+  .description-section,
+  .game-info-card {
+    bottom: 0;
+  }
 
-    }
+}
+
+@media (max-width: 768px) {
+
+  .performance-card,
+  .description-section,
+  .game-info-card {
+
+    position: static;
+
+  }
 
 }
 
@@ -1081,168 +1081,224 @@ h2 i {
    Featured Gameplay Showcase
 ================================================== */
 
-.featured-gameplay{
+.featured-gameplay {
 
-    display:grid;
+  display: grid;
 
-    grid-template-columns:2.3fr 1fr;
+  grid-template-columns: 2.3fr 1fr;
 
-    gap:24px;
+  gap: 24px;
 
-    margin-top:30px;
-
-}
-
-.featured-player{
-
-    background:#181818;
-
-    border:1px solid rgba(0,255,231,.35);
-
-    border-radius:16px;
-
-    overflow:hidden;
-
-    box-shadow:0 0 18px rgba(0,255,255,.10);
+  margin-top: 30px;
 
 }
 
-.featured-player iframe{
+.featured-player {
 
-    width:100%;
+  background: #181818;
 
-    aspect-ratio:16/9;
+  border: 1px solid rgba(0, 255, 231, .35);
 
-    border:none;
+  border-radius: 16px;
 
-    display:block;
+  overflow: hidden;
 
-}
-
-.now-playing{
-
-    padding:18px 22px;
-
-    border-top:1px solid rgba(0,255,231,.18);
-
-    color:#00ffe7;
-
-    font-size:1.1rem;
-
-    font-weight:700;
+  box-shadow: 0 0 18px rgba(0, 255, 255, .10);
 
 }
 
-.featured-playlist{
+.featured-player iframe {
 
-    display:flex;
+  width: 100%;
 
-    flex-direction:column;
+  aspect-ratio: 16/9;
 
-    gap:12px;
+  border: none;
 
-}
-
-.playlist-item{
-
-    display:flex;
-
-    gap:14px;
-
-    align-items:center;
-
-    padding:12px;
-
-    border-radius:12px;
-
-    background:#181818;
-
-    border:1px solid rgba(0,255,231,.20);
-
-    cursor:pointer;
-
-    transition:.25s;
+  display: block;
 
 }
 
-.playlist-item:hover{
+.now-playing {
 
-    border-color:#00ffe7;
+  padding: 18px 22px;
 
-    transform:translateX(4px);
+  border-top: 1px solid rgba(0, 255, 231, .18);
 
-}
+  color: #00ffe7;
 
-.playlist-item.active{
+  font-size: 1.1rem;
 
-    border-color:#00ffe7;
-
-    box-shadow:0 0 18px rgba(0,255,255,.30);
+  font-weight: 700;
 
 }
 
-.playlist-item img{
+.featured-playlist {
 
-    width:150px;
+  display: flex;
 
-    aspect-ratio:16/9;
+  flex-direction: column;
 
-    object-fit:cover;
-
-    border-radius:8px;
+  gap: 12px;
 
 }
 
-.playlist-info{
+.playlist-item {
 
-    flex:1;
+  display: flex;
 
-}
+  gap: 14px;
 
-.playlist-info h3{
+  align-items: center;
 
-    margin:0 0 8px;
+  padding: 12px;
 
-    color:#ffffff;
+  border-radius: 12px;
 
-    font-size:1rem;
+  background: #181818;
 
-}
+  border: 1px solid rgba(0, 255, 231, .20);
 
-.playlist-info p{
+  cursor: pointer;
 
-    margin:0;
-
-    color:#00ffe7;
-
-    font-size:.85rem;
+  transition: .25s;
 
 }
 
-@media(max-width:1100px){
+.playlist-item:hover {
 
-    .featured-gameplay{
+  border-color: #00ffe7;
 
-        grid-template-columns:1fr;
-
-    }
-
-    .featured-playlist{
-
-        display:grid;
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
+  transform: translateX(4px);
 
 }
 
-@media(max-width:700px){
+.playlist-item.active {
 
-    .featured-playlist{
+  border-color: #00ffe7;
 
-        grid-template-columns:1fr;
+  box-shadow: 0 0 18px rgba(0, 255, 255, .30);
 
-    }
+}
+
+.playlist-item img {
+
+  width: 150px;
+
+  aspect-ratio: 16/9;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+}
+
+.playlist-info {
+
+  flex: 1;
+
+}
+
+.playlist-info h3 {
+
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+
+}
+
+.playlist-info p {
+
+  margin: 0;
+
+  color: #00ffe7;
+
+  font-size: .85rem;
+
+}
+
+@media(max-width:1100px) {
+
+  .featured-gameplay {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .featured-playlist {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+@media(max-width:700px) {
+
+  .featured-playlist {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+.now-playing {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 22px;
+
+  border-top: 1px solid rgba(0, 255, 231, .18);
+
+  color: #00ffe7;
+
+  font-family: 'Orbitron', sans-serif;
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+}
+
+.benchmark-link {
+
+  margin-left: auto;
+
+  white-space: nowrap;
+
+  color: #00ffe7;
+
+  text-decoration: none;
+
+  font-family: 'Orbitron', sans-serif;
+
+  font-size: .92rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+}
+
+.benchmark-link:hover {
+
+  color: #7ffff8;
+
+  text-shadow:
+    0 0 8px #00ffe7,
+    0 0 18px #00ffe7;
 
 }
