@@ -1396,3 +1396,57 @@ h2 i {
   font-weight: 600;
 
 }
+
+/* ==========================================================
+   Responsive Gameplay Playlist
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .featured-gameplay {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .featured-playlist {
+
+        height: auto !important;
+
+        flex-direction: row;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        padding-right: 0;
+
+        padding-bottom: 10px;
+
+        gap: 16px;
+
+        scroll-behavior: smooth;
+
+    }
+
+    .featured-playlist::-webkit-scrollbar {
+
+        height: 6px;
+
+    }
+
+    .featured-playlist::-webkit-scrollbar-thumb {
+
+        background: rgba(0,255,231,.30);
+
+        border-radius: 999px;
+
+    }
+
+    .playlist-item {
+
+        flex: 0 0 300px;
+
+    }
+
+}
