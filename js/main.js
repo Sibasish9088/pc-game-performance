@@ -105,8 +105,35 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         const benchmarkSection = document.getElementById("benchmarkSection");
+        const collapseBenchmarkBtn = document.getElementById("collapseBenchmarkBtn");
 
         let benchmarkExpanded = false;
+
+        function collapseBenchmark() {
+
+            benchmarkExpanded = false;
+
+            benchmarkSection.classList.remove("visible");
+
+            viewBenchmarkBtn.querySelector("span").textContent =
+                "Benchmark Details ▼";
+
+            setTimeout(() => {
+
+                benchmarkSection.style.display = "none";
+
+                document.querySelector(".featured-player")
+                    .scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "start"
+
+                    });
+
+            }, 550);
+
+        }
 
         viewBenchmarkBtn.addEventListener("click", (e) => {
 
@@ -114,26 +141,42 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             benchmarkExpanded = !benchmarkExpanded;
 
-            benchmarkSection.style.display =
-                benchmarkExpanded ? "block" : "none";
+            if (benchmarkExpanded) {
+
+                // Show the section, but keep it hidden (opacity:0, translateY)
+                benchmarkSection.style.display = "block";
+
+                // First move the camera
+                benchmarkSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+                // Then reveal the content after the scroll has begun
+                setTimeout(() => {
+                    benchmarkSection.classList.add("visible");
+                }, 550);
+
+            } else {
+
+                collapseBenchmark();
+
+                return;
+
+            }
 
             viewBenchmarkBtn.querySelector("span").textContent =
                 benchmarkExpanded
                     ? "Benchmark Details ▲"
                     : "Benchmark Details ▼";
 
-            if (benchmarkExpanded) {
+        });
 
-                setTimeout(() => {
+        collapseBenchmarkBtn.addEventListener("click", (e) => {
 
-                    benchmarkSection.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
+            e.preventDefault();
 
-                }, 250);
-
-            }
+            collapseBenchmark();
 
         });
 

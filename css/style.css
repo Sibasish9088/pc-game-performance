@@ -1309,6 +1309,28 @@ h2 i {
 
   margin-top: 28px;
 
+  opacity: 0;
+
+  transform: translateY(28px);
+
+  transition:
+    opacity .45s ease,
+    transform .45s ease;
+
+  will-change: opacity, transform;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+}
+
+.benchmark-section.visible {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
 }
 
 .gameplay-header {
@@ -1381,9 +1403,9 @@ h2 i {
 
 .hero-action i {
 
-    color: #00ffe7;
+  color: #00ffe7;
 
-    filter: drop-shadow(0 0 6px rgba(0,255,231,.6));
+  filter: drop-shadow(0 0 6px rgba(0, 255, 231, .6));
 
 }
 
@@ -1490,9 +1512,11 @@ h2 i {
 
   background: #181818;
 
-  border: 1px solid rgba(0, 255, 231, .18);
+  border-left: 1px solid rgba(0, 255, 231, .18);
 
-  border-top: none;
+  border-right: 1px solid rgba(0, 255, 231, .18);
+
+  border-bottom: 1px solid rgba(0, 255, 231, .18);
 
   border-radius: 0 0 16px 16px;
 
@@ -1515,5 +1539,39 @@ h2 i {
 .benchmark-section .bottom-card {
 
   min-height: 180px;
+
+}
+
+.benchmark-section .gameplay-header {
+
+  background: #181818;
+
+  border: 1px solid rgba(0, 255, 231, .18);
+
+  border-bottom: 1px solid rgba(0, 255, 231, .18);
+
+  border-radius: 16px 16px 0 0;
+
+}
+
+/* ==========================================
+   Benchmark Footer
+========================================== */
+
+.benchmark-footer {
+
+  margin-top: 28px;
+
+  border-top: 1px solid rgba(0, 255, 255, .15);
+
+  border-bottom: none;
+
+  justify-content: center;
+
+}
+
+.benchmark-footer .hero-action {
+
+  font-size: 1rem;
 
 }
