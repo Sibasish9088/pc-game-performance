@@ -1475,3 +1475,23 @@ h2 i {
     border-radius: 0 0 16px 16px;
 
 }
+
+/* ==========================================
+   Homepage Benchmark Alignment
+========================================== */
+
+.benchmark-section .performance-card,
+.benchmark-section .game-info-card {
+
+    position: static;
+    top: auto;
+    bottom: auto;
+    min-height: 340px;
+
+}
+
+.benchmark-section .bottom-card {
+
+    min-height: 180px;
+
+}
