@@ -876,6 +876,8 @@ h2 i {
 
   color: #fff;
 
+  white-space: nowrap;
+
 }
 
 .fps-outstanding {
@@ -1321,13 +1323,23 @@ h2 i {
 
   border-bottom: 1px solid rgba(0, 255, 255, .15);
 
-  color: #41F2FF;
+  color: #00ffe7;
+
+  text-shadow: 0 0 8px rgba(0, 255, 231, .45);
 
   font-family: 'Orbitron', sans-serif;
 
   font-size: 1.2rem;
 
   font-weight: 600;
+
+}
+
+.gameplay-header i {
+
+  color: #00ffe7;
+
+  filter: drop-shadow(0 0 6px rgba(0, 255, 231, .6));
 
 }
 
@@ -1353,7 +1365,9 @@ h2 i {
 
   gap: 10px;
 
-  color: #41F2FF;
+  color: #00ffe7;
+
+  font-weight: 600;
 
   text-decoration: none;
 
@@ -1362,6 +1376,14 @@ h2 i {
   transition: .25s;
 
   cursor: pointer;
+
+}
+
+.hero-action i {
+
+    color: #00ffe7;
+
+    filter: drop-shadow(0 0 6px rgba(0,255,231,.6));
 
 }
 
@@ -1452,27 +1474,27 @@ h2 i {
 }
 
 .benchmark-placeholder {
-    background: #181818;
-    border: 1px solid rgba(0,255,231,.35);
-    border-radius: 16px;
-    padding: 80px;
-    text-align: center;
-    color: #00ffe7;
+  background: #181818;
+  border: 1px solid rgba(0, 255, 231, .35);
+  border-radius: 16px;
+  padding: 80px;
+  text-align: center;
+  color: #00ffe7;
 }
 
 .benchmark-content {
 
-    min-height: 500px;
+  min-height: 500px;
 
-    padding: 28px;
+  padding: 28px;
 
-    background: #181818;
+  background: #181818;
 
-    border: 1px solid rgba(0,255,231,.18);
+  border: 1px solid rgba(0, 255, 231, .18);
 
-    border-top: none;
+  border-top: none;
 
-    border-radius: 0 0 16px 16px;
+  border-radius: 0 0 16px 16px;
 
 }
 
@@ -1483,15 +1505,15 @@ h2 i {
 .benchmark-section .performance-card,
 .benchmark-section .game-info-card {
 
-    position: static;
-    top: auto;
-    bottom: auto;
-    min-height: 340px;
+  position: static;
+  top: auto;
+  bottom: auto;
+  min-height: 340px;
 
 }
 
 .benchmark-section .bottom-card {
 
-    min-height: 180px;
+  min-height: 180px;
 
 }

@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 heroPlayer.src =
                     game.media.preview;
 
+                renderBenchmark(game);
+
             }
 
             item.innerHTML = `
@@ -78,6 +80,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 heroPlayer.src =
                     game.media.preview;
+
+                renderBenchmark(game);
 
             });
 
