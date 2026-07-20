@@ -29,7 +29,8 @@
   "media": {
     "youtube": "https://www.youtube.com/embed/KFrELhacBTc",
     "preview": "https://www.youtube.com/embed/KFrELhacBTc?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
-    "homepagePreview": "https://www.youtube.com/embed/KFrELhacBTc?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "homepagePreview": "https://www.youtube.com/embed/KFrELhacBTc?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=245&end=265",
+    "thumbnail": "https://img.youtube.com/vi/KFrELhacBTc/hqdefault.jpg",
     "homepagePriority": 8,
     "hero": "",
     "cover": "",

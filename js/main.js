@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const playlist = document.getElementById('featuredPlaylist');
     const heroPlayer = document.getElementById('featuredGameplay');
-    const nowPlaying = document.getElementById('featuredTitle');
+    const viewBenchmarkBtn = document.getElementById("viewBenchmarkBtn");
+    const viewGameplayBtn = document.getElementById("viewGameplayBtn");
 
     // Assign component IDs dynamically
     const componentLabels = [
@@ -42,29 +43,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 item.classList.add("active");
 
+                currentFeaturedGame = game;
+
                 heroPlayer.src =
                     game.media.preview;
-
-                nowPlaying.textContent =
-                    game.title;
 
             }
 
             item.innerHTML = `
 
-            <img
-                src="${game.media.thumbnail}"
-                alt="${game.title}">
+                <img
+                    src="${game.media.thumbnail}"
+                    alt="${game.title}">
 
-            <div class="playlist-info">
+                <div class="playlist-info">
 
-                <h3>${game.title}</h3>
+                    <p class="playlist-title">
+                        ${game.title}
+                    </p>
 
-                <p>SPCBM Verified</p>
+                </div>
 
-            </div>
-
-        `;
+            `;
 
             item.addEventListener("click", () => {
 
@@ -74,11 +74,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 item.classList.add("active");
 
+                currentFeaturedGame = game;
+
                 heroPlayer.src =
                     game.media.preview;
-
-                nowPlaying.textContent =
-                    game.title;
 
             });
 
@@ -88,10 +87,34 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     }
 
+    let currentFeaturedGame = null;
+
+    function initializeHeroActions() {
+
+        viewGameplayBtn.addEventListener("click", () => {
+
+            if (!currentFeaturedGame) return;
+
+            window.location.href =
+                `game.html?id=${currentFeaturedGame.id}`;
+
+        });
+
+        viewBenchmarkBtn.addEventListener("click", (e) => {
+
+            e.preventDefault();
+
+            console.log("Benchmark Details clicked");
+
+        });
+
+    }
+
     // Load Game Data
     try {
         await loadGameData();
         buildFeaturedPlaylist();
+        initializeHeroActions();
 
     } catch (error) {
         console.error("Featured Gameplay initialization failed:", error);
