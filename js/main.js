@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const featuredGames =
             [...gameData]
                 .sort(() => Math.random() - 0.5)
-                .slice(0, 6);
+                .slice(0, 28);
 
         playlist.innerHTML = "";
 
@@ -110,10 +110,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     }
 
+    function syncPlaylistHeight() {
+
+    const hero = document.querySelector(".featured-player");
+    const playlist = document.querySelector(".featured-playlist");
+
+    if (!hero || !playlist) return;
+
+    playlist.style.height = `${hero.offsetHeight - 2}px`;
+}
+
     // Load Game Data
     try {
         await loadGameData();
         buildFeaturedPlaylist();
+        syncPlaylistHeight();
+        window.addEventListener("resize", syncPlaylistHeight);
         initializeHeroActions();
 
     } catch (error) {
