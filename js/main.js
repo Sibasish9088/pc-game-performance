@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    const HOMEPAGE_PREVIEW_DURATION = 45000;
     const playlist = document.getElementById('featuredPlaylist');
     const heroPlayer = document.getElementById('featuredGameplay');
     const viewBenchmarkBtn = document.getElementById("viewBenchmarkBtn");
@@ -42,6 +43,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (index === 0) {
 
                 item.classList.add("active");
+                item.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest",
+                    inline: "center"
+                });
 
                 currentFeaturedGame = game;
 
@@ -49,6 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     game.media.preview;
 
                 renderBenchmark(game);
+                startPreviewTimer();
 
             }
 
@@ -75,6 +82,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                     .forEach(card => card.classList.remove("active"));
 
                 item.classList.add("active");
+                item.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest",
+                    inline: "center"
+                });
 
                 currentFeaturedGame = game;
 
@@ -82,6 +94,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     game.media.preview;
 
                 renderBenchmark(game);
+                startPreviewTimer();
 
             });
 
@@ -92,6 +105,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     let currentFeaturedGame = null;
+    let previewTimer = null;
+
+    function startPreviewTimer() {
+
+        clearTimeout(previewTimer);
+
+        previewTimer = setTimeout(() => {
+
+            playNextFeaturedGame();
+
+        }, HOMEPAGE_PREVIEW_DURATION);
+
+    }
+
+    function playNextFeaturedGame() {
+
+        const items =
+            [...document.querySelectorAll(".playlist-item")];
+
+        const currentIndex =
+            items.findIndex(item =>
+                item.classList.contains("active")
+            );
+
+        if (currentIndex === -1)
+            return;
+
+        const nextIndex =
+            (currentIndex + 1) % items.length;
+
+        items[nextIndex].click();
+
+    }
 
     function initializeHeroActions() {
 
