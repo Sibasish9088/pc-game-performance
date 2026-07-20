@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.3.0] - 2026-07-21
+
+### Added
+- Featured Gameplay playlist with automatic preview progression
+- Automatic playlist synchronization and scrolling during preview playback
+
+### Changed
+- Refined homepage Featured Gameplay experience with seamless auto-advance
+- Preserved fast-loading YouTube preview architecture while enhancing playlist navigation
+
 ## [3.2.0] - 2026-07-13
 
 ### Added
