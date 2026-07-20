@@ -1459,3 +1459,19 @@ h2 i {
     text-align: center;
     color: #00ffe7;
 }
+
+.benchmark-content {
+
+    min-height: 500px;
+
+    padding: 28px;
+
+    background: #181818;
+
+    border: 1px solid rgba(0,255,231,.18);
+
+    border-top: none;
+
+    border-radius: 0 0 16px 16px;
+
+}

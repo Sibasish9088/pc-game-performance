@@ -118,6 +118,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ? "Benchmark Details ▲"
                     : "Benchmark Details ▼";
 
+            if (benchmarkExpanded) {
+
+                setTimeout(() => {
+
+                    benchmarkSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }, 250);
+
+            }
+
         });
 
     }
