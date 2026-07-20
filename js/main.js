@@ -100,11 +100,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         });
 
+        const benchmarkSection = document.getElementById("benchmarkSection");
+
+        let benchmarkExpanded = false;
+
         viewBenchmarkBtn.addEventListener("click", (e) => {
 
             e.preventDefault();
 
-            console.log("Benchmark Details clicked");
+            benchmarkExpanded = !benchmarkExpanded;
+
+            benchmarkSection.style.display =
+                benchmarkExpanded ? "block" : "none";
+
+            viewBenchmarkBtn.querySelector("span").textContent =
+                benchmarkExpanded
+                    ? "Benchmark Details ▲"
+                    : "Benchmark Details ▼";
 
         });
 
@@ -112,13 +124,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function syncPlaylistHeight() {
 
-    const hero = document.querySelector(".featured-player");
-    const playlist = document.querySelector(".featured-playlist");
+        const hero = document.querySelector(".featured-player");
+        const playlist = document.querySelector(".featured-playlist");
 
-    if (!hero || !playlist) return;
+        if (!hero || !playlist) return;
 
-    playlist.style.height = `${hero.offsetHeight - 2}px`;
-}
+        playlist.style.height = `${hero.offsetHeight - 2}px`;
+    }
 
     // Load Game Data
     try {
