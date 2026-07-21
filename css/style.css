@@ -73,11 +73,15 @@ h2 {
 
 .my-pc-section {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 32px;
-  align-items: start;
+  grid-template-columns:
+    clamp(320px, 22vw, 380px) minmax(0, 1fr);
 
-  padding: 30px;
+  gap: clamp(20px, 1.8vw, 32px);
+
+  align-items: stretch;
+
+  padding: clamp(18px, 2vw, 30px);
+
   border-bottom: 2px dashed #00ffe7;
 }
 
@@ -96,8 +100,12 @@ h2 {
 .pc-info {
   display: flex;
   flex-direction: column;
-  gap: 42px;
+  justify-content: space-between;
+  gap: 24px;
   width: 100%;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 .pc-info ul {
@@ -120,10 +128,7 @@ h2 {
 /* Unified Grid Layout for all sections in pc-info */
 .pc-info .components {
   display: grid;
-
-  grid-template-columns:
-    repeat(8, minmax(120px, 1fr));
-
+  grid-template-columns: repeat(8, minmax(120px, 1fr));
   gap: 16px;
 }
 
@@ -188,16 +193,16 @@ h2 {
 
 .performance-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .trust-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .component-card {
@@ -516,7 +521,8 @@ h2 i {
 
 .performance-highlights,
 .trust-panel {
-  margin-top: 8px;
+  margin: 0;
+  flex: 0 0 auto;
 }
 
 .container {
@@ -524,18 +530,43 @@ h2 i {
   margin: 0 auto;
 }
 
-@media (max-width:1500px) {
-  .pc-info .components {
-    grid-template-columns: repeat(4, 1fr);
-  }
+@media (max-width: 1700px) {
 
   .performance-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .trust-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
   }
+
+  .trust-item {
+    min-height: 72px;
+    padding: 12px 8px;
+  }
+
+  .trust-item span {
+    font-size: 0.88rem;
+    line-height: 1.2;
+  }
+
+  .pc-info {
+    gap: 18px;
+  }
+
+}
+
+@media (max-width: 1450px) {
+
+  .performance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
 }
 
 @media (max-width:992px) {
@@ -1574,4 +1605,25 @@ h2 i {
 
   font-size: 1rem;
 
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffe7;
+  border-radius: 999px;
+  box-shadow: 0 0 8px #00ffe7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7ffff8;
+  box-shadow:
+    0 0 12px #00ffe7,
+    0 0 20px #00ffe7;
 }

@@ -23,6 +23,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
+    function scrollPlaylistToItem(item) {
+
+        const container = playlist;
+
+        const containerRect = container.getBoundingClientRect();
+        const itemRect = item.getBoundingClientRect();
+
+        const delta =
+            (itemRect.top - containerRect.top)
+            - ((container.clientHeight - itemRect.height) / 2);
+
+        container.scrollTo({
+            top: container.scrollTop + delta,
+            behavior: "smooth"
+        });
+
+    }
+
     function buildFeaturedPlaylist() {
 
         const featuredGames =
@@ -43,11 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (index === 0) {
 
                 item.classList.add("active");
-                item.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest",
-                    inline: "center"
-                });
+                scrollPlaylistToItem(item);
 
                 currentFeaturedGame = game;
 
@@ -82,11 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     .forEach(card => card.classList.remove("active"));
 
                 item.classList.add("active");
-                item.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest",
-                    inline: "center"
-                });
+                scrollPlaylistToItem(item);
 
                 currentFeaturedGame = game;
 
@@ -238,12 +248,40 @@ document.addEventListener('DOMContentLoaded', async () => {
         playlist.style.height = `${hero.offsetHeight - 2}px`;
     }
 
+    function syncPcDashboardHeight() {
+
+        const hero =
+            document.querySelector(".my-pc-section video");
+
+        const dashboard =
+            document.querySelector(".pc-info");
+
+        if (!hero || !dashboard)
+            return;
+
+        dashboard.style.height =
+            `${hero.offsetHeight}px`;
+
+        requestAnimationFrame(() => {
+
+            // Reserved for future adaptive layout logic.
+
+        });
+
+    }
+
     // Load Game Data
     try {
         await loadGameData();
         buildFeaturedPlaylist();
         syncPlaylistHeight();
-        window.addEventListener("resize", syncPlaylistHeight);
+        syncPcDashboardHeight();
+        window.addEventListener("resize", () => {
+
+            syncPlaylistHeight();
+            syncPcDashboardHeight();
+
+        });
         initializeHeroActions();
 
     } catch (error) {
