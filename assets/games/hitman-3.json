@@ -29,8 +29,8 @@
   },
   "media": {
     "youtube": "https://www.youtube.com/embed/gaGEdjJK0gE",
-    "preview": "https://www.youtube.com/embed/gaGEdjJK0gE?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
-    "homepagePreview": "https://www.youtube.com/embed/gaGEdjJK0gE?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
+    "preview": "https://www.youtube.com/embed/gaGEdjJK0gE?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=45",
+    "homepagePreview": "https://www.youtube.com/embed/gaGEdjJK0gE?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=20",
     "thumbnail": "https://img.youtube.com/vi/gaGEdjJK0gE/hqdefault.jpg",
     "homepagePriority": 9,
     "hero": "",
