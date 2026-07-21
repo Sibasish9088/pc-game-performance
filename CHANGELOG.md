@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.4.0] - 2026-07-21
+
+### Changed
+- Refined benchmark navigation with smoother transitions between homepage benchmarks.
+- Improved Featured Gameplay playback to provide a continuous autoplay experience without disturbing the user's browsing position.
+- Finalized the Marketplace Edition homepage for production with a restored desktop presentation and consistent visual styling.
+
+### Fixed
+- Corrected homepage layout regressions introduced during the P1 Dashboard investigation.
+- Corrected Lucide SVG styling for homepage information cards.
+- Resolved final visual inconsistencies prior to production release.
+
 ## [3.3.0] - 2026-07-21
 
 ### Added

@@ -23,21 +23,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    function scrollPlaylistToItem(item) {
+    function transitionBenchmark(game) {
 
-        const container = playlist;
+        const content = document.querySelector(".benchmark-content");
 
-        const containerRect = container.getBoundingClientRect();
-        const itemRect = item.getBoundingClientRect();
+        content.classList.add("benchmark-changing");
 
-        const delta =
-            (itemRect.top - containerRect.top)
-            - ((container.clientHeight - itemRect.height) / 2);
+        setTimeout(() => {
 
-        container.scrollTo({
-            top: container.scrollTop + delta,
-            behavior: "smooth"
-        });
+            renderBenchmark(game);
+
+            requestAnimationFrame(() => {
+                content.classList.remove("benchmark-changing");
+            });
+
+        }, 380);
 
     }
 
@@ -61,14 +61,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (index === 0) {
 
                 item.classList.add("active");
-                scrollPlaylistToItem(item);
+                const pageX = window.scrollX;
+                const pageY = window.scrollY;
+
+                item.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                    inline: "nearest"
+                });
+
+                requestAnimationFrame(() => {
+                    window.scrollTo(pageX, pageY);
+                });
 
                 currentFeaturedGame = game;
 
                 heroPlayer.src =
                     game.media.preview;
 
-                renderBenchmark(game);
+                transitionBenchmark(game);
                 startPreviewTimer();
 
             }
@@ -96,14 +107,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                     .forEach(card => card.classList.remove("active"));
 
                 item.classList.add("active");
-                scrollPlaylistToItem(item);
+                const pageX = window.scrollX;
+                const pageY = window.scrollY;
+
+                item.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                    inline: "nearest"
+                });
+
+                requestAnimationFrame(() => {
+                    window.scrollTo(pageX, pageY);
+                });
 
                 currentFeaturedGame = game;
 
                 heroPlayer.src =
                     game.media.preview;
 
-                renderBenchmark(game);
+                transitionBenchmark(game);
                 startPreviewTimer();
 
             });
@@ -248,38 +270,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         playlist.style.height = `${hero.offsetHeight - 2}px`;
     }
 
-    function syncPcDashboardHeight() {
-
-        const hero =
-            document.querySelector(".my-pc-section video");
-
-        const dashboard =
-            document.querySelector(".pc-info");
-
-        if (!hero || !dashboard)
-            return;
-
-        dashboard.style.height =
-            `${hero.offsetHeight}px`;
-
-        requestAnimationFrame(() => {
-
-            // Reserved for future adaptive layout logic.
-
-        });
-
-    }
-
     // Load Game Data
     try {
         await loadGameData();
         buildFeaturedPlaylist();
         syncPlaylistHeight();
-        syncPcDashboardHeight();
         window.addEventListener("resize", () => {
 
             syncPlaylistHeight();
-            syncPcDashboardHeight();
 
         });
         initializeHeroActions();
