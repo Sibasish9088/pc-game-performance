@@ -811,7 +811,7 @@ h2 i {
 
 .performance-label {
 
-  color: #d7ffff;
+  color: #00ffe7;
 
   margin-bottom: 8px;
 
@@ -865,7 +865,7 @@ h2 i {
 
   font-weight: bold;
 
-  color: #fff;
+  color: #00ffe7;
 
   white-space: nowrap;
 
@@ -1419,6 +1419,15 @@ h2 i {
 
   font-weight: 600;
 
+}
+
+.performance-label,
+.fps-text,
+.playlist-title,
+.game-info-list li,
+.bottom-card p,
+.info-row {
+    color: #00ffe7;
 }
 
 /* ==========================================================
