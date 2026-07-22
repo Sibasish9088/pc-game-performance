@@ -1,0 +1,7 @@
+{
+    "id": "ups",
+    "title": "APC 1500VA UPS",
+    "icon": "battery-charging",
+    "displayOrder": 6,
+    "notes": "Optional with Workstation"
+}

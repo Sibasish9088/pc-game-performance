@@ -1,0 +1,7 @@
+{
+    "id": "invoice",
+    "title": "Purchase Invoice",
+    "icon": "receipt",
+    "displayOrder": 3,
+    "notes": "Original Invoice Included"
+}

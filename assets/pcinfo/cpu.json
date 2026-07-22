@@ -1,0 +1,14 @@
+{
+    "id": "cpu",
+    "name": "Intel Core i7-14700K",
+    "manufacturer": "Intel",
+    "category": "CPU",
+    "icon": "cpu",
+    "displayOrder": 1,
+    "detailPage": "/assets/components/cpu.html",
+    "purchaseDate": "2025-07",
+    "warranty": "Manufacturer Warranty",
+    "price": "",
+    "model": "Core i7-14700K",
+    "notes": "20 Cores (8P + 12E), 28 Threads"
+}

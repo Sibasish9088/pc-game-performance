@@ -1,0 +1,7 @@
+{
+    "id": "warranty",
+    "title": "Manufacturer Warranty",
+    "icon": "shield-check",
+    "displayOrder": 5,
+    "notes": "Covered by OEM Warranty"
+}

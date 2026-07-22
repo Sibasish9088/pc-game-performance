@@ -1,0 +1,14 @@
+{
+    "id": "gpu",
+    "name": "Gigabyte RTX 5070 Ti Eagle OC ICE 16GB",
+    "manufacturer": "Gigabyte",
+    "category": "Graphics Card",
+    "icon": "monitor",
+    "displayOrder": 3,
+    "detailPage": "/assets/components/gpu.html",
+    "purchaseDate": "2025-07",
+    "warranty": "Manufacturer Warranty",
+    "price": "",
+    "model": "RTX 5070 Ti Eagle OC ICE 16GB",
+    "notes": "16GB GDDR7, DLSS 4, Ray Tracing"
+}

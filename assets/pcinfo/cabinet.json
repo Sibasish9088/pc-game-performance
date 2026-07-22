@@ -1,0 +1,14 @@
+{
+    "id": "cabinet",
+    "name": "ANT Esports Crystal Wood",
+    "manufacturer": "ANT Esports",
+    "category": "Cabinet",
+    "icon": "package",
+    "displayOrder": 7,
+    "detailPage": "/assets/components/cabinet.html",
+    "purchaseDate": "2025-07",
+    "warranty": "Manufacturer Warranty",
+    "price": "",
+    "model": "Crystal Wood",
+    "notes": "Tempered Glass Mid-Tower Cabinet"
+}

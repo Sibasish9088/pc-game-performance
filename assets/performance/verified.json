@@ -1,0 +1,7 @@
+{
+    "id": "verified",
+    "title": "AAA Benchmark Verified",
+    "icon": "badge-check",
+    "displayOrder": 4,
+    "notes": "Benchmarked and Verified"
+}

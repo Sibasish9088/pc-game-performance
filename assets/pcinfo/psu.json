@@ -1,0 +1,14 @@
+{
+    "id": "psu",
+    "name": "Gigabyte UD1000GM 1000W Gold PSU",
+    "manufacturer": "Gigabyte",
+    "category": "Power Supply",
+    "icon": "plug",
+    "displayOrder": 6,
+    "detailPage": "/assets/components/psu.html",
+    "purchaseDate": "2025-07",
+    "warranty": "Manufacturer Warranty",
+    "price": "",
+    "model": "UD1000GM",
+    "notes": "1000W 80+ Gold Fully Modular"
+}

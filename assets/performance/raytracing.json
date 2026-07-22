@@ -1,0 +1,7 @@
+{
+    "id": "raytracing",
+    "title": "Ray Tracing Ready",
+    "icon": "sparkles",
+    "displayOrder": 2,
+    "notes": "Hardware Accelerated Ray Tracing"
+}

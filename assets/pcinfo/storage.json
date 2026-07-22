@@ -1,0 +1,14 @@
+{
+    "id": "storage",
+    "name": "Kingston NV3 2TB NVMe SSD",
+    "manufacturer": "Kingston",
+    "category": "Storage",
+    "icon": "hard-drive",
+    "displayOrder": 5,
+    "detailPage": "/assets/components/storage.html",
+    "purchaseDate": "2025-07",
+    "warranty": "Manufacturer Warranty",
+    "price": "",
+    "model": "NV3 2TB",
+    "notes": "PCIe Gen4 NVMe SSD"
+}

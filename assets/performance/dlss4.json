@@ -1,0 +1,7 @@
+{
+    "id": "dlss4",
+    "title": "DLSS 4 Enabled",
+    "icon": "rocket",
+    "displayOrder": 3,
+    "notes": "AI Frame Generation"
+}
