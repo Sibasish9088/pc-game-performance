@@ -1049,12 +1049,76 @@ h2 i {
 
 @media (max-width: 768px) {
 
+  /* Existing rules... */
+
+  .section-title,
+  .pc-info h2 {
+    font-size: 1.05rem;
+  }
+
+  .gameplay-header {
+    font-size: 1.05rem;
+  }
+
+  .performance-card h2,
+  .game-info-card h2,
+  .bottom-card h2 {
+    font-size: 1.05rem;
+  }
+
   .performance-card,
   .description-section,
   .game-info-card {
 
     position: static;
 
+  }
+
+  .game-info-list li {
+    grid-template-columns: 110px 1fr;
+    gap: 10px;
+  }
+
+  .game-info-list li span {
+    text-align: right;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- Mobile Typography Polish ---------- */
+
+  /* Section titles */
+  .section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.15rem;
+  }
+
+  /* Gameplay Capture header */
+  .gameplay-header h2 {
+    font-size: 1.05rem;
+    gap: 8px;
+  }
+
+  /* Benchmark Analysis header */
+  #benchmarkSection .gameplay-header span {
+    font-size: 1.05rem;
+    gap: 8px;
+  }
+
+  /* Benchmark card headers */
+  .performance-card h2,
+  .game-info-card h2,
+  .bottom-card h2 {
+    font-size: 1.05rem;
+    gap: 8px;
+  }
+
+  /* Footer actions */
+  .hero-action {
+    font-size: 0.70rem;
+    gap: 6px;
   }
 
 }
@@ -1427,7 +1491,7 @@ h2 i {
 .game-info-list li,
 .bottom-card p,
 .info-row {
-    color: #00ffe7;
+  color: #00ffe7;
 }
 
 /* ==========================================================
