@@ -1668,3 +1668,67 @@ h2 i {
   filter: blur(2px);
 
 }
+
+/* ==========================================================
+   Gameplay Gallery
+========================================================== */
+
+.gameplay-gallery-card {
+
+  margin-top: 32px;
+
+  padding: 24px;
+
+  background: #181818;
+
+  border: 1px solid rgba(0, 255, 231, .18);
+
+  border-radius: 16px;
+
+}
+
+.gameplay-gallery-header {
+
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+}
+
+.gameplay-gallery-header h2 {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 0;
+
+}
+
+.gameplay-gallery {
+
+  display: flex;
+
+  gap: 16px;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  padding-bottom: 8px;
+
+  scrollbar-width: none;
+
+}
+
+.gameplay-gallery::-webkit-scrollbar {
+
+  display: none;
+
+}

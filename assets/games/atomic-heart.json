@@ -33,7 +33,63 @@
     "homepagePriority": 1,
     "hero": "",
     "cover": "",
-    "gallery": []
+    "gallery": [
+      {
+        "part": 1,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 01",
+        "videoId": "QYyj02G5OnU"
+      },
+      {
+        "part": 2,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 02",
+        "videoId": "NTISyi-rvNI"
+      },
+      {
+        "part": 3,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 03",
+        "videoId": "cIw4XlSO6fQ"
+      },
+      {
+        "part": 4,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 04",
+        "videoId": "paYJOYNYF60"
+      },
+      {
+        "part": 5,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 05",
+        "videoId": "7LqjOgQgEyI"
+      },
+      {
+        "part": 6,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 06",
+        "videoId": "7rnOxDQQ9eQ"
+      },
+      {
+        "part": 7,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 07",
+        "videoId": "0I48PWyj2U4"
+      },
+      {
+        "part": 8,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 08",
+        "videoId": "WWhF3a-k6N4"
+      },
+      {
+        "part": 9,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 09",
+        "videoId": "Mv6jmABJXks"
+      },
+      {
+        "part": 10,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 10",
+        "videoId": "tpxQTl0obr4"
+      },
+      {
+        "part": 11,
+        "title": "Atomic Heart 4K 195 FPS Walkthrough Part 11",
+        "videoId": "YSdWdQm5jA8"
+      }
+    ]
   },
   "benchmarkNotes": [
     "Atomic Graphics Preset",

@@ -18,6 +18,7 @@ async function loadGameDetail(gameId) {
     const game = await response.json();
 
     renderBenchmark(game);
+    renderGameplayGallery(game);
 
     document.title =
       `${game.title} | Siba PC Benchmark`;
@@ -255,7 +256,7 @@ function renderBenchmark(game) {
 
   document.getElementById("dlss").textContent =
     game.benchmark.dlss;
-  
+
   //---------------------------------------
   // Benchmark Notes
   //---------------------------------------
@@ -347,6 +348,53 @@ function renderBenchmark(game) {
   applyBarStyle("bar1080", fps1080);
   applyBarStyle("bar1440", fps1440);
   applyBarStyle("bar2160", fps2160);
+
+}
+
+function renderGameplayGallery(game) {
+
+  const gallery =
+    document.getElementById("gameplayGallery");
+
+  if (!gallery) return;
+
+  gallery.innerHTML = "";
+
+  if (
+    !game.media ||
+    !Array.isArray(game.media.gallery)
+  ) return;
+
+  game.media.gallery.forEach(video => {
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "gameplay-gallery-item";
+
+    card.innerHTML = `
+            <img
+                src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+                alt="${video.title}"
+            >
+
+            <div class="gallery-info">
+
+                <span class="gallery-title">
+                    ${video.title}
+                </span>
+
+                <span class="gallery-part">
+                    Part ${String(video.part).padStart(2, "0")}
+                </span>
+
+            </div>
+        `;
+
+    gallery.appendChild(card);
+
+  });
 
 }
 
