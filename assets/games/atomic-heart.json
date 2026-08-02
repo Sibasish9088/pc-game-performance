@@ -1,0 +1,51 @@
+{
+  "id": "atomic-heart",
+  "title": "Atomic Heart",
+  "release": 2023,
+  "developer": "Mundfish",
+  "publisher": "Focus Entertainment",
+  "engine": "Unreal Engine 4",
+  "description": "Atomic Heart is a visually stunning first-person action RPG set in an alternate-history Soviet Union where advanced robotics and artificial intelligence have transformed society. Combining fast-paced combat, immersive exploration, and striking retro-futuristic art direction, the game delivers a technically demanding PC experience. The gameplay showcased on SPCBM is captured entirely in real-time using the 'Atomic' graphics preset, highlighting exceptional image quality, fluid gameplay, and the capabilities of modern high-end PC hardware.",
+  "tags": [
+    "First-Person Shooter",
+    "Action RPG",
+    "Sci-Fi",
+    "Story Rich",
+    "Open World"
+  ],
+  "benchmark": {
+    "preset": "Atomic",
+    "rayTracing": false,
+    "dlss": "Disabled",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+  "fps": {
+    "1080p": 300,
+    "1440p": 219,
+    "2160p": 195
+  },
+  "media": {
+    "youtube": "https://www.youtube.com/embed/NTISyi-rvNI",
+    "preview": "https://www.youtube.com/embed/NTISyi-rvNI?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "homepagePreview": "https://www.youtube.com/embed/NTISyi-rvNI?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "thumbnail": "https://img.youtube.com/vi/NTISyi-rvNI/hqdefault.jpg",
+    "homepagePriority": 1,
+    "hero": "",
+    "cover": "",
+    "gallery": []
+  },
+  "benchmarkNotes": [
+    "Atomic Graphics Preset",
+    "Native Resolution Rendering",
+    "Real Gameplay Performance",
+    "Captured on NVIDIA GeForce RTX 5070 Ti",
+    "Performance verified through extended gameplay sessions"
+  ],
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

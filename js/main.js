@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const HOMEPAGE_PREVIEW_DURATION = 45000;
+    const HOMEPAGE_PREVIEW_DURATION = 90000;
     const playlist = document.getElementById('featuredPlaylist');
     const heroPlayer = document.getElementById('featuredGameplay');
     const viewBenchmarkBtn = document.getElementById("viewBenchmarkBtn");
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!currentFeaturedGame) return;
 
             window.location.href =
-                `game.html?id=${currentFeaturedGame.id}`;
+                `games/game.html?id=${currentFeaturedGame.id}`;
 
         });
 
@@ -270,6 +270,54 @@ document.addEventListener('DOMContentLoaded', async () => {
         playlist.style.height = `${hero.offsetHeight - 2}px`;
     }
 
+    /* ==========================================================
+        Desktop Focus Workspace Transition Engine
+    ========================================================== */
+
+    const homepageSection = document.querySelector(".my-pc-section");
+    const focusWorkspace = document.getElementById("focusWorkspace");
+    const focusClose = document.querySelector(".focus-close");
+
+    function showFocusWorkspace() {
+
+        homepageSection.classList.add("workspace-hidden");
+
+        setTimeout(() => {
+
+            focusWorkspace.style.display = "block";
+
+            requestAnimationFrame(() => {
+                focusWorkspace.classList.add("visible");
+            });
+
+        }, 450);
+    }
+
+    function hideFocusWorkspace() {
+
+        focusWorkspace.classList.remove("visible");
+
+        setTimeout(() => {
+
+            focusWorkspace.style.display = "none";
+
+            homepageSection.classList.remove("workspace-hidden");
+
+        }, 450);
+    }
+
+    function focusWorkspaceTransition() {
+        focusClose.addEventListener("click", hideFocusWorkspace);
+
+        document.querySelectorAll(
+            ".component-card, .highlight-card, .trust-item"
+        ).forEach(card => {
+
+            card.addEventListener("click", showFocusWorkspace);
+
+        });
+    }
+
     // Load Game Data
     try {
         await loadGameData();
@@ -281,6 +329,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         });
         initializeHeroActions();
+        focusWorkspaceTransition();
 
     } catch (error) {
         console.error("Featured Gameplay initialization failed:", error);

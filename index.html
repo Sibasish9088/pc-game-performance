@@ -56,170 +56,194 @@
                 </div>
             </div>
         </section>
-        <section id="dynamic-content" style="display: none"></section>
-        <section id="gameplays">
-
-            <h2 class="section-title">
-                <i data-lucide="gamepad-2"></i>
-                My Gameplays
-            </h2>
-
-            <div class="featured-gameplay">
-
-                <div class="featured-player">
-
-                    <div class="gameplay-header">
-
-                        <i data-lucide="clapperboard"></i>
-
-                        <span>SPCBM • Gameplay Capture</span>
-
-                    </div>
-
-                    <iframe id="featuredGameplay" src="" allow="autoplay" loading="lazy">
-                    </iframe>
-
-                    <div class="hero-actions">
-
-                        <a id="viewGameplayBtn" class="hero-action" href="javascript:void(0)">
-
-                            <i data-lucide="monitor"></i>
-
-                            <span>View Gameplay</span>
-
-                        </a>
-
-                        <a id="viewBenchmarkBtn" class="hero-action" href="javascript:void(0)">
-
-                            <i data-lucide="cpu"></i>
-
-                            <span>Benchmark Details ▼</span>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div id="featuredPlaylist" class="featured-playlist">
-
-                </div>
-
-            </div>
+        <section id="dynamic-content">
             <!-- ==========================================================
+                 SPCBM Desktop Focus Workspace
+            ========================================================== -->
+            <section id="focusWorkspace" class="focus-workspace">
+
+                <button class="focus-close" aria-label="Close Workspace">
+                    <i data-lucide="x"></i>
+                </button>
+
+                <div class="focus-layout">
+
+                    <aside class="focus-navigator">
+
+                    </aside>
+
+                    <section class="focus-content">
+
+                    </section>
+
+                </div>
+
+            </section>
+            <section id="gameplays">
+
+                <h2 class="section-title">
+                    <i data-lucide="gamepad-2"></i>
+                    My Gameplays
+                </h2>
+
+                <div class="featured-gameplay">
+
+                    <div class="featured-player">
+
+                        <div class="gameplay-header">
+
+                            <i data-lucide="clapperboard"></i>
+
+                            <span>SPCBM • Gameplay Capture</span>
+
+                        </div>
+
+                        <iframe id="featuredGameplay" src="" allow="autoplay" loading="lazy">
+                        </iframe>
+
+                        <div class="hero-actions">
+
+                            <a id="viewGameplayBtn" class="hero-action" href="javascript:void(0)">
+
+                                <i data-lucide="monitor"></i>
+
+                                <span>View Gameplay</span>
+
+                            </a>
+
+                            <a id="viewBenchmarkBtn" class="hero-action" href="javascript:void(0)">
+
+                                <i data-lucide="cpu"></i>
+
+                                <span>Benchmark Details ▼</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div id="featuredPlaylist" class="featured-playlist">
+
+                    </div>
+
+                </div>
+                <!-- ==========================================================
                             SPCBM Benchmark Section
             ========================================================== -->
 
-            <section id="benchmarkSection" class="benchmark-section">
-                <div class="gameplay-header">
-                    <i data-lucide="cpu"></i>
-                    <span>SPCBM • Benchmark Analysis</span>
-                </div>
-                <div class="benchmark-content">
-                    <!-- ==========================================================
+                <section id="benchmarkSection" class="benchmark-section">
+                    <div class="gameplay-header">
+                        <i data-lucide="cpu"></i>
+                        <span>SPCBM • Benchmark Analysis</span>
+                    </div>
+                    <div class="benchmark-content">
+                        <!-- ==========================================================
                     Game Overview
                     =========================================================== -->
 
-                    <section class="game-overview">
+                        <section class="game-overview">
 
-                        <!-- LEFT COLUMN -->
+                            <!-- LEFT COLUMN -->
 
-                        <div class="overview-left">
+                            <div class="overview-left">
 
-                            <!-- ===========================
+                                <!-- ===========================
                             Performance
                             ============================ -->
 
-                            <div class="performance-card">
+                                <div class="performance-card">
 
-                                <h2>
+                                    <h2>
 
-                                    <i data-lucide="gauge"></i>
+                                        <i data-lucide="gauge"></i>
 
-                                    Performance
+                                        Performance
 
-                                </h2>
+                                    </h2>
 
-                                <div class="performance-bars">
+                                    <div class="performance-bars">
 
-                                    <div class="performance-item">
+                                        <div class="performance-item">
 
-                                        <div class="performance-label">
+                                            <div class="performance-label">
 
-                                            1080p Ultra RTX
-
-                                        </div>
-
-                                        <div class="performance-row">
-
-                                            <div class="performance-track">
-
-                                                <div id="bar1080" class="performance-fill">
-                                                </div>
+                                                1080p Ultra RTX
 
                                             </div>
 
-                                            <span id="fps1080" class="fps-text">
+                                            <div class="performance-row">
 
-                                                -- FPS
+                                                <div class="performance-track">
 
-                                            </span>
+                                                    <div id="bar1080" class="performance-fill">
+                                                    </div>
 
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="performance-item">
-
-                                        <div class="performance-label">
-
-                                            1440p Ultra RTX
-
-                                        </div>
-
-                                        <div class="performance-row">
-
-                                            <div class="performance-track">
-
-                                                <div id="bar1440" class="performance-fill">
                                                 </div>
+
+                                                <span id="fps1080" class="fps-text">
+
+                                                    -- FPS
+
+                                                </span>
 
                                             </div>
 
-                                            <span id="fps1440" class="fps-text">
-
-                                                -- FPS
-
-                                            </span>
-
                                         </div>
 
-                                    </div>
 
+                                        <div class="performance-item">
 
-                                    <div class="performance-item">
+                                            <div class="performance-label">
 
-                                        <div class="performance-label">
-
-                                            2160p Ultra RTX
-
-                                        </div>
-
-                                        <div class="performance-row">
-
-                                            <div class="performance-track">
-
-                                                <div id="bar2160" class="performance-fill">
-                                                </div>
+                                                1440p Ultra RTX
 
                                             </div>
 
-                                            <span id="fps2160" class="fps-text">
+                                            <div class="performance-row">
 
-                                                -- FPS
+                                                <div class="performance-track">
 
-                                            </span>
+                                                    <div id="bar1440" class="performance-fill">
+                                                    </div>
+
+                                                </div>
+
+                                                <span id="fps1440" class="fps-text">
+
+                                                    -- FPS
+
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="performance-item">
+
+                                            <div class="performance-label">
+
+                                                2160p Ultra RTX
+
+                                            </div>
+
+                                            <div class="performance-row">
+
+                                                <div class="performance-track">
+
+                                                    <div id="bar2160" class="performance-fill">
+                                                    </div>
+
+                                                </div>
+
+                                                <span id="fps2160" class="fps-text">
+
+                                                    -- FPS
+
+                                                </span>
+
+                                            </div>
 
                                         </div>
 
@@ -229,172 +253,170 @@
 
                             </div>
 
-                        </div>
 
 
+                            <!-- RIGHT COLUMN -->
 
-                        <!-- RIGHT COLUMN -->
+                            <div class="overview-right">
 
-                        <div class="overview-right">
+                                <section class="game-info-card">
 
-                            <section class="game-info-card">
+                                    <h2>
 
-                                <h2>
+                                        <i data-lucide="info"></i>
 
-                                    <i data-lucide="info"></i>
+                                        Game Information
 
-                                    Game Information
+                                    </h2>
 
-                                </h2>
+                                    <ul class="game-info-list">
 
-                                <ul class="game-info-list">
+                                        <li>
 
-                                    <li>
+                                            <strong>Developer:</strong>
 
-                                        <strong>Developer:</strong>
+                                            <span id="developer">
 
-                                        <span id="developer">
+                                                Loading...
 
-                                            Loading...
+                                            </span>
 
-                                        </span>
+                                        </li>
 
-                                    </li>
+                                        <li>
 
-                                    <li>
+                                            <strong>Publisher:</strong>
 
-                                        <strong>Publisher:</strong>
+                                            <span id="publisher">
 
-                                        <span id="publisher">
+                                                Loading...
 
-                                            Loading...
+                                            </span>
 
-                                        </span>
+                                        </li>
 
-                                    </li>
+                                        <li>
 
-                                    <li>
+                                            <strong>Engine:</strong>
 
-                                        <strong>Engine:</strong>
+                                            <span id="engine">
 
-                                        <span id="engine">
+                                                Loading...
 
-                                            Loading...
+                                            </span>
 
-                                        </span>
+                                        </li>
 
-                                    </li>
+                                        <li>
 
-                                    <li>
+                                            <strong>Graphics Preset:</strong>
 
-                                        <strong>Graphics Preset:</strong>
+                                            <span id="preset">
 
-                                        <span id="preset">
+                                                Loading...
 
-                                            Loading...
+                                            </span>
 
-                                        </span>
+                                        </li>
 
-                                    </li>
+                                        <li>
 
-                                    <li>
+                                            <strong>Ray Tracing:</strong>
 
-                                        <strong>Ray Tracing:</strong>
+                                            <span id="raytracing">
 
-                                        <span id="raytracing">
+                                                Loading...
 
-                                            Loading...
+                                            </span>
 
-                                        </span>
+                                        </li>
 
-                                    </li>
+                                        <li>
 
-                                    <li>
+                                            <strong>Upscaling:</strong>
 
-                                        <strong>Upscaling:</strong>
+                                            <span id="dlss">
 
-                                        <span id="dlss">
+                                                Loading...
 
-                                            Loading...
+                                            </span>
 
-                                        </span>
+                                        </li>
 
-                                    </li>
+                                    </ul>
 
-                                </ul>
+                                </section>
 
-                            </section>
+                            </div>
 
-                        </div>
+                        </section>
 
-                    </section>
-
-                    <!-- ==========================================================
+                        <!-- ==========================================================
                     Bottom Information Cards
                     =========================================================== -->
 
-                    <section class="bottom-information">
+                        <section class="bottom-information">
 
-                        <!-- ===========================
+                            <!-- ===========================
                         Benchmark Notes
                         ============================ -->
 
-                        <div class="bottom-card">
+                            <div class="bottom-card">
 
-                            <h2>
+                                <h2>
 
-                                <i data-lucide="clipboard-list"></i>
+                                    <i data-lucide="clipboard-list"></i>
 
-                                Benchmark Notes
+                                    Benchmark Notes
 
-                            </h2>
+                                </h2>
 
-                            <div id="fps-insight-content">
+                                <div id="fps-insight-content">
 
-                                Loading...
+                                    Loading...
+
+                                </div>
 
                             </div>
 
-                        </div>
 
-
-                        <!-- ===========================
+                            <!-- ===========================
                         Hardware Requirements
                         ============================ -->
 
-                        <div class="bottom-card">
+                            <div class="bottom-card">
 
-                            <h2>
+                                <h2>
 
-                                <i data-lucide="microchip"></i>
+                                    <i data-lucide="microchip"></i>
 
-                                Hardware Requirements
+                                    Hardware Requirements
 
-                            </h2>
+                                </h2>
 
-                            <div id="comparison-content">
+                                <div id="comparison-content">
 
-                                Loading...
+                                    Loading...
+
+                                </div>
 
                             </div>
 
-                        </div>
+                        </section>
+                    </div>
+                    <div class="hero-actions benchmark-footer">
 
-                    </section>
-                </div>
-                <div class="hero-actions benchmark-footer">
+                        <a id="collapseBenchmarkBtn" class="hero-action">
 
-                    <a id="collapseBenchmarkBtn" class="hero-action">
+                            <i data-lucide="chevrons-up"></i>
 
-                        <i data-lucide="chevrons-up"></i>
+                            <span>Featured Gameplay</span>
 
-                        <span>Featured Gameplay</span>
+                        </a>
 
-                    </a>
-
-                </div>
+                    </div>
+                </section>
             </section>
-        </section>
     </main>
     <script src="js/gameData.js"></script>
     <script src="js/main.js"></script>
