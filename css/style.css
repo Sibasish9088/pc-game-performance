@@ -815,7 +815,7 @@ h2 i {
 
   margin-bottom: 8px;
 
-  font-size: .95rem;
+  font-size: .72rem;
 
 }
 
@@ -908,6 +908,16 @@ h2 i {
 
   border-bottom: 1px solid rgba(255, 255, 255, .08);
 
+  font-size: 0.72rem;
+
+}
+
+.game-info-list li span {
+
+  text-align: right;
+
+  font-size: 0.72rem;
+
 }
 
 .game-info-list li:last-child {
@@ -935,6 +945,8 @@ h2 i {
 }
 
 .bottom-card p {
+
+  font-size: .72rem;
 
   line-height: 1.8;
 
@@ -975,6 +987,8 @@ h2 i {
   padding: 14px 0;
 
   border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+  font-size: 0.72rem;
 
 }
 
@@ -1101,7 +1115,7 @@ h2 i {
 
   .game-info-list li span {
     text-align: right;
-    font-size: 0.9rem;
+    font-size: 0.72rem;
   }
 
   /* ---------- Mobile Typography Polish ---------- */
@@ -1139,6 +1153,38 @@ h2 i {
   .hero-action {
     font-size: 0.70rem;
     gap: 6px;
+  }
+
+  .performance-label {
+
+    font-size: .82rem;
+
+  }
+
+  .fps-text {
+
+    font-size: 1rem;
+
+  }
+
+  .game-info-list li {
+
+    font-size: .88rem;
+
+  }
+
+  .bottom-card p {
+
+    font-size: .72rem;
+
+    line-height: 1.65;
+
+  }
+
+  .info-row {
+
+    font-size: .72rem;
+
   }
 
 }
@@ -1417,7 +1463,7 @@ h2 i {
 
   font-family: 'Orbitron', sans-serif;
 
-  font-size: 1.2rem;
+  font-size: 0.72rem;
 
   font-weight: 600;
 
@@ -1428,6 +1474,18 @@ h2 i {
   color: #00ffe7;
 
   filter: drop-shadow(0 0 6px rgba(0, 255, 231, .6));
+
+}
+
+.gameplay-header h2 {
+
+  font-size: inherit;
+
+}
+
+.gameplay-header span {
+
+  font-size: inherit;
 
 }
 
@@ -1460,6 +1518,8 @@ h2 i {
   text-decoration: none;
 
   font-family: 'Orbitron', sans-serif;
+
+  font-size: 0.72rem;
 
   transition: .25s;
 
@@ -1514,6 +1574,7 @@ h2 i {
 .bottom-card p,
 .info-row {
   color: #00ffe7;
+  font-size: 0.72rem;
 }
 
 /* ==========================================================
@@ -1647,7 +1708,7 @@ h2 i {
 
 .benchmark-footer .hero-action {
 
-  font-size: 1rem;
+  font-size: 0.72rem;
 
 }
 
