@@ -370,26 +370,34 @@ function renderGameplayGallery(game) {
     const card =
       document.createElement("div");
 
-    card.className =
-      "gameplay-gallery-item";
+    card.className = "playlist-item";
+
+    card.dataset.videoId = video.videoId;
+    card.dataset.part = video.part;
 
     card.innerHTML = `
+
             <img
-                src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+                src="https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg"
                 alt="${video.title}"
-            >
+                loading="lazy">
 
-            <div class="gallery-info">
+            <div class="playlist-info">
 
-                <span class="gallery-title">
-                    ${video.title}
-                </span>
+                <h3 class="playlist-title">
 
-                <span class="gallery-part">
                     Part ${String(video.part).padStart(2, "0")}
-                </span>
+
+                </h3>
+
+                <p class="playlist-status">
+
+                    Gameplay Capture
+
+                </p>
 
             </div>
+
         `;
 
     gallery.appendChild(card);

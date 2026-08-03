@@ -990,6 +990,26 @@ h2 i {
 
 @media(max-width:1100px) {
 
+  .featured-gameplay {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+  }
+
+  .gameplay-header {
+
+    font-size: 1.05rem;
+
+  }
+
+  .hero-action {
+
+    font-size: .90rem;
+
+  }
+
   .game-overview {
 
     grid-template-columns: 1fr;
@@ -1224,6 +1244,8 @@ h2 i {
   border-color: #00ffe7;
 
   box-shadow: 0 0 18px rgba(0, 255, 255, .30);
+
+  transform: translateX(4px);
 
 }
 
@@ -1730,5 +1752,111 @@ h2 i {
 .gameplay-gallery::-webkit-scrollbar {
 
   display: none;
+
+}
+
+.gameplay-gallery .playlist-item {
+
+  flex: 0 0 250px;
+
+  transform: none;
+
+}
+
+.gameplay-gallery .playlist-item:hover {
+
+  transform: translateY(-3px);
+
+}
+
+.gameplay-gallery .playlist-info {
+
+  min-width: 0;
+
+}
+
+.gameplay-gallery .playlist-title {
+
+  margin-bottom: 6px;
+
+}
+
+.gameplay-gallery .playlist-status {
+
+  opacity: .85;
+
+}
+
+.back-to-previews {
+
+  display: none;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-left: auto;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  color: #00ffe7;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  opacity: .88;
+
+  transition:
+    opacity .25s ease,
+    color .25s ease,
+    text-shadow .25s ease;
+
+}
+
+.back-to-previews.visible {
+
+  display: flex;
+
+}
+
+.back-to-previews:hover {
+
+  opacity: 1;
+
+  color: #7ffff8;
+
+  text-shadow:
+    0 0 8px rgba(0, 255, 231, .45);
+
+}
+
+.playlist-context {
+
+  display: none;
+
+  margin-bottom: 14px;
+
+}
+
+.playlist-context.visible {
+
+  display: block;
+
+}
+
+.playlist-context h3 {
+
+  margin-bottom: 4px;
+
+}
+
+.playlist-context span {
+
+  opacity: .7;
+
+  font-size: .82rem;
 
 }

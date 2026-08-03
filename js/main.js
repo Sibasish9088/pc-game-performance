@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const heroPlayer = document.getElementById('featuredGameplay');
     const viewBenchmarkBtn = document.getElementById("viewBenchmarkBtn");
     const viewGameplayBtn = document.getElementById("viewGameplayBtn");
+    const backToPreviewsBtn = document.getElementById("backToPreviews");
+    const gameplaySectionTitle = document.querySelector("#gameplaySectionTitle span");
+    const homepageState = {
+        mode: "preview",
+        selectedGame: null,
+        selectedVideoIndex: 0
+    };
 
     // Assign component IDs dynamically
     const componentLabels = [
@@ -136,6 +143,128 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     }
 
+    function buildGameplayPlaylist(game) {
+
+        if (!game?.media?.gallery)
+            return;
+
+        playlist.innerHTML = "";
+
+        game.media.gallery.forEach((video, index) => {
+
+            const item =
+                document.createElement("div");
+
+            item.className = "playlist-item";
+
+            if (index === 0) {
+
+                item.classList.add("active");
+
+            }
+
+            item.innerHTML = `
+
+            <img
+                src="https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg"
+                alt="Part ${String(video.part).padStart(2, "0")}">
+
+            <div class="playlist-info">
+
+                <p class="playlist-title">
+
+                    Part ${String(video.part).padStart(2, "0")}
+
+                </p>
+
+            </div>
+
+        `;
+
+            item.addEventListener("click", () => {
+
+                document
+                    .querySelectorAll(".playlist-item")
+                    .forEach(card =>
+                        card.classList.remove("active"));
+
+                item.classList.add("active");
+
+                homepageState.selectedVideoIndex = index;
+
+                // Commit-4
+                // Hero playback switches here.
+
+            });
+
+            playlist.appendChild(item);
+
+        });
+
+    }
+
+    function buildGameplayLibrary() {
+
+        const context = document.getElementById("playlistContext");
+        context.classList.add("visible");
+        context.querySelector("h3").textContent = "Gameplay Library";
+        context.querySelector("span").textContent = "Browse captured walkthroughs";
+
+        playlist.innerHTML = "";
+
+        const gameplayGames =
+            gameData.filter(game =>
+                game.media &&
+                game.media.gallery &&
+                game.media.gallery.length > 0
+            );
+
+        gameplayGames.forEach((game, index) => {
+
+            const item =
+                document.createElement("div");
+
+            item.className = "playlist-item";
+
+            if (
+                homepageState.selectedGame &&
+                homepageState.selectedGame.id === game.id
+            ) {
+
+                item.classList.add("active");
+
+            }
+
+            item.innerHTML = `
+
+            <img
+                src="${game.media.thumbnail}"
+                alt="${game.title}">
+
+            <div class="playlist-info">
+
+                <p class="playlist-title">
+
+                    ${game.title}
+
+                </p>
+
+            </div>
+
+        `;
+
+            item.addEventListener("click", () => {
+
+                loadSelectedGame(game);
+
+            });
+
+            playlist.appendChild(item);
+
+        });
+
+    }
+
     let currentFeaturedGame = null;
     let previewTimer = null;
 
@@ -173,12 +302,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function initializeHeroActions() {
 
+        backToPreviewsBtn.addEventListener("click", () => {
+
+            exitGameplayMode();
+
+        });
+
         viewGameplayBtn.addEventListener("click", () => {
 
-            if (!currentFeaturedGame) return;
+            if (homepageState.mode === "preview") {
 
-            window.location.href =
-                `games/game.html?id=${currentFeaturedGame.id}`;
+                if (!currentFeaturedGame)
+                    return;
+
+                loadSelectedGame(currentFeaturedGame);
+
+                return;
+
+            }
+
+            buildGameplayLibrary();
 
         });
 
@@ -316,6 +459,74 @@ document.addEventListener('DOMContentLoaded', async () => {
             card.addEventListener("click", showFocusWorkspace);
 
         });
+    }
+
+    function loadSelectedGame(game) {
+
+        clearTimeout(previewTimer);
+        homepageState.selectedGame = game;
+        homepageState.mode = "gameplay";
+        backToPreviewsBtn.classList.add("visible");
+        viewGameplayBtn.querySelector("span").textContent = "Other Gameplays";
+        gameplaySectionTitle.textContent = `${game.title} Gameplay`;
+        homepageState.selectedVideoIndex = 0;
+        loadGameplayHero(game);
+        loadGameplayPlaylist(game);
+        transitionBenchmark(game);
+
+    }
+
+    function exitGameplayMode() {
+
+        homepageState.mode = "preview";
+        homepageState.selectedGame = null;
+        homepageState.selectedVideoIndex = 0;
+        backToPreviewsBtn.classList.remove("visible");
+        viewGameplayBtn.querySelector("span").textContent = "View Gameplay";
+        gameplaySectionTitle.textContent = "My Gameplays";
+        buildFeaturedPlaylist();
+
+    }
+
+    function loadGameplayHero(game) {
+
+        if (!game || !game.media) return;
+
+        // Reset playback timer because the user has
+        // intentionally selected a game.
+        clearTimeout(previewTimer);
+
+        // Start from the gameplay entry point.
+        // If gameplay is unavailable, gracefully
+        // fall back to the homepage preview.
+        heroPlayer.style.opacity = "0.35";
+
+        setTimeout(() => {
+
+            heroPlayer.src =
+                game.media.gameplay ??
+                game.media.preview;
+
+            heroPlayer.onload = () => {
+
+                heroPlayer.style.opacity = "1";
+
+            };
+
+        }, 180);
+
+    }
+
+    function loadGameplayPlaylist(game) {
+
+        document
+            .getElementById("playlistContext")
+            .classList.remove("visible");
+
+        buildGameplayPlaylist(game);
+
+        syncPlaylistHeight();
+
     }
 
     // Load Game Data
