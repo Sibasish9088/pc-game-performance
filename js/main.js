@@ -663,7 +663,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         requestAnimationFrame(() => {
 
-            document.querySelector("#featuredPlaylist .playlist-item")?.click();
+            const items =
+                document.querySelectorAll("#featuredPlaylist .playlist-item");
+
+            items.forEach(item =>
+                item.classList.remove("active"));
+
+            const activeItem =
+                items[homepageState.selectedVideoIndex];
+
+            if (!activeItem)
+                return;
+
+            activeItem.classList.add("active");
+
+            activeItem.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "nearest"
+            });
 
         });
 
