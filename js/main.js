@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const HOMEPAGE_PREVIEW_DURATION = 90000;
     const playlist = document.getElementById('featuredPlaylist');
     const heroPlayer = document.getElementById('featuredGameplay');
+    let ytPlayer = null;
+    let ytApiReady = false;
     const viewBenchmarkBtn = document.getElementById("viewBenchmarkBtn");
     const viewGameplayBtn = document.getElementById("viewGameplayBtn");
     const backToPreviewsBtn = document.getElementById("backToPreviews");
@@ -25,6 +27,49 @@ document.addEventListener('DOMContentLoaded', async () => {
         'case',
         'fans'
     ];
+
+    window.onYouTubeIframeAPIReady = function () {
+
+        ytApiReady = true;
+
+        ytPlayer = new YT.Player("featuredGameplay", {
+
+            events: {
+
+                onReady: () => {
+
+                    console.log("YouTube API Ready");
+
+                },
+
+                onStateChange: handlePlayerStateChange
+            }
+
+        });
+
+    };
+
+    function handlePlayerStateChange(event) {
+
+        if (event.data !== YT.PlayerState.ENDED)
+            return;
+
+        if (homepageState.mode !== "gameplay")
+            return;
+
+        const gallery = homepageState.selectedGame?.media?.gallery;
+
+        if (!gallery)
+            return;
+
+        const nextIndex = homepageState.selectedVideoIndex + 1;
+
+        if (nextIndex >= gallery.length)
+            return;
+
+        document.querySelectorAll("#featuredPlaylist .playlist-item")[nextIndex]?.click();
+
+    }
 
     document.querySelectorAll('.component-card').forEach((card, index) => {
         if (index < componentLabels.length) {
@@ -210,8 +255,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 homepageState.selectedVideoIndex = index;
 
-                // Commit-4
-                // Hero playback switches here.
+                ytPlayer.loadVideoById(video.videoId);
 
             });
 
@@ -587,9 +631,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         setTimeout(() => {
 
-            heroPlayer.src =
+            const gameplayUrl =
                 game.media.gameplay ??
                 game.media.preview;
+
+            const separator =
+                gameplayUrl.includes("?") ? "&" : "?";
+
+            heroPlayer.src =
+                `${gameplayUrl}${separator}enablejsapi=1&playsinline=1&rel=0`;
 
             heroPlayer.onload = () => {
 
