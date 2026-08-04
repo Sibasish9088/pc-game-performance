@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const gameplaySectionTitle = document.querySelector("#gameplaySectionTitle span");
     const homepageState = {
         mode: "preview",
+        playlistView: "preview",
+        heroLocked: false,
         selectedGame: null,
         selectedVideoIndex: 0
     };
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     }
 
-    function buildFeaturedPlaylist() {
+    function renderPreviewPlaylist() {
 
         const featuredGames =
             [...gameData]
@@ -80,14 +82,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 requestAnimationFrame(() => {
                     window.scrollTo(pageX, pageY);
                 });
+            }
 
-                currentFeaturedGame = game;
+            function initializeHomepagePreview() {
 
-                heroPlayer.src =
-                    game.media.preview;
+                const firstItem =
+                    document.querySelector(".playlist-item");
 
-                transitionBenchmark(game);
-                startPreviewTimer();
+                if (!firstItem)
+                    return;
+
+                firstItem.click();
 
             }
 
@@ -127,13 +132,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                     window.scrollTo(pageX, pageY);
                 });
 
-                currentFeaturedGame = game;
+                if (!homepageState.heroLocked) {
+                    currentFeaturedGame = game;
 
-                heroPlayer.src =
-                    game.media.preview;
+                    heroPlayer.src =
+                        game.media.preview;
 
-                transitionBenchmark(game);
-                startPreviewTimer();
+                    transitionBenchmark(game);
+                    startPreviewTimer();
+                }
 
             });
 
@@ -152,8 +159,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         game.media.gallery.forEach((video, index) => {
 
-            const item =
-                document.createElement("div");
+            const item = document.createElement("div");
 
             item.className = "playlist-item";
 
@@ -189,6 +195,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                         card.classList.remove("active"));
 
                 item.classList.add("active");
+                const pageX = window.scrollX;
+                const pageY = window.scrollY;
+
+                item.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                    inline: "nearest"
+                });
+
+                requestAnimationFrame(() => {
+                    window.scrollTo(pageX, pageY);
+                });
 
                 homepageState.selectedVideoIndex = index;
 
@@ -315,13 +333,38 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (!currentFeaturedGame)
                     return;
 
+                const gallery = currentFeaturedGame.media?.gallery ?? [];
+
+                if (gallery.length === 0) {
+
+                    showGameplayUnavailable();
+
+                    return;
+
+                }
+
                 loadSelectedGame(currentFeaturedGame);
+
+                return;
+            }
+
+            if (homepageState.playlistView === "gameplay") {
+
+                homepageState.playlistView = "preview";
+
+                viewGameplayBtn.querySelector("span").textContent = "Continue Watching";
+
+                renderPreviewPlaylist();
 
                 return;
 
             }
 
-            buildGameplayLibrary();
+            homepageState.playlistView = "gameplay";
+
+            viewGameplayBtn.querySelector("span").textContent = "Other Gameplays";
+
+            loadGameplayPlaylist(homepageState.selectedGame);
 
         });
 
@@ -466,6 +509,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         clearTimeout(previewTimer);
         homepageState.selectedGame = game;
         homepageState.mode = "gameplay";
+        homepageState.playlistView = "gameplay";
+        homepageState.heroLocked = true;
         backToPreviewsBtn.classList.add("visible");
         viewGameplayBtn.querySelector("span").textContent = "Other Gameplays";
         gameplaySectionTitle.textContent = `${game.title} Gameplay`;
@@ -479,12 +524,51 @@ document.addEventListener('DOMContentLoaded', async () => {
     function exitGameplayMode() {
 
         homepageState.mode = "preview";
+        homepageState.heroLocked = false;
         homepageState.selectedGame = null;
         homepageState.selectedVideoIndex = 0;
         backToPreviewsBtn.classList.remove("visible");
         viewGameplayBtn.querySelector("span").textContent = "View Gameplay";
         gameplaySectionTitle.textContent = "My Gameplays";
-        buildFeaturedPlaylist();
+        renderPreviewPlaylist();
+        document.querySelector("#featuredPlaylist .playlist-item")?.click();
+    }
+
+    function showGameplayUnavailable() {
+
+        const overlay = document.createElement("div");
+
+        overlay.className = "gameplay-unavailable-overlay";
+
+        overlay.innerHTML = `
+        <div class="gameplay-unavailable-card">
+
+            <h2>Gameplay Capture</h2>
+
+            <p>Full gameplay coming soon.</p>
+
+            <span>Returning to Preview...</span>
+
+        </div>
+    `;
+
+        document.body.appendChild(overlay);
+
+        requestAnimationFrame(() => {
+            overlay.classList.add("visible");
+        });
+
+        setTimeout(() => {
+
+            overlay.classList.remove("visible");
+
+            setTimeout(() => {
+
+                overlay.remove();
+
+            }, 350);
+
+        }, 2200);
 
     }
 
@@ -527,12 +611,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         syncPlaylistHeight();
 
+        requestAnimationFrame(() => {
+
+            document.querySelector("#featuredPlaylist .playlist-item")?.click();
+
+        });
+
     }
 
     // Load Game Data
     try {
         await loadGameData();
-        buildFeaturedPlaylist();
+        renderPreviewPlaylist();
+        document.querySelector("#featuredPlaylist .playlist-item")?.click();
         syncPlaylistHeight();
         window.addEventListener("resize", () => {
 
