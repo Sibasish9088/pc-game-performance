@@ -29,6 +29,7 @@
   "media": {
     "youtube": "https://www.youtube.com/embed/ZGPTcf5kc6o",
     "preview": "https://www.youtube.com/embed/ZGPTcf5kc6o?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "previewVideoId": "ZGPTcf5kc6o",
     "homepagePreview": "https://www.youtube.com/embed/ZGPTcf5kc6o?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
     "thumbnail": "https://img.youtube.com/vi/ZGPTcf5kc6o/hqdefault.jpg",
     "homepagePriority": 10,
@@ -50,3 +51,4 @@
     "gpuHeavy": true
   }
 }
+

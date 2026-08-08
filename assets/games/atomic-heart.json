@@ -28,10 +28,12 @@
   "media": {
     "youtube": "https://www.youtube.com/embed/NTISyi-rvNI",
     "preview": "https://www.youtube.com/embed/NTISyi-rvNI?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "previewVideoId": "NTISyi-rvNI",
     "homepagePreview": "https://www.youtube.com/embed/NTISyi-rvNI?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
     "thumbnail": "https://img.youtube.com/vi/NTISyi-rvNI/hqdefault.jpg",
     "homepagePriority": 1,
     "gameplay": "https://www.youtube.com/embed/QYyj02G5OnU?autoplay=1&mute=0&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1",
+    "gameplayVideoId": "QYyj02G5OnU",
     "hero": "",
     "cover": "",
     "gallery": [

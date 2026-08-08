@@ -64,8 +64,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const nextIndex = homepageState.selectedVideoIndex + 1;
 
-        if (nextIndex >= gallery.length)
+        if (nextIndex >= gallery.length) {
+            showGameplayCompleteOverlay();
             return;
+        }
 
         document.querySelectorAll("#featuredPlaylist .playlist-item")[nextIndex]?.click();
 
@@ -609,6 +611,50 @@ document.addEventListener('DOMContentLoaded', async () => {
             setTimeout(() => {
 
                 overlay.remove();
+
+            }, 350);
+
+        }, 2200);
+
+    }
+
+    function showGameplayComplete() {
+
+        const overlay = document.createElement("div");
+
+        overlay.className = "gameplay-unavailable-overlay";
+
+        overlay.innerHTML = `
+        <div class="gameplay-unavailable-card">
+
+            <h2>Gameplay Capture</h2>
+
+            <p>That's all from</p>
+
+            <strong>${homepageState.selectedGame.title}</strong>
+
+            <span>Switching back to Previews...</span>
+
+        </div>
+    `;
+
+        document.body.appendChild(overlay);
+
+        requestAnimationFrame(() => {
+
+            overlay.classList.add("visible");
+
+        });
+
+        setTimeout(() => {
+
+            overlay.classList.remove("visible");
+
+            setTimeout(() => {
+
+                overlay.remove();
+
+                exitGameplayMode();
 
             }, 350);
 
