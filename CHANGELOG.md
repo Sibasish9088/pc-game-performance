@@ -1,5 +1,45 @@
 # Changelog
 
+## [Unreleased]
+
+### AIE-01 COMMIT-2 — Media Contract Adoption
+
+#### Added
+- Centralized YouTube embed and thumbnail URL generation in `mediaHelper`.
+
+#### Changed
+- Updated active media consumption to use `previewVideoId` and `gameplayVideoId`.
+- Preserved the Hero Player, playlist, Continue Watching and auto-progression ownership model.
+
+#### Fixed
+- Corrected the end-of-playlist completion handler reference.
+
+### AIE-01 COMMIT-3 — JSON Media Adoption
+
+#### Changed
+- Added `gameplayVideoId` to every active game JSON file.
+- Preserved Atomic Heart's dedicated gameplay ID and used the approved preview-ID fallback for active games without dedicated gameplay recordings.
+
+### AIE-01 COMMIT-4 — Repository Validation & M1 Closure
+
+#### Verified
+- Confirmed active Media Contract adoption, JSON validity, static JavaScript integrity and JSON-only COMMIT-3 scope.
+- Completed Product Owner verification and architect review with no verified regression in the M1 media flow.
+
+## [3.5.0] - 2026-08-08
+
+### Added
+- Established the SPCBM AI Engineering Pack as the repository’s permanent engineering knowledge base.
+- Added AI onboarding, architecture, engineering standards, gameplay-engine, JSON-contract, checkpoint, sprint, decision-log, lessons-learned, roadmap, and release-note documentation.
+- Added video-ID media metadata to support the transition away from presentation-specific YouTube URLs.
+
+### Changed
+- Expanded the Hero Workspace gameplay experience with playlist rendering, game selection, return-to-preview behavior, and YouTube Player API integration.
+- Established v3.5.0 as the baseline tag for AI-assisted engineering and future Stable Checkpoints.
+
+### Notes
+- Legacy media fields remain available for backward compatibility during the staged Media Contract adoption.
+
 ## [3.4.0] - 2026-07-21
 
 ### Changed

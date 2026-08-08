@@ -448,6 +448,84 @@ Prefer evolutionary improvement over architectural replacement.
 
 ---
 
+# Lesson-016
+
+Title
+
+Phased Contract Adoption Preserves Behaviour
+
+---
+
+Observation
+
+The media contract could be adopted by the application before every game had dedicated gameplay content.
+
+---
+
+Engineering Principle
+
+Migrate framework behavior and repository content in separate, verified steps when a compatibility fallback can preserve the existing experience.
+
+---
+
+Future Guidance
+
+Do not force content migration to become a framework rewrite. Define the fallback, its owner and its removal condition before adopting it.
+
+---
+
+# Lesson-017
+
+Title
+
+Content Debt Is Not Engineering Debt
+
+---
+
+Observation
+
+Games using preview media as gameplay fallback do not indicate a defect in the Gameplay Engine or media contract.
+
+---
+
+Engineering Principle
+
+Classify missing assets separately from implementation defects so stable production code is not changed merely to compensate for unavailable content.
+
+---
+
+Future Guidance
+
+Track dedicated gameplay recordings as content enrichment and preserve the validated fallback until those assets exist.
+
+---
+
+# Lesson-018
+
+Title
+
+Independent Exit Audits Strengthen Milestones
+
+---
+
+Observation
+
+The M1 exit audit found documentation drift and dormant paths without conflating them with verified regressions in the active media flow.
+
+---
+
+Engineering Principle
+
+An audit should distinguish verified blockers from process observations, technical debt and documentation debt.
+
+---
+
+Future Guidance
+
+Use an audit-only closure step after implementation and Product Owner verification. Record its findings before starting the next sprint.
+
+---
+
 # Closing Reflection
 
 SPCBM demonstrates that engineering maturity is not measured by repository size or feature count.

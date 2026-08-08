@@ -2233,3 +2233,139 @@ Positive
 ---
 
 End of Phase-4
+
+---
+
+# Decision-041
+
+Title
+
+Media Contract Adoption
+
+Status
+
+Accepted
+
+Version
+
+AIE-01 / M1
+
+---
+
+Problem
+
+Media embed URLs were consumed directly from repository content, coupling JSON data to YouTube presentation details.
+
+---
+
+Decision
+
+Adopt `previewVideoId` and `gameplayVideoId` as the application media contract.
+
+The media helper owns YouTube embed and thumbnail URL generation.
+
+---
+
+Rationale
+
+Video identifiers represent content. URL construction represents presentation.
+
+Separating them preserves the JSON contract while keeping provider-specific rendering logic in one implementation location.
+
+---
+
+Consequences
+
+Positive
+
+• Active media consumption is independent of stored embed URLs.
+
+• Hero preview, gameplay playback and gallery thumbnails share one URL-generation responsibility.
+
+• Future provider or URL-parameter changes are localized.
+
+---
+
+# Decision-042
+
+Title
+
+Temporary Gameplay Fallback
+
+Status
+
+Temporary
+
+Version
+
+AIE-01 / M1
+
+---
+
+Problem
+
+Most active game records did not yet have dedicated gameplay media when the media contract was adopted.
+
+---
+
+Decision
+
+When a game does not have a dedicated `gameplayVideoId`, gameplay uses its `previewVideoId` as the intentional runtime fallback.
+
+---
+
+Rationale
+
+The migration must preserve working playback without forcing content acquisition and framework changes into the same implementation step.
+
+---
+
+Removal Condition
+
+Remove the fallback only when every active game has a dedicated gameplay recording represented by a `gameplayVideoId` distinct from its `previewVideoId`.
+
+---
+
+# Decision-043
+
+Title
+
+Validation-First Milestone Closure
+
+Status
+
+Accepted
+
+Version
+
+AIE-01 / M1
+
+---
+
+Problem
+
+Media-contract changes affect data, URL generation and playback behavior across the Hero Workspace.
+
+---
+
+Decision
+
+Close the milestone only after static repository validation, Product Owner playback verification and an independent architecture review.
+
+---
+
+Rationale
+
+Separating implementation from validation keeps regressions visible and prevents unresolved content or documentation work from being mistaken for framework defects.
+
+---
+
+Consequences
+
+Positive
+
+• M1 closure is evidence-based.
+
+• Content debt, engineering debt and documentation debt remain independently actionable.
+
+• Future AI-assisted sprints have a repeatable review gate.
