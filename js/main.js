@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const nextIndex = homepageState.selectedVideoIndex + 1;
 
         if (nextIndex >= gallery.length) {
-            showGameplayCompleteOverlay();
+            showGameplayComplete();
             return;
         }
 
@@ -183,7 +183,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                     currentFeaturedGame = game;
 
                     heroPlayer.src =
-                        game.media.preview;
+                        mediaHelper.buildYouTubeEmbedUrl(
+                            game.media.previewVideoId,
+                            {
+                                autoplay: 1,
+                                mute: 1,
+                                cc_load_policy: 0,
+                                controls: 1,
+                                rel: 0,
+                                modestbranding: 1,
+                                iv_load_policy: 3,
+                                playsinline: 1,
+                                start: 0,
+                                end: 90
+                            }
+                        );
 
                     transitionBenchmark(game);
                     startPreviewTimer();
@@ -219,7 +233,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             item.innerHTML = `
 
             <img
-                src="https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg"
+                src="${mediaHelper.buildYouTubeThumbnailUrl(video.videoId)}"
                 alt="Part ${String(video.part).padStart(2, "0")}">
 
             <div class="playlist-info">
@@ -677,15 +691,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         setTimeout(() => {
 
-            const gameplayUrl =
-                game.media.gameplay ??
-                game.media.preview;
-
-            const separator =
-                gameplayUrl.includes("?") ? "&" : "?";
-
             heroPlayer.src =
-                `${gameplayUrl}${separator}enablejsapi=1&playsinline=1&rel=0`;
+                mediaHelper.buildYouTubeEmbedUrl(
+                    game.media.gameplayVideoId ??
+                    game.media.previewVideoId,
+                    {
+                        autoplay: 1,
+                        mute: 0,
+                        cc_load_policy: 0,
+                        controls: 1,
+                        rel: 0,
+                        modestbranding: 1,
+                        iv_load_policy: 3,
+                        playsinline: 1,
+                        enablejsapi: 1
+                    }
+                );
 
             heroPlayer.onload = () => {
 

@@ -53,7 +53,21 @@ async function loadGameDetail(gameId) {
       game.benchmark.dlss;
 
     document.getElementById("video-frame").src =
-      game.media.youtube;
+      mediaHelper.buildYouTubeEmbedUrl(
+        game.media.gameplayVideoId ??
+        game.media.previewVideoId,
+        {
+          autoplay: 1,
+          mute: 0,
+          cc_load_policy: 0,
+          controls: 1,
+          rel: 0,
+          modestbranding: 1,
+          iv_load_policy: 3,
+          playsinline: 1,
+          enablejsapi: 1
+        }
+      );
 
     //---------------------------------------
     // Tags
@@ -378,7 +392,7 @@ function renderGameplayGallery(game) {
     card.innerHTML = `
 
             <img
-                src="https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg"
+                src="${mediaHelper.buildYouTubeThumbnailUrl(video.videoId)}"
                 alt="${video.title}"
                 loading="lazy">
 
