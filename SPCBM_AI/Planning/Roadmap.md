@@ -23,9 +23,19 @@ High-level roadmap for SPCBM v5.x and related initiatives.
 - Security review and hardening of third-party embed usage.
 
 ## Milestones
+
+- M0: AI Engineering Baseline established
+      • Engineering Pack v1.1 completed
+      • AI_Onboarding.md established
+      • Repository documentation completed
+      • Baseline tag created (v3.5.0)
+
 - M1: Media Schema Migration complete & tested
+
 - M2: Media Helper fully adopted; legacy field deprecation announced
+
 - M3: CI schema validation enabled for PRs
+
 - M4: Playback analytics & cloud ingestion prototype
 
 Review cadence: update roadmap every sprint and record major decisions in DecisionLog.md.
