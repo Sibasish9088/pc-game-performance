@@ -1,0 +1,179 @@
+{
+  "id": "resonance-a-plagues-tale-legacy",
+  "title": "Resonance: A Plague Tale Legacy",
+  "release": 2026,
+  "developer": "Asobo Studio",
+  "publisher": "Focus Entertainment",
+  "engine": "Zouna",
+  "description": "Resonance: A Plague Tale Legacy is an action-adventure prequel set fifteen years before the events of A Plague Tale: Requiem. Players take control of Sophia as she journeys to the mysterious Minotaur's Island, combining combat, exploration, environmental puzzles, and narrative-driven storytelling. The gameplay showcased on SPCBM is captured in real time using Ultra graphics settings at 4K, demonstrating the visual fidelity and performance of a modern high-end PC experience.",
+  "tags": [
+    "Action Adventure",
+    "Third-Person",
+    "Story Rich",
+    "Puzzle",
+    "Fantasy"
+  ],
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": false,
+    "dlss": "Disabled",
+    "resolutionScale": "100%",
+    "verified": false
+  },
+  "fps": {
+    "1080p": null,
+    "1440p": null,
+    "2160p": null
+  },
+  "media": {
+    "youtube": "https://www.youtube.com/embed/vRIpFOBwSOU",
+    "preview": "https://www.youtube.com/embed/NNPQkSElY9U?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "previewVideoId": "NNPQkSElY9U",
+    "homepagePreview": "https://www.youtube.com/embed/NNPQkSElY9U?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "thumbnail": "https://img.youtube.com/vi/NNPQkSElY9U/hqdefault.jpg",
+    "homepagePriority": 1,
+    "gameplay": "https://www.youtube.com/embed/vRIpFOBwSOU?autoplay=1&mute=0&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1",
+    "gameplayVideoId": "vRIpFOBwSOU",
+    "hero": "",
+    "cover": "",
+    "gallery": [
+      {
+        "part": 1,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 01",
+        "videoId": "vRIpFOBwSOU"
+      },
+      {
+        "part": 2,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 02",
+        "videoId": "KW5iTT0lzQA"
+      },
+      {
+        "part": 3,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 03",
+        "videoId": "FB3l-BOOGZA"
+      },
+      {
+        "part": 4,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 04",
+        "videoId": "XedfJXEaANE"
+      },
+      {
+        "part": 5,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 05",
+        "videoId": "gMvaqcuIrmU"
+      },
+      {
+        "part": 6,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 06",
+        "videoId": "gbNeVUisGBQ"
+      },
+      {
+        "part": 7,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 07",
+        "videoId": "IFpuLQPwDf0"
+      },
+      {
+        "part": 8,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 08",
+        "videoId": "Q-Vdw80HVys"
+      },
+      {
+        "part": 9,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 09",
+        "videoId": "LebV6o3iVnE"
+      },
+      {
+        "part": 10,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 10",
+        "videoId": "5X0Li2vsPms"
+      },
+      {
+        "part": 11,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 11",
+        "videoId": "LOOdXLngBA4"
+      },
+      {
+        "part": "12",
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 12",
+        "videoId": "G2eoBLDx0FU"
+      },
+      {
+        "part": "12 Bug",
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 12 Bug",
+        "videoId": "GtgfhN9QeHA"
+      },
+      {
+        "part": 13,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 13",
+        "videoId": "PM-w-p26qNY"
+      },
+      {
+        "part": 14,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 14",
+        "videoId": "x_6-WYrpDG4"
+      },
+      {
+        "part": 15,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 15",
+        "videoId": "wYYoijVVjgk"
+      },
+      {
+        "part": 16,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 16",
+        "videoId": "phzZx_9UmSU"
+      },
+      {
+        "part": 17,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 17",
+        "videoId": "pYmA0B-tWJg"
+      },
+      {
+        "part": 18,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 18",
+        "videoId": "m6nJPONtQXY"
+      },
+      {
+        "part": 19,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 19",
+        "videoId": "UX0paLwhxnk"
+      },
+      {
+        "part": 20,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 20",
+        "videoId": "gb_2B0n3AaU"
+      },
+      {
+        "part": 21,
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Part 21",
+        "videoId": "EY7Ep5QJGyQ"
+      },
+      {
+        "part": "Game Ends",
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Game Ends",
+        "videoId": "lYVfWB_w2Ec"
+      },
+      {
+        "part": "In Game Credits",
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay In Game Credits",
+        "videoId": "ZsIzR3nbDhU"
+      },
+      {
+        "part": "Gratitude",
+        "title": "Resonance A Plague Tale Legacy 4K Ultra Settings Gameplay Gratitude",
+        "videoId": "W-EU3nHgzDY"
+      }
+    ]
+  },
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "4K Gameplay Capture",
+    "Real Gameplay Performance",
+    "Captured on NVIDIA GeForce RTX 5070 Ti"
+  ],
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

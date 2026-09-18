@@ -1,0 +1,65 @@
+{
+  "id": "crimson-desert",
+  "title": "Crimson Desert",
+  "release": 2025,
+  "developer": "Pearl Abyss",
+  "publisher": "Pearl Abyss",
+  "engine": "BlackSpace Engine",
+  "description": "Crimson Desert is an open-world action-adventure game set in the vast and war-torn continent of Pywel. Combining cinematic storytelling, large-scale environments, intense combat, and detailed character interactions, the game delivers a demanding modern PC experience. The gameplay showcased on SPCBM is captured in real time using Ultra graphics settings, demonstrating the visual fidelity and performance of modern high-end PC hardware.",
+  "tags": [
+    "Action Adventure",
+    "Open World",
+    "RPG",
+    "Fantasy",
+    "Story Rich"
+  ],
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": false,
+    "dlss": "Disabled",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+  "fps": {
+    "1080p": 300,
+    "1440p": 212,
+    "2160p": 174
+  },
+  "media": {
+    "youtube": "https://www.youtube.com/embed/pH0Gk18mEQ8",
+    "preview": "https://www.youtube.com/embed/pH0Gk18mEQ8?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "previewVideoId": "pH0Gk18mEQ8",
+    "homepagePreview": "https://www.youtube.com/embed/pH0Gk18mEQ8?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "thumbnail": "https://img.youtube.com/vi/pH0Gk18mEQ8/hqdefault.jpg",
+    "homepagePriority": 1,
+    "gameplay": "https://www.youtube.com/embed/pH0Gk18mEQ8?autoplay=1&mute=0&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1",
+    "gameplayVideoId": "pH0Gk18mEQ8",
+    "hero": "",
+    "cover": "",
+    "gallery": [
+      {
+        "part": 1,
+        "title": "Crimson Desert 4K RTX 5070 Ti Ultra Gameplay Part 01",
+        "videoId": "pH0Gk18mEQ8"
+      },
+      {
+        "part": 2,
+        "title": "Crimson Desert 4K RTX 5070 Ti Ultra Gameplay Part 02",
+        "videoId": "aoCg9W3VDwY"
+      }
+    ]
+  },
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "Native Resolution Rendering",
+    "Real Gameplay Performance",
+    "Captured on NVIDIA GeForce RTX 5070 Ti",
+    "Performance verified through gameplay"
+  ],
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

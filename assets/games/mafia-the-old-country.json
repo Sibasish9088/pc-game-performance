@@ -1,0 +1,191 @@
+{
+  "id": "mafia-the-old-country",
+  "title": "Mafia: The Old Country",
+  "release": 2025,
+  "developer": "Hangar 13",
+  "publisher": "2K",
+  "engine": "Unreal Engine 5",
+  "description": "Mafia: The Old Country is a cinematic action-adventure game set in 1900s Sicily, exploring the origins of organized crime through a focused narrative campaign. Combining detailed environments, cinematic presentation, stealth, gunplay, and close-quarters combat, the game delivers a demanding modern PC experience. The gameplay showcased on SPCBM is captured in real time using Ultra graphics settings on high-end PC hardware.",
+  "tags": [
+    "Action Adventure",
+    "Third-Person Shooter",
+    "Crime",
+    "Story Rich",
+    "Cinematic"
+  ],
+  "benchmark": {
+    "preset": "Ultra",
+    "rayTracing": false,
+    "dlss": "Disabled",
+    "resolutionScale": "100%",
+    "verified": true
+  },
+  "fps": {
+    "1080p": 300,
+    "1440p": 218,
+    "2160p": 112
+  },
+  "media": {
+    "youtube": "https://www.youtube.com/embed/Qbv1UI4o4f0",
+    "preview": "https://www.youtube.com/embed/1qX3IKObCGI?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=80&end=170",
+    "previewVideoId": "1qX3IKObCGI",
+    "homepagePreview": "https://www.youtube.com/embed/1qX3IKObCGI?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=80&end=170",
+    "thumbnail": "https://img.youtube.com/vi/1qX3IKObCGI/hqdefault.jpg",
+    "homepagePriority": 1,
+    "gameplay": "https://www.youtube.com/embed/Qbv1UI4o4f0?autoplay=1&mute=0&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1",
+    "gameplayVideoId": "Qbv1UI4o4f0",
+    "hero": "",
+    "cover": "",
+    "gallery": [
+      {
+        "part": 1,
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 01",
+        "videoId": "Qbv1UI4o4f0"
+      },
+      {
+        "part": 2,
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 02",
+        "videoId": "8SChpmzZi1g"
+      },
+      {
+        "part": "3A",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 3A",
+        "videoId": "YdoWojy1AxU"
+      },
+      {
+        "part": "3B",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 3B",
+        "videoId": "QNTlLmeSFz4"
+      },
+      {
+        "part": 4,
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 04",
+        "videoId": "qyhKLIajaWY"
+      },
+      {
+        "part": 5,
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 05",
+        "videoId": "MiNdU8qJV70"
+      },
+      {
+        "part": 6,
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 06",
+        "videoId": "1qX3IKObCGI"
+      },
+      {
+        "part": "7A",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 7A",
+        "videoId": "w44q5IZGxkA"
+      },
+      {
+        "part": "7B",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 7B",
+        "videoId": "EWjQsN8wiUs"
+      },
+      {
+        "part": "8A",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 8A",
+        "videoId": "TBeUe_JKFkk"
+      },
+      {
+        "part": "8B",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 8B",
+        "videoId": "4tUH_1gYe1Y"
+      },
+      {
+        "part": "8C",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 8C",
+        "videoId": "maKvPBMQtmU"
+      },
+      {
+        "part": "9A",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 9A",
+        "videoId": "m_g5eTu7SR0"
+      },
+      {
+        "part": "9B",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 9B",
+        "videoId": "ysQfFPSjyzE"
+      },
+      {
+        "part": 10,
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 10",
+        "videoId": "Fu_yxnwzTV4"
+      },
+      {
+        "part": 11,
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 11",
+        "videoId": "39Z-u0iKt70"
+      },
+      {
+        "part": "12A",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 12A",
+        "videoId": "OBDgc5xRjA0"
+      },
+      {
+        "part": "12B",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 12B",
+        "videoId": "5hT19hXaXvA"
+      },
+      {
+        "part": "12C",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 12C",
+        "videoId": "0d49nKF6nfQ"
+      },
+      {
+        "part": 13,
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 13",
+        "videoId": "XWyUmLCQl6c"
+      },
+      {
+        "part": "14A",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 14A",
+        "videoId": "6NKm5WHP-CU"
+      },
+      {
+        "part": "14B",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 14B",
+        "videoId": "dL5ITCKNjY0"
+      },
+      {
+        "part": "15A",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 15A",
+        "videoId": "Po8RyceFqcw"
+      },
+      {
+        "part": "15B",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 15B",
+        "videoId": "_d-sC-XrdBA"
+      },
+      {
+        "part": "15C",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Part 15C",
+        "videoId": "NSGo1Ff2eRs"
+      },
+      {
+        "part": "Epilogue",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Epilogue",
+        "videoId": "OO6AY7eYRBE"
+      },
+      {
+        "part": "Credits",
+        "title": "Mafia The Old Country 4K RTX 5070 Ti Ultra Settings Walkthrough Credits",
+        "videoId": "a1Yflpfqzq8"
+      }
+    ]
+  },
+  "benchmarkNotes": [
+    "Ultra Graphics Preset",
+    "Native Resolution Rendering",
+    "Real Gameplay Performance",
+    "Captured on NVIDIA GeForce RTX 5070 Ti",
+    "Game requires BIOS update for the tested 13th/14th Gen Intel CPU environment",
+    "Performance verified through gameplay"
+  ],
+  "requirements": {
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
+    "cpuHeavy": false,
+    "gpuHeavy": true
+  }
+}

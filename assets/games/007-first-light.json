@@ -1,53 +1,194 @@
 {
   "id": "007-first-light",
-  "title": "007: First Light",
+  "title": "007 First Light",
   "release": 2026,
   "developer": "IO Interactive",
   "publisher": "IO Interactive",
-  "engine": "Glacier Engine",
-  "description": "007: First Light is a 2026 espionage action-adventure game developed and published by IO Interactive. Serving as a standalone re-imagined origin story, the game follows a young James Bond as he earns his 00 status through high-risk covert operations across the globe.",
+  "engine": "Glacier",
+  "description": "007 First Light is a story-driven action-adventure game presenting an original origin story for James Bond. Combining espionage, stealth, combat, gadgets, driving, and cinematic set pieces, the game delivers a modern high-fidelity PC experience. The gameplay showcased on SPCBM is captured in real time at 4K using Ultra graphics settings on high-end PC hardware.",
   "tags": [
-    "Third-Person",
+    "Action Adventure",
     "Stealth",
-    "Action",
-    "Espionage",
-    "Adventure"
+    "Third-Person Shooter",
+    "Spy",
+    "Story Rich"
   ],
   "benchmark": {
     "preset": "Ultra",
-    "rayTracing": true,
-    "dlss": "Quality + Frame Generation",
+    "rayTracing": false,
+    "dlss": "Disabled",
     "resolutionScale": "100%",
-    "verified": true
+    "verified": false
   },
   "fps": {
-    "1080p": 180,
-    "1440p": 150,
-    "2160p": 105
+    "1080p": null,
+    "1440p": null,
+    "2160p": null
   },
   "media": {
-    "youtube": "https://www.youtube.com/embed/3EeeRWQQARE",
-    "preview": "https://www.youtube.com/embed/3EeeRWQQARE?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
-    "previewVideoId": "3EeeRWQQARE",
-    "gameplayVideoId": "3EeeRWQQARE",
-    "homepagePreview": "https://www.youtube.com/embed/3EeeRWQQARE?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
-    "thumbnail": "https://img.youtube.com/vi/3EeeRWQQARE/hqdefault.jpg",
-    "homepagePriority": 10,
+    "youtube": "https://www.youtube.com/embed/fOlcsmml3Ig",
+    "preview": "https://www.youtube.com/embed/VZuG_a_AKSc?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "previewVideoId": "VZuG_a_AKSc",
+    "homepagePreview": "https://www.youtube.com/embed/VZuG_a_AKSc?autoplay=1&mute=1&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&start=0&end=90",
+    "thumbnail": "https://img.youtube.com/vi/VZuG_a_AKSc/hqdefault.jpg",
+    "homepagePriority": 1,
+    "gameplay": "https://www.youtube.com/embed/fOlcsmml3Ig?autoplay=1&mute=0&cc_load_policy=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1",
+    "gameplayVideoId": "fOlcsmml3Ig",
     "hero": "",
     "cover": "",
-    "gallery": []
+    "gallery": [
+      {
+        "part": 1,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 01",
+        "videoId": "fOlcsmml3Ig"
+      },
+      {
+        "part": 2,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 02",
+        "videoId": "qAkrhKSU34A"
+      },
+      {
+        "part": 3,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 03",
+        "videoId": "lNZd9JF_5fA"
+      },
+      {
+        "part": 4,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 04",
+        "videoId": "3nKTt3p8yaI"
+      },
+      {
+        "part": 5,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 05",
+        "videoId": "WDAuK8WDsJ4"
+      },
+      {
+        "part": 6,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 06",
+        "videoId": "oHwcaZiyMWY"
+      },
+      {
+        "part": 7,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 07",
+        "videoId": "g_jFX61euW8"
+      },
+      {
+        "part": 8,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 08",
+        "videoId": "oYUZDBFdImc"
+      },
+      {
+        "part": "9B",
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 9B",
+        "videoId": "qFJmDsFjJaY"
+      },
+      {
+        "part": 10,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 10",
+        "videoId": "FvcjhXgRyHo"
+      },
+      {
+        "part": 11,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 11",
+        "videoId": "sQHGCYzYztM"
+      },
+      {
+        "part": 12,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 12",
+        "videoId": "Z0bTfUiRM9I"
+      },
+      {
+        "part": 13,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 13",
+        "videoId": "3VHENTQkq4Y"
+      },
+      {
+        "part": 15,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 15",
+        "videoId": "_r4FBLdpLL0"
+      },
+      {
+        "part": 18,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 18",
+        "videoId": "zGmrMNt1lyI"
+      },
+      {
+        "part": 19,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 19",
+        "videoId": "h4uZqh8RHXM"
+      },
+      {
+        "part": 20,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 20",
+        "videoId": "KZvjAzzDPu8"
+      },
+      {
+        "part": 21,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 21",
+        "videoId": "RCh1wu732ik"
+      },
+      {
+        "part": 22,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 22",
+        "videoId": "by1l4iifZog"
+      },
+      {
+        "part": 23,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 23",
+        "videoId": "8WfGmt17vho"
+      },
+      {
+        "part": 24,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 24",
+        "videoId": "08ESpHgWE0k"
+      },
+      {
+        "part": 25,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 25",
+        "videoId": "dqNYUgM81kw"
+      },
+      {
+        "part": 26,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 26",
+        "videoId": "iA6NKOKtPK8"
+      },
+      {
+        "part": 27,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 27",
+        "videoId": "a0Aq3RdQvtw"
+      },
+      {
+        "part": 28,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 28",
+        "videoId": "F0cgcgYhB3I"
+      },
+      {
+        "part": 29,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 29",
+        "videoId": "ZkyMWbp8-58"
+      },
+      {
+        "part": 30,
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Part 30",
+        "videoId": "4dkHHvYhDQI"
+      },
+      {
+        "part": "Ending",
+        "title": "007 First Light 4K RTX 5070 Ti Ultra Settings Gameplay Ending",
+        "videoId": "JO3rVEriAu0"
+      }
+    ]
   },
   "benchmarkNotes": [
     "Ultra Graphics Preset",
-    "Ray Tracing Enabled",
-    "DLSS Quality + Frame Generation",
-    "Excellent image quality with stable frame pacing"
+    "4K Gameplay Capture",
+    "Real Gameplay Performance",
+    "Captured on NVIDIA GeForce RTX 5070 Ti"
   ],
   "requirements": {
-    "minimumVRAM": "12 GB",
-    "recommendedVRAM": "16 GB",
+    "minimumVRAM": "8 GB",
+    "recommendedVRAM": "12 GB",
     "cpuHeavy": false,
     "gpuHeavy": true
   }
 }
-
