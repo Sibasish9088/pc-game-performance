@@ -16,18 +16,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         selectedVideoIndex: 0
     };
 
-    // Assign component IDs dynamically
-    const componentLabels = [
-        'cpu',
-        'motherboard',
-        'gpu',
-        'ram',
-        'storage',
-        'psu',
-        'case',
-        'fans'
-    ];
-
     window.onYouTubeIframeAPIReady = function () {
 
         ytApiReady = true;
@@ -72,12 +60,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.querySelectorAll("#featuredPlaylist .playlist-item")[nextIndex]?.click();
 
     }
-
-    document.querySelectorAll('.component-card').forEach((card, index) => {
-        if (index < componentLabels.length) {
-            card.id = componentLabels[index];
-        }
-    });
 
     function transitionBenchmark(game) {
 
@@ -523,6 +505,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     const homepageSection = document.querySelector(".my-pc-section");
     const focusWorkspace = document.getElementById("focusWorkspace");
     const focusClose = document.querySelector(".focus-close");
+    const focusNavigator = focusWorkspace.querySelector(".focus-navigator");
+    const focusContent = focusWorkspace.querySelector(".focus-content");
+    const componentAbbreviations = {
+        cpu: "CPU",
+        gpu: "GPU",
+        motherboard: "MOB",
+        memory: "RAM",
+        storage: "STR",
+        psu: "PSU",
+        cabinet: "CBN",
+        cooler: "CLR"
+    };
+    let workspaceComponents = [];
+    let workspacePerformance = [];
+    let workspaceTrustInfo = [];
+    let selectedComponentId = null;
+    let selectedWorkspaceSection = "components";
 
     function showFocusWorkspace() {
 
@@ -552,15 +551,165 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, 450);
     }
 
+    function componentRows(component, fields) {
+        const rows = fields.map(([label, key]) => [label, component[key]])
+            .filter(([, value]) => value);
+
+        return rows.map(([label, value]) => `
+            <div class="workspace-info-row">
+                <span>${label}</span><strong>${value}</strong>
+            </div>
+        `).join("");
+    }
+
+    function selectWorkspaceComponent(componentId) {
+        const component = workspaceComponents.find(item => item.id === componentId);
+        if (!component) return;
+
+        selectedComponentId = componentId;
+        const currentIndex = workspaceComponents.indexOf(component);
+        const nextComponent = workspaceComponents[(currentIndex + 1) % workspaceComponents.length];
+
+        selectedWorkspaceSection = "components";
+        focusNavigator.innerHTML = workspaceComponents.map(item => `
+            <button class="component-nav-item ${item.id === componentId ? "active" : ""}"
+                type="button" data-component-id="${item.id}"
+                aria-pressed="${item.id === componentId}">
+                ${componentAbbreviations[item.id] || item.id.toUpperCase()}
+            </button>
+        `).join("");
+
+        focusContent.classList.add("focus-content-changing");
+        setTimeout(() => {
+            focusContent.innerHTML = `
+                <header class="workspace-component-header">
+                    <i data-lucide="${component.icon}"></i>
+                    <div>
+                        <p>${component.category}</p>
+                        <h2>${component.name}</h2>
+                    </div>
+                </header>
+                <section class="workspace-info-section">
+                    <h3>Overview</h3>
+                    <div class="workspace-info-list">${componentRows(component, [
+                        ["Category", "category"], ["Manufacturer", "manufacturer"], ["Model", "model"]
+                    ])}</div>
+                </section>
+                <section class="workspace-info-section">
+                    <h3>Specifications</h3>
+                    <div class="workspace-info-list">${componentRows(component, [["Details", "notes"]])}</div>
+                </section>
+                <section class="workspace-info-section">
+                    <h3>Highlights</h3>
+                    <div class="workspace-info-list">${componentRows(component, [
+                        ["Purchased", "purchaseDate"], ["Warranty", "warranty"], ["Price", "price"]
+                    ])}</div>
+                </section>
+                <button class="workspace-next-component" type="button"
+                    data-component-id="${nextComponent.id}"
+                    aria-label="Next component: ${nextComponent.name}">
+                    <span>${nextComponent.id}</span>
+                    <i data-lucide="chevron-right"></i>
+                </button>
+                <button class="workspace-next-section" type="button" aria-label="Next section: Performance Highlights">
+                    <span>Performance Highlights</span>
+                    <i data-lucide="chevron-down"></i>
+                </button>
+            `;
+            initializeFocusIcons();
+            requestAnimationFrame(() => focusContent.classList.remove("focus-content-changing"));
+        }, 180);
+    }
+
+    function selectWorkspaceSection(section) {
+        const isPerformance = section === "performance";
+        const records = isPerformance ? workspacePerformance : workspaceTrustInfo;
+        const title = isPerformance ? "Performance Highlights" : "For Verified Buyers Only";
+        const nextSection = isPerformance ? "trust" : "components";
+        const nextSectionTitle = isPerformance ? "For Verified Buyers Only" : "PC Components";
+
+        selectedWorkspaceSection = section;
+        focusNavigator.innerHTML = records.map((item, index) => `
+            <button class="component-nav-item ${index === 0 ? "active" : ""}" type="button" disabled>
+                ${item.title || item.name}
+            </button>
+        `).join("");
+
+        focusContent.classList.add("focus-content-changing");
+        setTimeout(() => {
+            focusContent.innerHTML = `
+                <header class="workspace-component-header">
+                    <i data-lucide="${isPerformance ? "zap" : "badge-check"}"></i>
+                    <div><p>SPCBM</p><h2>${title}</h2></div>
+                </header>
+                <section class="workspace-info-section workspace-feature-list">
+                    ${records.length ? records.map(item => `
+                        <article><i data-lucide="${item.icon}"></i><span>${item.title || item.name}</span></article>
+                    `).join("") : "<p>Loading current information…</p>"}
+                </section>
+                <button class="workspace-next-section" type="button" data-next-section="${nextSection}"
+                    aria-label="Next section: ${nextSectionTitle}">
+                    <span>${nextSectionTitle}</span><i data-lucide="chevron-down"></i>
+                </button>
+            `;
+            initializeFocusIcons();
+            requestAnimationFrame(() => focusContent.classList.remove("focus-content-changing"));
+        }, 180);
+    }
+
+    function initializeFocusIcons() {
+        if (window.lucide) window.lucide.createIcons();
+    }
+
+    function openComponentWorkspace(componentId) {
+        selectWorkspaceComponent(componentId);
+        showFocusWorkspace();
+    }
+
     function focusWorkspaceTransition() {
         focusClose.addEventListener("click", hideFocusWorkspace);
 
-        document.querySelectorAll(
-            ".component-card, .highlight-card, .trust-item"
-        ).forEach(card => {
+        homepageSection.addEventListener("click", event => {
+            const card = event.target.closest(".component-card");
+            if (!card || !workspaceComponents.length) return;
+            openComponentWorkspace(card.dataset.id);
+        });
 
-            card.addEventListener("click", showFocusWorkspace);
+        focusNavigator.addEventListener("click", event => {
+            const item = event.target.closest("[data-component-id]");
+            if (item) selectWorkspaceComponent(item.dataset.componentId);
+        });
 
+        focusContent.addEventListener("click", event => {
+            const nextComponent = event.target.closest(".workspace-next-component");
+            if (nextComponent) {
+                selectWorkspaceComponent(nextComponent.dataset.componentId);
+                return;
+            }
+
+            const nextSection = event.target.closest(".workspace-next-section");
+            if (nextSection) {
+                if (nextSection.dataset.nextSection === "components") {
+                    selectWorkspaceComponent(selectedComponentId || workspaceComponents[0]?.id);
+                } else {
+                    selectWorkspaceSection(nextSection.dataset.nextSection || "performance");
+                }
+            }
+        });
+
+        document.addEventListener("pc-components-ready", event => {
+            const workspaceOrder = ["cpu", "gpu", "motherboard", "memory", "storage", "psu", "cabinet", "cooler"];
+            workspaceComponents = [...event.detail.components].sort(
+                (a, b) => workspaceOrder.indexOf(a.id) - workspaceOrder.indexOf(b.id)
+            );
+        });
+
+        document.addEventListener("performance-info-ready", event => {
+            workspacePerformance = event.detail.performance;
+        });
+
+        document.addEventListener("trust-info-ready", event => {
+            workspaceTrustInfo = event.detail.trustInfo;
         });
     }
 
@@ -754,6 +903,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     }
 
+    // Set up the independent workspace before asynchronous homepage loaders
+    // publish their current component, performance, and trust records.
+    focusWorkspaceTransition();
+
     // Load Game Data
     try {
         await loadGameData();
@@ -766,8 +919,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         });
         initializeHeroActions();
-        focusWorkspaceTransition();
-
     } catch (error) {
         console.error("Featured Gameplay initialization failed:", error);
 

@@ -22,7 +22,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     initializeLucideIcons();
 
-    bindComponentEvents();
+    // The focus workspace consumes the same records used by the homepage.
+    // Keeping the data hand-off here avoids falling back to the legacy detail
+    // pages (and their outdated component data).
+    document.dispatchEvent(new CustomEvent("pc-components-ready", {
+      detail: { components }
+    }));
   } catch (error) {
     console.error("Failed to initialize PC components:", error);
   }
@@ -51,7 +56,6 @@ async function loadComponents() {
     (a, b) => a.displayOrder - b.displayOrder
   );
 }
-
 /* ==========================================================
    Renderer
 ========================================================== */
@@ -95,39 +99,5 @@ function initializeLucideIcons() {
   if (window.lucide) {
     lucide.createIcons();
   }
-
-}
-
-/* ==========================================================
-   Events
-========================================================== */
-
-function bindComponentEvents() {
-
-  document
-    .querySelectorAll(".component-card")
-    .forEach(card => {
-
-      card.addEventListener("click", () => {
-
-        loadComponentDetail(card.dataset.detailPage);
-
-      });
-
-    });
-
-}
-
-/* ==========================================================
-   Detail Loader
-========================================================== */
-
-function loadComponentDetail(detailPage) {
-
-  if (!detailPage) {
-    return;
-  }
-
-  window.location.href = detailPage;
 
 }

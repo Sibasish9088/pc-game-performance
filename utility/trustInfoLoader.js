@@ -20,7 +20,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     initializeLucideIcons();
 
-    bindComponentEvents();
+    document.dispatchEvent(new CustomEvent("trust-info-ready", {
+      detail: { trustInfo }
+    }));
+
   } catch (error) {
     console.error("Failed to initialize trust information:", error);
   }
@@ -51,7 +54,6 @@ async function loadTrustInfo() {
   );
 
 }
-
 /* ==========================================================
    Renderer
 ========================================================== */
@@ -94,39 +96,5 @@ function initializeLucideIcons() {
   if (window.lucide) {
     lucide.createIcons();
   }
-
-}
-
-/* ==========================================================
-   Events
-========================================================== */
-
-function bindComponentEvents() {
-
-  document
-    .querySelectorAll(".component-card")
-    .forEach(card => {
-
-      card.addEventListener("click", () => {
-
-        loadComponentDetail(card.dataset.detailPage);
-
-      });
-
-    });
-
-}
-
-/* ==========================================================
-   Detail Loader
-========================================================== */
-
-function loadComponentDetail(detailPage) {
-
-  if (!detailPage) {
-    return;
-  }
-
-  window.location.href = detailPage;
 
 }

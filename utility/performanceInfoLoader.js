@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     initializeLucideIcons();
 
-    bindComponentEvents();
+    document.dispatchEvent(new CustomEvent("performance-info-ready", {
+      detail: { performance }
+    }));
+
   } catch (error) {
     console.error("Failed to initialize PC components:", error);
   }
@@ -49,7 +52,6 @@ async function loadPerformance() {
   );
 
 }
-
 /* ==========================================================
    Renderer
 ========================================================== */
@@ -92,39 +94,5 @@ function initializeLucideIcons() {
   if (window.lucide) {
     lucide.createIcons();
   }
-
-}
-
-/* ==========================================================
-   Events
-========================================================== */
-
-function bindComponentEvents() {
-
-  document
-    .querySelectorAll(".component-card")
-    .forEach(card => {
-
-      card.addEventListener("click", () => {
-
-        loadComponentDetail(card.dataset.detailPage);
-
-      });
-
-    });
-
-}
-
-/* ==========================================================
-   Detail Loader
-========================================================== */
-
-function loadComponentDetail(detailPage) {
-
-  if (!detailPage) {
-    return;
-  }
-
-  window.location.href = detailPage;
 
 }
